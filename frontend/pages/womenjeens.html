@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>womenjeans</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/frontend/css/product.css">
+</head>
+<body data-category="womens" data-subcategory="jeans">
+     <div class="page-container">
+    <header>
+        <!-- DESKTOP HEADER -->
+<div class="desktop-header">
+  <div class="logo">🛒 NexCart</div>
+
+  <div class="search-box">
+    <i class="fas fa-search"></i>
+    <input type="text" placeholder="Search products">
+  </div>
+
+  <div class="icons">
+    <div class="icon user" id="userIcon">
+      <i class="far fa-user"></i>
+      <span>Profile</span>
+      <div class="user-dropdown">
+        <a href="profile.html"><i class="far fa-user"></i> My Profile</a>
+        <a href="my-order.html"><i class="fas fa-box"></i> My Orders</a>
+        <button onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</button>
+      </div>
+    </div>
+
+    <div class="icon" onclick="location.href='wishlist.html'">
+      <i class="far fa-heart"></i>
+      <span class="count" id="wishlistCount">0</span>
+    </div>
+
+    <div class="icon" onclick="location.href='cart.html'">
+      <i class="fas fa-shopping-cart"></i>
+      <span class="count" id="cartCount">0</span>
+    </div>
+
+    <div class="icon">
+      <i class="fa-regular fa-circle-question"></i>
+    </div>
+  </div>
+</div>
+
+<!-- MOBILE HEADER -->
+<div class="mobile-header">
+  <div class="logo">🛒 NexCart</div>
+  <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
+</div>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-header">
+    NexCart
+    <i class="fas fa-times" id="closeMenu"></i>
+  </div>
+
+  <a href="home.html"><i class="fa-solid fa-house"></i> Home</a>
+
+  <div class="accordion">
+    <div class="accordion-item">
+      <div class="accordion-title">👕 Men <i class="fas fa-chevron-down"></i></div>
+      <div class="accordion-content">
+        <a href="shirts.html">Shirt</a>
+        <a href="pants.html">Pants</a>
+        <a href="tshirts.html">T-shirts</a>
+        <a href="menfootwear.html">Footwear</a>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-title">👗 Women <i class="fas fa-chevron-down"></i></div>
+      <div class="accordion-content">
+        <a href="sarees.html">Sarees</a>
+        <a href="tshirtswomens.html">Tshirts</a>
+        <a href="womenjeens.html">jeans</a>
+        <a href="anarkalis.html">Anarkalis</a>
+        <a href="lehangas.html">Lahangas</a>
+        <a href="womenfootwear.html">Footwear</a>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-title">🧒 Kids <i class="fas fa-chevron-down"></i></div>
+      <div class="accordion-content">
+        <a href="boys.html">Boys Clothing</a>
+        <a href="girls.html">Girls Clothing</a>
+        <a href="boysfootwear.html">Boys Footwear</a>
+        <a href="girlsfootwear.html">Girls Footwear</a>
+      </div>
+    </div>
+  </div>
+
+  <a href="profile.html"><i class="fa-solid fa-user"></i> My Profile</a>
+  <a href="my-order.html"><i class="fas fa-box"></i>  My Orders</a>
+  <a href="wishlist.html"><i class="fa-solid fa-heart"></i> Wishlist</a>
+  <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
+  <button onclick="logout()"><i class="fa-solid fa-right-from-bracket"></i> Logout</button>
+</div>
+
+<div class="overlay" id="overlay"></div>
+
+    </header>
+   <div class="list">
+        <div class="dropdown">
+            <p class="dropbtn">Mens</p>
+            <div class="dropdown-content">
+                <a href="shirts.html">Shirts</a>
+                <a href="pants.html">Pants</a>
+                <a href="tshirts.html">T-Shirts</a>
+                <a href="menfootwear.html">Footwear</a> 
+            </div>
+      </div>
+      <div class="dropdown">
+            <p class="dropbtn">Womens</p>
+            <div class="dropdown-content">
+                <a href="sarees.html">Sarees</a>
+                <a href="tshirtswomens.html">Tshirts</a>
+                <a href="womenjeens.html">Jeans</a>
+                <a href="anarkalis.html">Anarkalis</a>
+                <a href="lehangas.html">Lahangas</a>
+                <a href="womenfootwear.html">Footwear</a>
+            </div>
+      </div>
+      <div class="dropdown">
+            <p class="dropbtn">Kids</p>
+            <div class="dropdown-content">
+                <a href="boys.html">Boys wear</a>
+                <a href="girls.html">Girls wear</a>
+                <a href="boysfootwear.html">Boys Footwear</a>
+                <a href="girlsfootwear.html">Girls Footwear</a>
+            </div>
+      </div>
+      <div class="dropdown">
+            <p class="dropbtn">Electronics</p>
+            <div class="dropdown-content">
+                <a href="mobiles.html">Mobiles</a>
+                <a href="laptops.html">Laptops</a>
+            </div>
+      </div>
+    </div>
+<img src="/frontend/asserts/womensfassion/jeansbanner.jpeg"  alt="banner" class="hero-banner">
+<main>
+    <section>
+  <p class="section-title">New Arrivals</p>
+
+  <!-- STATIC PRODUCTS ABOVE (unchanged) -->
+
+  <!-- DYNAMIC PRODUCTS -->
+  <div class="section-container" id="dynamicProducts"></div>
+</section>
+    <section class="womenjeans">
+        <p class="section-title">WomenJeans</p>
+        <div class="section-container">
+            <div class="product-card" data-id="shirt_101">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womensfassion/WomenJeans/a1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womensfassion/WomenJeans/a2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/WomenJeans/a3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/WomenJeans/a4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Van Heusen</div>
+                    <div class="title">Van Heusen Women's Cotton Relaxed Fit Lounge T Shirt</div>
+             
+                    <div class="price">
+                        <span class="current">₹474</span>
+                        <span class="old">₹508</span>
+                        <span class="off">7% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womensfassion/WomenJeans/b1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womensfassion/WomenJeans/b2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/WomenJeans/b3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/WomenJeans/b4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">U.S. Polo</div>
+                    <div class="title">U.S. Polo ASSN. Women's Cotton Loose Printed t-shirt</div>
+             
+                    <div class="price">
+                        <span class="current">₹849</span>
+                        <span class="old">₹1,249</span>
+                        <span class="off">32% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womensfassion/WomenJeans/c1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womensfassion/WomenJeans/c2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/WomenJeans/c3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/WomenJeans/c4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">HELLCAT</div>
+                    <div class="title">HELLCAT Beige Printed Loose Fit Crew-Neck Crop T-Shirt</div>
+             
+                    <div class="price">
+                        <span class="current">₹281</span>
+                        <span class="old">₹1,499</span>
+                        <span class="off">81% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womensfassion/WomenJeans/d4.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womensfassion/WomenJeans/d2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/WomenJeans/d3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/WomenJeans/d1.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Max Women</div>
+                    <div class="title">Max Women's Cotton Regular fit casual T-Shirt </div>
+             
+                    <div class="price">
+                        <span class="current">₹316</span>
+                        <span class="old">₹399</span>
+                        <span class="off">20% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womensfassion/WomenJeans/e4.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womensfassion/WomenJeans/e2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/WomenJeans/e3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/WomenJeans/e1.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">London Hills</div>
+                    <div class="title">London Hills Stretchable Round Neck Top for Casual</div>
+             
+                    <div class="price">
+                        <span class="current">₹999</span>
+                        <span class="old">₹1,999</span>
+                        <span class="off">50% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womensfassion/WomenJeans/f4.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womensfassion/WomenJeans/f2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/WomenJeans/f3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/WomenJeans/f1.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">AUSK</div>
+                    <div class="title">AUSK Oversized T-Shirt for Graphic Womens Tshirts</div>
+             
+                    <div class="price">
+                        <span class="current">₹2,499</span>
+                        <span class="old">₹9,999</span>
+                        <span class="off">75% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womensfassion/WomenJeans/g2.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womensfassion/WomenJeans/g1.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/WomenJeans/g3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/WomenJeans/g4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Max Women</div>
+                    <div class="title">Max Women's Cotton Regular Printed Round Neck T-Shirt</div>
+             
+                    <div class="price">
+                        <span class="current">₹249</span>
+                        <span class="old">₹299</span>
+                        <span class="off">17% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womensfassion/WomenJeans/h1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womensfassion/WomenJeans/h2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/WomenJeans/h3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/WomenJeans/h4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Juneberry</div>
+                    <div class="title">JUNEBERRY® Oversize Loose Baggy Fit Drop  </div>
+             
+                    <div class="price">
+                        <span class="current">₹299</span>
+                        <span class="old">₹1,199</span>
+                        <span class="off">75% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womensfassion/WomenJeans/i1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womensfassion/WomenJeans/i2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/WomenJeans/i3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/WomenJeans/i4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Max Store</div>
+                    <div class="title">Max Women's Cotton Regular Printed Round Neck T-Shirt</div>
+             
+                    <div class="price">
+                        <span class="current">₹249</span>
+                        <span class="old">₹299</span>
+                        <span class="off">17% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womensfassion/WomenJeans/j1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womensfassion/WomenJeans/j2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/WomenJeans/j3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/WomenJeans/j4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">TQH</div>
+                    <div class="title">TQH Women's Casual regular   Printed Round Neck </div>
+             
+                    <div class="price">
+                        <span class="current">₹299</span>
+                        <span class="old">₹499</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womensfassion/WomenJeans/k1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womensfassion/WomenJeans/k2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/WomenJeans/k3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/WomenJeans/k4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Dollar</div>
+                    <div class="title">Dollar Women's Regular Fit casual  T-Shirt with neck</div>
+             
+                    <div class="price">
+                        <span class="current">₹299</span>
+                        <span class="old">₹499</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womensfassion/WomenJeans/l1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womensfassion/WomenJeans/l2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/WomenJeans/l3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/WomenJeans/l4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Dollar</div>
+                    <div class="title">Dollar Women's Regular Fit casual T-Shirts for girls</div>
+             
+                    <div class="price">
+                        <span class="current">₹299</span>
+                        <span class="old">₹499</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+       
+    
+</main>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section">
+        <div class="footer-logo">
+        <span>🛒</span>NexCart
+    </div>
+        <p style="font-size: 12px;">Your one-stop destination for quality products at the best prices.</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <a href="#">Home</a>
+      <a href="#">Shop</a>
+      <a href="#">Categories</a>
+      <a href="#">Contact Us</a>
+    </div>
+
+    <div class="footer-section">
+      <h3>Customer Service</h3>
+      <a href="#">FAQ</a>
+      <a href="#">Returns</a>
+      <a href="#">Shipping</a>
+      <a href="#">Privacy Policy</a>
+    </div>
+
+    <div class="footer-social">
+      <h3>Follow Us</h3>
+      <i class="fa-brands fa-instagram" id="instagram"></i>
+      <i class="fa-brands fa-facebook" id="facebook"></i>
+      <i class="fa-brands fa-x-twitter" id="twitter"></i>
+      <i class="fa-brands fa-youtube" id="youtube"></i>
+      <i class="fa-brands fa-whatsapp" id="whatsapp"></i>
+      <i class="fa-brands fa-telegram" id="telegram"></i>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 NexCart. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/frontend/js/product.js"></script>
+</body>
+</html>

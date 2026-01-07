@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lehangas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/frontend/css/product.css">
+</head>
+<body data-category="womens" data-subcategory="lehangas">
+     <div class="page-container">
+    <header>
+        <!-- DESKTOP HEADER -->
+<div class="desktop-header">
+  <div class="logo">🛒 NexCart</div>
+
+  <div class="search-box">
+    <i class="fas fa-search"></i>
+    <input type="text" placeholder="Search products">
+  </div>
+
+  <div class="icons">
+    <div class="icon user" id="userIcon">
+      <i class="far fa-user"></i>
+      <span>Profile</span>
+      <div class="user-dropdown">
+        <a href="profile.html"><i class="far fa-user"></i> My Profile</a>
+        <a href="my-order.html"><i class="fas fa-box"></i> My Orders</a>
+        <button onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</button>
+      </div>
+    </div>
+
+    <div class="icon" onclick="location.href='wishlist.html'">
+      <i class="far fa-heart"></i>
+      <span class="count" id="wishlistCount">0</span>
+    </div>
+
+    <div class="icon" onclick="location.href='cart.html'">
+      <i class="fas fa-shopping-cart"></i>
+      <span class="count" id="cartCount">0</span>
+    </div>
+
+    <div class="icon">
+      <i class="fa-regular fa-circle-question"></i>
+    </div>
+  </div>
+</div>
+
+<!-- MOBILE HEADER -->
+<div class="mobile-header">
+  <div class="logo">🛒 NexCart</div>
+  <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
+</div>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-header">
+    NexCart
+    <i class="fas fa-times" id="closeMenu"></i>
+  </div>
+
+  <a href="home.html"><i class="fa-solid fa-house"></i> Home</a>
+
+  <div class="accordion">
+    <div class="accordion-item">
+      <div class="accordion-title">👕 Men <i class="fas fa-chevron-down"></i></div>
+      <div class="accordion-content">
+        <a href="shirts.html">Shirt</a>
+        <a href="pants.html">Pants</a>
+        <a href="tshirts.html">T-shirts</a>
+        <a href="menfootwear.html">Footwear</a>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-title">👗 Women <i class="fas fa-chevron-down"></i></div>
+      <div class="accordion-content">
+        <a href="sarees.html">Sarees</a>
+        <a href="tshirtswomens.html">Tshirts</a>
+        <a href="womenjeens.html">jeans</a>
+        <a href="anarkalis.html">Anarkalis</a>
+        <a href="lehangas.html">Lahangas</a>
+        <a href="womenfootwear.html">Footwear</a>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-title">🧒 Kids <i class="fas fa-chevron-down"></i></div>
+      <div class="accordion-content">
+        <a href="boys.html">Boys Clothing</a>
+        <a href="girls.html">Girls Clothing</a>
+        <a href="boysfootwear.html">Boys Footwear</a>
+        <a href="girlsfootwear.html">Girls Footwear</a>
+      </div>
+    </div>
+  </div>
+
+  <a href="profile.html"><i class="fa-solid fa-user"></i> My Profile</a>
+  <a href="my-order.html"><i class="fas fa-box"></i>  My Orders</a>
+  <a href="wishlist.html"><i class="fa-solid fa-heart"></i> Wishlist</a>
+  <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
+  <button onclick="logout()"><i class="fa-solid fa-right-from-bracket"></i> Logout</button>
+</div>
+
+<div class="overlay" id="overlay"></div>
+
+    </header>
+   <div class="list">
+        <div class="dropdown">
+            <p class="dropbtn">Mens</p>
+            <div class="dropdown-content">
+                <a href="shirts.html">Shirts</a>
+                <a href="pants.html">Pants</a>
+                <a href="tshirts.html">T-Shirts</a>
+                <a href="menfootwear.html">Footwear</a>
+            </div>
+      </div>
+      <div class="dropdown">
+            <p class="dropbtn">Womens</p>
+            <div class="dropdown-content">
+                <a href="sarees.html">Sarees</a>
+                <a href="tshirtswomens.html">Tshirts</a>
+                <a href="womenjeens.html">jeans</a>
+                <a href="anarkalis.html">Anarkalis</a>
+                <a href="lehangas.html">Lahangas</a>
+                <a href="womenfootwear.html">Footwear</a>
+            </div>
+      </div>
+      <div class="dropdown">
+            <p class="dropbtn">Kids</p>
+            <div class="dropdown-content">
+                <a href="boys.html">Boys wear</a>
+                <a href="girls.html">Girls wear</a>
+                <a href="boysfootwear.html">Boys Footwear</a>
+                <a href="girlsfootwear.html">Girls Footwear</a>
+            </div>
+      </div>
+      <div class="dropdown">
+            <p class="dropbtn">Electronics</p>
+            <div class="dropdown-content">
+                <a href="mobiles.html">Mobiles</a>
+                <a href="laptops.html">Laptops</a>
+            </div>
+      </div>
+    </div>
+<img src="/frontend/asserts/womensfassion/lehangabanner1.jpg"  alt="banner" class="hero-banner">
+<main>
+    <section>
+  <p class="section-title">New Arrivals</p>
+
+  <!-- STATIC PRODUCTS ABOVE (unchanged) -->
+
+  <!-- DYNAMIC PRODUCTS -->
+  <div class="section-container" id="dynamicProducts"></div>
+</section>
+    <section class="lehangas">
+        <p class="section-title">Lehangas</p>
+        <div class="section-container">
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womensfassion/lehangas/a1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womensfassion/lehangas/a2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/lehangas/a3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/lehangas/a4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">GOROLY, La Rosa</div>
+                    <div class="title">Women's print chaniya choli showcases intricate ajrakh print </div>
+             
+                    <div class="price">
+                        <span class="current">₹999</span>
+                        <span class="old">₹1,999</span>
+                        <span class="off">50% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womensfassion/lehangas/b1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womensfassion/lehangas/b2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/lehangas/b3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/lehangas/b4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">LooknBook Art</div>
+                    <div class="title">Women's Chiffon Embroidered Lehenga Choli Panvel LH-New</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,499</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womensfassion/lehangas/c1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womensfassion/lehangas/c3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/lehangas/c2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/lehangas/c4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">GOROLY, La Rosa</div>
+                    <div class="title">Stylish Chinon Embroidered Work Lehenga Choli semi stiched For Women</div>
+             
+                    <div class="price">
+                        <span class="current">₹999</span>
+                        <span class="old">₹4,599</span>
+                        <span class="off">78% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womensfassion/lehangas/d1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womensfassion/lehangas/d2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/lehangas/d3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/lehangas/d4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Generic</div>
+                    <div class="title">madhuram women'S Georgette Lehenga And Choli With Long Shrug </div>
+             
+                    <div class="price">
+                        <span class="current">₹1,424</span>
+                        <span class="old">₹6,999</span>
+                        <span class="off">80% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womensfassion/lehangas/e1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womensfassion/lehangas/e2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/lehangas/e3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/lehangas/e4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Fabcartz</div>
+                    <div class="title">Women's Wedding Special Foil Silk Lehenga Choli For Any Occasion</div>
+             
+                    <div class="price">
+                        <span class="current">₹999</span>
+                        <span class="old">₹1,999</span>
+                        <span class="off">50% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womensfassion/lehangas/f1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womensfassion/lehangas/f2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/lehangas/f3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/lehangas/f4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Zeel Clothing</div>
+                    <div class="title">Women's Orange Sequence Embroidery Work Silk Semi-Sttiched Lehenga Choli</div>
+             
+                    <div class="price">
+                        <span class="current">₹2,499</span>
+                        <span class="old">₹9,999</span>
+                        <span class="off">75% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womensfassion/lehangas/g1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womensfassion/lehangas/g2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/lehangas/g3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/lehangas/g4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">RENVAANI FASHION</div>
+                    <div class="title">Women's Chiffon Embroidered Lehenga Choli Panvel LH-New</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,481</span>
+                        <span class="old">₹2,999</span>
+                        <span class="off">51% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womensfassion/lehangas/h1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womensfassion/lehangas/h2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/lehangas/h3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/lehangas/h4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">PURVAJA</div>
+                    <div class="title">Zeel Clothing Women's Sequins Embroidered Net Semi-Stitched Lehenga </div>
+             
+                    <div class="price">
+                        <span class="current">₹4,976</span>
+                        <span class="old">₹9,999</span>
+                        <span class="off">50% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womensfassion/lehangas/i1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womensfassion/lehangas/i2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/lehangas/i3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/lehangas/i4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">TRENDMALLS</div>
+                    <div class="title">Women's Georgette Semi Stitched Lehenga Choli With Dupatta, Traditional</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,499</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womensfassion/lehangas/j1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womensfassion/lehangas/j2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/lehangas/j3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/lehangas/j4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Suppar Sleave</div>
+                    <div class="title">Zeel Clothing Women Dola Silk Semi stitched Sequins Zari </div>
+             
+                    <div class="price">
+                        <span class="current">₹3,847</span>
+                        <span class="old">₹9,999</span>
+                        <span class="off">62% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womensfassion/lehangas/k1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womensfassion/lehangas/k2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/lehangas/k3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/lehangas/k4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Nena Fashion</div>
+                    <div class="title">Aika Creation Women's Chiffon Embroidered Lehenga Choli</div>
+             
+                    <div class="price">
+                        <span class="current">₹999</span>
+                        <span class="old">₹1,999</span>
+                        <span class="off">50% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womensfassion/lehangas/l1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womensfassion/lehangas/l4.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/lehangas/l3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/lehangas/l4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">madhuram textiles</div>
+                    <div class="title">ZAALIMA FASHION Women's Semi Stitched Net Lehenga Choli</div>
+             
+                    <div class="price">
+                        <span class="current">₹799</span>
+                        <span class="old">₹2,999</span>
+                        <span class="off">73% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+       
+    
+</main>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section">
+        <div class="footer-logo">
+        <span>🛒</span>NexCart
+    </div>
+        <p style="font-size: 12px;">Your one-stop destination for quality products at the best prices.</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <a href="#">Home</a>
+      <a href="#">Shop</a>
+      <a href="#">Categories</a>
+      <a href="#">Contact Us</a>
+    </div>
+
+    <div class="footer-section">
+      <h3>Customer Service</h3>
+      <a href="#">FAQ</a>
+      <a href="#">Returns</a>
+      <a href="#">Shipping</a>
+      <a href="#">Privacy Policy</a>
+    </div>
+
+    <div class="footer-social">
+      <h3>Follow Us</h3>
+      <i class="fa-brands fa-instagram" id="instagram"></i>
+      <i class="fa-brands fa-facebook" id="facebook"></i>
+      <i class="fa-brands fa-x-twitter" id="twitter"></i>
+      <i class="fa-brands fa-youtube" id="youtube"></i>
+      <i class="fa-brands fa-whatsapp" id="whatsapp"></i>
+      <i class="fa-brands fa-telegram" id="telegram"></i>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 NexCart. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/frontend/js/product.js"></script>
+</body>
+</html>

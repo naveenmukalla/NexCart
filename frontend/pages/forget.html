@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Forgot Password | NexCart</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/frontend/css/login.css">
+</head>
+
+<body>
+<div class="container">
+  <div class="right" style="margin:auto">
+
+    <h2>Forgot Password</h2>
+    <p>Enter your registered email</p>
+
+    <div class="input-box">
+      <input type="email" id="email" placeholder="Email Address" required>
+    </div>
+
+    <button class="btn" onclick="sendOTP()">Send OTP</button>
+
+    <p class="footer">
+      <a href="login.html">Back to Login</a>
+    </p>
+
+  </div>
+</div>
+
+<script>
+function sendOTP() {
+  const email = document.getElementById("email").value.trim();
+
+  if (!email) {
+    alert("Please enter email");
+    return;
+  }
+
+  localStorage.setItem("resetEmail", email);
+
+  fetch("http://localhost:5000/request-otp", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ email })
+  })
+  .then(res => res.json())
+  .then(data => {
+    alert(data.message);
+    if (!data.message.includes("Wait")) {
+      window.location.href = "reset.html";
+    }
+  })
+  .catch(() => alert("Server not running"));
+}
+</script>
+
+</body>
+</html>

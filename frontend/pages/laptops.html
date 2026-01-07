@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laptops</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/frontend/css/mobile.css">
+</head>
+<body data-category="electronics" data-subcategory="laptops">
+     <div class="page-container">
+    <header>
+        <!-- DESKTOP HEADER -->
+<div class="desktop-header">
+  <div class="logo">🛒 NexCart</div>
+
+  <div class="search-box">
+    <i class="fas fa-search"></i>
+    <input type="text" placeholder="Search products">
+  </div>
+
+  <div class="icons">
+    <div class="icon user" id="userIcon">
+      <i class="far fa-user"></i>
+      <span>Profile</span>
+      <div class="user-dropdown">
+        <a href="profile.html"><i class="far fa-user"></i> My Profile</a>
+        <a href="my-order.html"><i class="fas fa-box"></i> My Orders</a>
+        <button onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</button>
+      </div>
+    </div>
+
+    <div class="icon" onclick="location.href='wishlist.html'">
+      <i class="far fa-heart"></i>
+      <span class="count" id="wishlistCount">0</span>
+    </div>
+
+    <div class="icon" onclick="location.href='cart.html'">
+      <i class="fas fa-shopping-cart"></i>
+      <span class="count" id="cartCount">0</span>
+    </div>
+
+    <div class="icon">
+      <i class="fa-regular fa-circle-question"></i>
+    </div>
+  </div>
+</div>
+
+<!-- MOBILE HEADER -->
+<div class="mobile-header">
+  <div class="logo">🛒 NexCart</div>
+  <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
+</div>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-header">
+    NexCart
+    <i class="fas fa-times" id="closeMenu"></i>
+  </div>
+
+  <a href="home.html"><i class="fa-solid fa-house"></i> Home</a>
+
+  <div class="accordion">
+    <div class="accordion-item">
+      <div class="accordion-title">👕 Men <i class="fas fa-chevron-down"></i></div>
+      <div class="accordion-content">
+        <a href="shirts.html">Shirt</a>
+        <a href="pants.html">Pants</a>
+        <a href="tshirts.html">T-shirts</a>
+        <a href="menfootwear.html">Footwear</a>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-title">👗 Women <i class="fas fa-chevron-down"></i></div>
+      <div class="accordion-content">
+        <a href="sarees.html">Sarees</a>
+        <a href="tshirtswomens.html">Tshirts</a>
+        <a href="womenjeens.html">jeans</a>
+        <a href="anarkalis.html">Anarkalis</a>
+        <a href="lehangas.html">Lahangas</a>
+        <a href="womenfootwear.html">Footwear</a>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-title">🧒 Kids <i class="fas fa-chevron-down"></i></div>
+      <div class="accordion-content">
+        <a href="boys.html">Boys Clothing</a>
+        <a href="girls.html">Girls Clothing</a>
+        <a href="boysfootwear.html">Boys Footwear</a>
+        <a href="girlsfootwear.html">Girls Footwear</a>
+      </div>
+    </div>
+  </div>
+
+  <a href="profile.html"><i class="fa-solid fa-user"></i> My Profile</a>
+  <a href="my-order.html"><i class="fas fa-box"></i>  My Orders</a>
+  <a href="wishlist.html"><i class="fa-solid fa-heart"></i> Wishlist</a>
+  <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
+  <button onclick="logout()"><i class="fa-solid fa-right-from-bracket"></i> Logout</button>
+</div>
+
+<div class="overlay" id="overlay"></div>
+
+    </header>
+   <div class="list">
+        <div class="dropdown">
+            <p class="dropbtn">Mens</p>
+            <div class="dropdown-content">
+                <a href="shirts.html">Shirts</a>
+                <a href="pants.html">Pants</a>
+                <a href="tshirts.html">T-Shirts</a>
+                <a href="menfootwear.html">Footwear</a>
+            </div>
+      </div>
+      <div class="dropdown">
+            <p class="dropbtn">Womens</p>
+            <div class="dropdown-content">
+                <a href="sarees.html">Sarees</a>
+                <a href="tshirtswomens.html">Tshirts</a>
+                <a href="womenjeens.html">jeans</a>
+                <a href="anarkalis.html">Anarkalis</a>
+                <a href="lehangas.html">Lahangas</a>
+                <a href="womenfootwear.html">Footwear</a>
+            </div>
+      </div>
+      <div class="dropdown">
+            <p class="dropbtn">Kids</p>
+            <div class="dropdown-content">
+                <a href="boys.html">Boys wear</a>
+                <a href="girls.html">Girls wear</a>
+                <a href="boysfootwear.html">Boys Footwear</a>
+                <a href="girlsfootwear.html">Girls Footwear</a>
+            </div>
+      </div>
+      <div class="dropdown">
+            <p class="dropbtn">Electronics</p>
+            <div class="dropdown-content">
+                <a href="mobiles.html">Mobiles</a>
+                <a href="laptops.html">Laptops</a>
+            </div>
+      </div>
+    </div>
+     <img src="/frontend/asserts/maclaptop/laptopbanner.png"  alt="banner" class="hero-banner">
+<main>
+    <section>
+  <p class="section-title">New Arrivals</p>
+
+  <!-- STATIC PRODUCTS ABOVE (unchanged) -->
+
+  <!-- DYNAMIC PRODUCTS -->
+  <div class="section-container" id="dynamicProducts"></div>
+</section>
+    <section class="Formals" id="productList">
+      <div class="section-container">
+        <div class="product-card">
+          
+          <div class="image-box" id="imageBox">
+            <div class="wishlist" id="wishlist">❤</div>
+              <img src="/frontend/asserts/maclaptop/a1.jpg" class="product-img active">
+              <img src="/frontend/asserts/maclaptop/a2.jpg" class="product-img">
+              <img src="/frontend/asserts/maclaptop/a3.jpg" class="product-img">
+              <img src="/frontend/asserts/maclaptop/a4.jpg" class="product-img">
+          </div>
+
+          <div class="details">
+            <div class="brand">Apple</div>
+            <div class="title">Apple MacBook AIR M2 - (16 GB/256 GB)</div>
+        
+            <div class="price">
+              <span class="current" id="currentPrice">₹89,999</span>
+              <span class="old" id="oldPrice">₹99,900</span>
+              <span class="off">10% off</span>
+            </div>
+        
+            <div class="rating">★★★★☆ (7,653)</div>
+            <!-- SPECS -->
+            <h4>Specification:</h4>
+            <ul class="specs">
+              <li>Apple M2 Processor</li>
+              <li>16 GB Unified Memory RAM</li>
+              <li>Mac OS Operating System</li>
+              <li>256 GB SSD</li>
+              <li>34.54 cm (13.6 Inch) Display</li>
+            </ul>
+        
+            <div class="buttons">
+              <button class="cart">Add to Cart</button>
+              <button class="buy">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          
+          <div class="image-box" id="imageBox">
+            <div class="wishlist" id="wishlist">❤</div>
+              <img src="/frontend/asserts/maclaptop/B1.jpg" class="product-img active">
+              <img src="/frontend/asserts/maclaptop/B2.jpg" class="product-img">
+              <img src="/frontend/asserts/maclaptop/b1.jpg" class="product-img">
+              <img src="/frontend/asserts/maclaptop/b1.jpg" class="product-img">
+          </div>
+
+          <div class="details">
+            <div class="brand">Apple</div>
+            <div class="title">Apple MacBookPro M3-(24 GB/1 TB)</div>
+        
+            <div class="price">
+              <span class="current" id="currentPrice">₹1,95,990</span>
+              <span class="old" id="oldPrice">₹2,00,000</span>
+              <span class="off">6% off</span>
+            </div>
+        
+            <div class="rating">★★★★☆ (3,563)</div>
+            <!-- SPECS -->
+            <h4>Specification:</h4>
+            <ul class="specs">
+              <li>Apple M4 Processor</li>
+              <li>16 GB Unified Memory RAM</li>
+              <li>Mac OS Operating System</li>
+              <li>1 TB SSD</li>
+              <li>35.56 cm (14 Inch) Display</li>
+            </ul>
+        
+            <div class="buttons">
+              <button class="cart">Add to Cart</button>
+              <button class="buy">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          
+          <div class="image-box" id="imageBox">
+            <div class="wishlist" id="wishlist">❤</div>
+              <img src="/frontend/asserts/maclaptop/c1.webp" class="product-img active">
+              <img src="/frontend/asserts/maclaptop/c2.jpg" class="product-img">
+              <img src="/frontend/asserts/maclaptop/c3.jpg" class="product-img">
+              <img src="/frontend/asserts/maclaptop/c4.jpg" class="product-img">
+          </div>
+
+          <div class="details">
+            <div class="brand">Apple</div>
+            <div class="title">Apple M4 - (24 GB/1 TB)</div>
+        
+            <div class="price">
+              <span class="current" id="currentPrice">₹79,999</span>
+              <span class="old" id="oldPrice">₹89,999</span>
+              <span class="off">11% off</span>
+            </div>
+        
+            <div class="rating">★★★★☆ (5,947)</div>
+
+            <!-- SPECS -->
+            <h4>Specification:</h4>
+            <ul class="specs">
+              <li>Apple M4 Processor</li>
+              <li>24 GB Unified Memory RAM</li>
+              <li>Mac OS Operating System</li>
+              <li>1 TB SSD</li>
+              <li>35.56 cm (14 Inch) Display</li>
+            </ul>
+        
+            <div class="buttons">
+              <button class="cart">Add to Cart</button>
+              <button class="buy">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          
+          <div class="image-box" id="imageBox">
+            <div class="wishlist" id="wishlist">❤</div>
+              <img src="/frontend/asserts/maclaptop/d1.webp" class="product-img active">
+              <img src="/frontend/asserts/maclaptop/d2.jpg" class="product-img">
+              <img src="/frontend/asserts/maclaptop/d3.jpg" class="product-img">
+              <img src="/frontend/asserts/maclaptop/d4.jpg" class="product-img">
+          </div>
+
+          <div class="details">
+            <div class="brand">Apple</div>
+            <div class="title">Apple MacBook Air M3-(8 GB/512 GB)</div>
+        
+            <div class="price">
+              <span class="current" id="currentPrice">₹1,25,990</span>
+              <span class="old" id="oldPrice">₹1,34,900</span>
+              <span class="off">6% off</span>
+            </div>
+        
+            <div class="rating">★★★★☆ (7,532)</div>
+            <!-- SPECS -->
+            <h4>Specification:</h4>
+            <ul class="specs">
+              <li>M3 Processor</li>
+              <li>8 GB Unified Memory RAM</li>
+              <li>Mac OS Operating System</li>
+              <li>512 GB SSD</li>
+              <li>(38.1 cm (15 Inch) Display)</li>
+            </ul>
+        
+            <div class="buttons">
+              <button class="cart">Add to Cart</button>
+              <button class="buy">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          
+          <div class="image-box" id="imageBox">
+            <div class="wishlist" id="wishlist">❤</div>
+              <img src="/frontend/asserts/maclaptop/e1.jpg" class="product-img active">
+              <img src="/frontend/asserts/maclaptop/e2.jpg" class="product-img">
+              <img src="/frontend/asserts/maclaptop/e3.jpg" class="product-img">
+              <img src="/frontend/asserts/maclaptop/e4.jpg" class="product-img">
+          </div>
+
+          <div class="details">
+            <div class="brand">Apple</div>
+            <div class="title">2020 Macbook Air M1-(16 GB/256 GB)</div>
+        
+            <div class="price">
+              <span class="current" id="currentPrice">₹79,999</span>
+              <span class="old" id="oldPrice">₹</span>
+              <span class="off">11% off</span>
+            </div>
+        
+            <div class="rating">★★★★☆ (1,653)</div>
+
+            <!-- SPECS -->
+            <h4>Specification:</h4>
+            <ul class="specs">
+              <li>Apple M1 Processor</li>
+              <li>16 GB DDR4 RAM</li>
+              <li>Mac OS Operating System</li>
+              <li>256 GB SSD</li>
+              <li>33.78 cm (13.3 inch) Display</li>
+            </ul>
+        
+            <div class="buttons">
+              <button class="cart">Add to Cart</button>
+              <button class="buy">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          
+          <div class="image-box" id="imageBox">
+            <div class="wishlist" id="wishlist">❤</div>
+              <img src="/frontend/asserts/maclaptop/f1.webp" class="product-img active">
+              <img src="/frontend/asserts/maclaptop/f2.jpg" class="product-img">
+              <img src="/frontend/asserts/maclaptop/f3.jpg" class="product-img">
+              <img src="/frontend/asserts/maclaptop/f4.jpg" class="product-img">
+          </div>
+
+          <div class="details">
+            <div class="brand">Apple</div>
+            <div class="title">Apple MacBook Pro M4 Max-(36 GB/1 TB)</div>
+        
+            <div class="price">
+              <span class="current" id="currentPrice">₹3,19,900</span>
+              <span class="old" id="oldPrice">₹3,80,999</span>
+              <span class="off">19% off</span>
+            </div>
+        
+            <div class="rating">★★★★☆ (7,543)</div>
+        
+           
+            
+
+            <!-- SPECS -->
+            <h4>Specification:</h4>
+            <ul class="specs">
+              <li>Apple M4 Max Processor</li>
+              <li>36 GB Unified Memory RAM</li>
+              <li>Mac OS Operating System</li>
+              <li>1 TB SSD</li>
+              <li>35.56 cm (14 Inch) Display</li>
+            </ul>
+        
+            <div class="buttons">
+              <button class="cart">Add to Cart</button>
+              <button class="buy">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          
+          <div class="image-box" id="imageBox">
+            <div class="wishlist" id="wishlist">❤</div>
+              <img src="/frontend/asserts/maclaptop/g1.webp" class="product-img active">
+              <img src="/frontend/asserts/maclaptop/g2.jpg" class="product-img">
+              <img src="/frontend/asserts/maclaptop/g3.jpg" class="product-img">
+              <img src="/frontend/asserts/maclaptop/g4.jpg" class="product-img">
+          </div>
+
+          <div class="details">
+            <div class="brand">Apple</div>
+            <div class="title">Apple MacBook AIR M2-(8 GB/256 GB)</div>
+        
+            <div class="price">
+              <span class="current" id="currentPrice">₹83,990</span>
+              <span class="old" id="oldPrice">₹99,900</span>
+              <span class="off">15% off</span>
+            </div>
+        
+            <div class="rating">★★★★☆ (3,762)</div>
+        
+           
+            
+
+            <!-- SPECS -->
+            <h4>Specification:</h4>
+            <ul class="specs">
+              <li>Apple M2 Processor</li>
+              <li>8 GB Unified Memory RAM</li>
+              <li>Mac OS Operating System</li>
+              <li>256 GB SSD</li>
+              <li>34.54 cm (13.6 Inch) Display</li>
+            </ul>
+        
+            <div class="buttons">
+              <button class="cart">Add to Cart</button>
+              <button class="buy">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          
+          <div class="image-box" id="imageBox">
+            <div class="wishlist" id="wishlist">❤</div>
+              <img src="/frontend/asserts/maclaptop/h1.jpg" class="product-img active">
+              <img src="/frontend/asserts/maclaptop/h2.jpg" class="product-img">
+              <img src="/frontend/asserts/maclaptop/h3.jpg" class="product-img">
+              <img src="/frontend/asserts/maclaptop/h4.jpg" class="product-img">
+          </div>
+
+          <div class="details">
+            <div class="brand">Apple</div>
+            <div class="title">Apple MacBook AIR M2-(8 GB/256 GB)</div>
+        
+            <div class="price">
+              <span class="current" id="currentPrice">₹1,31,990</span>
+              <span class="old" id="oldPrice">₹1,39,990</span>
+              <span class="off">5% off</span>
+            </div>
+        
+            <div class="rating">★★★★☆ (2,865)</div>
+            <!-- SPECS -->
+            <h4>Specification:</h4>
+            <ul class="specs">
+              <li>Apple M2 Processor</li>
+              <li>8 GB Unified Memory RAM</li>
+              <li>Mac OS Operating System</li>
+              <li>256 GB SSD</li>
+              <li>34.54 cm (13.6 Inch) Display</li>
+            </ul>
+        
+            <div class="buttons">
+              <button class="cart">Add to Cart</button>
+              <button class="buy">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          
+          <div class="image-box" id="imageBox">
+            <div class="wishlist" id="wishlist">❤</div>
+              <img src="/frontend/asserts/maclaptop/i1.jpg" class="product-img active">
+              <img src="/frontend/asserts/maclaptop/i2.jpg" class="product-img">
+              <img src="/frontend/asserts/maclaptop/i3.jpg" class="product-img">
+              <img src="/frontend/asserts/maclaptop/i4.jpg" class="product-img">
+          </div>
+
+          <div class="details">
+            <div class="brand">Apple</div>
+            <div class="title">Macbook Pro M1 Pro(16 GB/1 TB)</div>
+        
+            <div class="price">
+              <span class="current" id="currentPrice">₹2,26,990</span>
+              <span class="old" id="oldPrice">₹2,39,900</span>
+              <span class="off">5% off</span>
+            </div>
+        
+            <div class="rating">★★★★☆ (1,748)</div>
+            <!-- SPECS -->
+            <h4>Specification:</h4>
+            <ul class="specs">
+              <li>Apple M1 Pro Processor</li>
+              <li>16 GB Unified Memory RAM</li>
+              <li>Mac OS Operating System</li>
+              <li>1 TB SSD</li>
+              <li>36.07 cm (14.2 inch) Display</li>
+            </ul>
+        
+            <div class="buttons">
+              <button class="cart">Add to Cart</button>
+              <button class="buy">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          
+          <div class="image-box" id="imageBox">
+            <div class="wishlist" id="wishlist">❤</div>
+              <img src="/frontend/asserts/maclaptop/j1.jpg" class="product-img active">
+              <img src="/frontend/asserts/maclaptop/j2.jpg" class="product-img">
+              <img src="/frontend/asserts/maclaptop/j3.jpg" class="product-img">
+              <img src="/frontend/asserts/maclaptop/j4.jpg" class="product-img">
+          </div>
+
+          <div class="details">
+            <div class="brand">Apple</div>
+            <div class="title">Apple M3 - (24 GB/512 GB)</div>
+        
+            <div class="price">
+              <span class="current" id="currentPrice">₹1,44,990</span>
+              <span class="old" id="oldPrice">₹1,54,900</span>
+              <span class="off">6% off</span>
+            </div>
+        
+            <div class="rating">★★★★☆ (3,974)</div>
+            <!-- SPECS -->
+            <h4>Specification:</h4>
+            <ul class="specs">
+              <li>Apple M3 Processor</li>
+              <li>24 GB Unified Memory RAM</li>
+              <li>Mac OS Operating System</li>
+              <li>512 GB SSD</li>
+              <li>34.54 cm (13.6 Inch) Display</li>
+            </ul>
+        
+            <div class="buttons">
+              <button class="cart">Add to Cart</button>
+              <button class="buy">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          
+          <div class="image-box" id="imageBox">
+            <div class="wishlist" id="wishlist">❤</div>
+              <img src="/frontend/asserts/maclaptop/k1.jpg" class="product-img active">
+              <img src="/frontend/asserts/maclaptop/k2.jpg" class="product-img">
+              <img src="/frontend/asserts/maclaptop/k3.jpg" class="product-img">
+              <img src="/frontend/asserts/maclaptop/k4.jpg" Class="product-img">
+              </div>
+
+          <div class="details">
+            <div class="brand">Apple</div>
+            <div class="title">Apple MacBook Air M4 - (16 GB/256 GB)</div>
+        
+            <div class="price">
+              <span class="current" id="currentPrice">₹1,16,900</span>
+              <span class="old" id="oldPrice">₹1,24,900</span>
+              <span class="off">6% off</span>
+            </div>
+        
+            <div class="rating">★★★★☆ (6,563)</div>
+            <!-- SPECS -->
+            <h4>Specification:</h4>
+            <ul class="specs">
+              <li>Apple M4 Processor</li>
+              <li>16 GB Unified Memory RAM</li>
+              <li>Mac OS Operating System</li>
+              <li>256 GB SSD</li>
+              <li>38.86 cm (15.3 inch) Display</li>
+            </ul>
+        
+            <div class="buttons">
+              <button class="cart">Add to Cart</button>
+              <button class="buy">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          
+          <div class="image-box" id="imageBox">
+            <div class="wishlist" id="wishlist">❤</div>
+              <img src="/frontend/asserts/maclaptop/l1.jpg" class="product-img active">
+              <img src="/frontend/asserts/maclaptop/l2.jpg" class="product-img">
+              <img src="/frontend/asserts/maclaptop/l3.jpg" class="product-img">
+              <img src="/frontend/asserts/maclaptop/l4.jpg" class="product-img">
+          </div>
+
+          <div class="details">
+            <div class="brand">Apple</div>
+            <div class="title">Apple MacBook Pro M5-(24 GB/1 TB)</div>
+        
+            <div class="price">
+              <span class="current" id="currentPrice">₹1,89,980</span>
+              <span class="old" id="oldPrice">₹2,09,900</span>
+              <span class="off">7% off</span>
+            </div>
+        
+            <div class="rating">★★★★☆ (4,653)</div>
+            <!-- SPECS -->
+            <h4>Specification:</h4>
+            <ul class="specs">
+              <li>Apple M5 Processor</li>
+              <li>24 GB Unified Memory RAM</li>
+              <li>Mac OS Operating System</li>
+              <li>1 TB SSD</li>
+              <li>35.56 cm (14 inch) Display</li>
+            </ul>
+        
+            <div class="buttons">
+              <button class="cart">Add to Cart</button>
+              <button class="buy">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section">
+        <div class="footer-logo">
+        <span>🛒</span>NexCart
+    </div>
+        <p style="font-size: 12px;">Your one-stop destination for quality products at the best prices.</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <a href="#">Home</a>
+      <a href="#">Shop</a>
+      <a href="#">Categories</a>
+      <a href="#">Contact Us</a>
+    </div>
+
+    <div class="footer-section">
+      <h3>Customer Service</h3>
+      <a href="#">FAQ</a>
+      <a href="#">Returns</a>
+      <a href="#">Shipping</a>
+      <a href="#">Privacy Policy</a>
+    </div>
+
+    <div class="footer-social">
+      <h3>Follow Us</h3>
+      <i class="fa-brands fa-instagram" id="instagram"></i>
+      <i class="fa-brands fa-facebook" id="facebook"></i>
+      <i class="fa-brands fa-x-twitter" id="twitter"></i>
+      <i class="fa-brands fa-youtube" id="youtube"></i>
+      <i class="fa-brands fa-whatsapp" id="whatsapp"></i>
+      <i class="fa-brands fa-telegram" id="telegram"></i>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 NexCart. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/frontend/js/laptop.js"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Reset Password | NexCart</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/frontend/css/login.css">
+</head>
+
+<body>
+<div class="container">
+  <div class="right" style="margin:auto">
+
+    <h2>Verify OTP</h2>
+    <p>Enter OTP and new password</p>
+
+    <div class="input-box">
+      <input type="text" id="otp" placeholder="6-digit OTP" maxlength="6">
+    </div>
+
+    <div class="input-box">
+      <input type="password" id="password" placeholder="New Password">
+    </div>
+
+    <p id="timer"></p>
+
+    <button class="btn" onclick="resetPassword()">Reset Password</button>
+
+    <button id="resendBtn" disabled onclick="resendOTP()">
+      Resend OTP
+    </button>
+
+  </div>
+</div>
+
+<script>
+const email = localStorage.getItem("resetEmail");
+let expiryTime = Date.now() + 300000; // 5 minutes
+let resendCooldown = 60;
+
+if (!email) {
+  alert("Session expired");
+  location.href = "forgot.html";
+}
+
+// ⏳ OTP COUNTDOWN
+setInterval(() => {
+  const diff = expiryTime - Date.now();
+  if (diff <= 0) {
+    timer.innerText = "OTP expired";
+    return;
+  }
+  timer.innerText =
+    "Expires in " +
+    Math.floor(diff / 60000) + ":" +
+    Math.floor(diff % 60000 / 1000).toString().padStart(2, "0");
+}, 1000);
+
+// 🔁 RESEND COOLDOWN
+let c = resendCooldown;
+const cooldownTimer = setInterval(() => {
+  resendBtn.innerText = `Resend OTP (${c}s)`;
+  c--;
+  if (c < 0) {
+    resendBtn.innerText = "Resend OTP";
+    resendBtn.disabled = false;
+    clearInterval(cooldownTimer);
+  }
+}, 1000);
+
+function resendOTP() {
+  fetch("http://localhost:5000/request-otp", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ email })
+  })
+  .then(res => res.json())
+  .then(data => {
+    alert(data.message);
+    expiryTime = Date.now() + 300000;
+    location.reload();
+  });
+}
+
+function resetPassword() {
+  if (!otp.value || !password.value) {
+    alert("Fill all fields");
+    return;
+  }
+
+  fetch("http://localhost:5000/reset-password", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      email,
+      otp: otp.value,
+      password: password.value
+    })
+  })
+  .then(res => res.json())
+  .then(data => {
+    alert(data.message);
+    if (data.message.includes("successful")) {
+      localStorage.removeItem("resetEmail");
+      window.location.href = "login.html";
+    }
+  });
+}
+</script>
+
+</body>
+</html>

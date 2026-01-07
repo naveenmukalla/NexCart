@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NexCart Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="/frontend/css/login.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Left Panel (Different Image) -->
+    <div class="left">
+        <img src="/frontend/asserts/loginandsignup/login.png" alt="Login Image">
+        <h1>Welcome Back!</h1>
+        <p>Login to continue shopping with NexCart</p>
+    </div>
+
+    <!-- Right Panel -->
+    <div class="right">
+
+        <div class="logo">
+            <span>🛒</span>NexCart
+        </div>
+
+        <h2>Login</h2>
+        <p>Please login to your account</p>
+
+        <form>
+
+            <div class="input-box">
+                <input type="email" name="email" placeholder="Email Address" required>
+                <i class="fa fa-envelope"></i>
+            </div>
+
+            <div class="input-box">
+                <input type="password" name="password" placeholder="Password" required>
+                <i class="fa fa-lock"></i>
+            </div>
+
+            <button type="submit" class="btn">Login</button>
+
+        </form>
+
+        <div class="or">OR</div>
+
+        <div class="social">
+            <i class="fa-brands fa-google"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+        </div>
+
+        <p class="terms">
+            Forgot your password?
+            <a href="forget.html"><b>Reset here</b></a>
+        </p>
+
+        <div class="footer">
+            Don’t have an account?
+            <a href="signup.html">Sign Up</a>
+        </div>
+
+    </div>
+</div>
+<script>
+document.querySelector("form").addEventListener("submit", async function (e) {
+  e.preventDefault();
+
+  const email = document.querySelector('input[name="email"]').value.trim();
+  const password = document.querySelector('input[name="password"]').value.trim();
+
+  if (!email || !password) {
+    alert("Please enter email and password");
+    return;
+  }
+
+  // ==========================
+  // ADMIN LOGIN (FRONTEND ONLY)
+  // ==========================
+  if (email === "admin@nexcart.com" && password === "admin123") {
+    localStorage.setItem("loggedUser", email);
+    localStorage.setItem("role", "admin");
+    window.location.href = "admin.html";
+    return;
+  }
+
+  try {
+    // ==========================
+    // USER LOGIN (BACKEND)
+    // ==========================
+    const res = await fetch("http://localhost:5000/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, password })
+    });
+
+    const data = await res.json();
+
+    // ❌ LOGIN FAILED
+    if (!res.ok) {
+      alert(data.message);
+      return;
+    }
+
+    // ✅ LOGIN SUCCESS
+    // localStorage.setItem("loggedUser", data.user.emailphone);
+    localStorage.setItem("loggedUser", JSON.stringify(data.user));
+    localStorage.setItem("role", "user");
+    localStorage.setItem("username", data.user.name);
+
+    window.location.href = "home.html";
+
+  } catch (error) {
+    console.error("LOGIN ERROR:", error);
+    alert("Backend server not running. Start Flask (localhost:5000)");
+  }
+});
+</script>
+
+</body>
+</html>

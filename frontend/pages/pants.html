@@ -1,0 +1,2289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mens Pants</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/frontend/css/product.css">
+</head>
+<body data-category="mens" data-subcategory="pants">
+     <div class="page-container">
+    <header>
+        <!-- DESKTOP HEADER -->
+<div class="desktop-header">
+  <div class="logo">🛒 NexCart</div>
+
+  <div class="search-box">
+    <i class="fas fa-search"></i>
+    <input type="text" placeholder="Search products">
+  </div>
+
+  <div class="icons">
+    <div class="icon user" id="userIcon">
+      <i class="far fa-user"></i>
+      <span>Profile</span>
+      <div class="user-dropdown">
+        <a href="profile.html"><i class="far fa-user"></i> My Profile</a>
+        <a href="my-order.html"><i class="fas fa-box"></i> My Orders</a>
+        <button onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</button>
+      </div>
+    </div>
+
+    <div class="icon" onclick="location.href='wishlist.html'">
+      <i class="far fa-heart"></i>
+      <span class="count" id="wishlistCount">0</span>
+    </div>
+
+    <div class="icon" onclick="location.href='cart.html'">
+      <i class="fas fa-shopping-cart"></i>
+      <span class="count" id="cartCount">0</span>
+    </div>
+
+    <div class="icon">
+      <i class="fa-regular fa-circle-question"></i>
+    </div>
+  </div>
+</div>
+
+<!-- MOBILE HEADER -->
+<div class="mobile-header">
+  <div class="logo">🛒 NexCart</div>
+  <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
+</div>
+<!-- MOBILE SEARCH (NEW) -->
+<div class="mobile-search">
+  <i class="fas fa-search"></i>
+  <input type="text" placeholder="Search products">
+</div>
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-header">
+    NexCart
+    <i class="fas fa-times" id="closeMenu"></i>
+  </div>
+
+  <a href="#"><i class="fa-solid fa-house"></i> Home</a>
+
+  <div class="accordion">
+    <div class="accordion-item">
+      <div class="accordion-title">👕 Men <i class="fas fa-chevron-down"></i></div>
+      <div class="accordion-content">
+        <a href="shirts.html">Shirt</a>
+        <a href="pants.html">Pants</a>
+        <a href="tshirts.html">T-shirts</a>
+        <a href="menfootwear.html">Footwear</a>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-title">👗 Women <i class="fas fa-chevron-down"></i></div>
+      <div class="accordion-content">
+        <a href="sarees.html">Sarees</a>
+        <a href="tshirtswomens.html">Tshirts</a>
+        <a href="womenjeens.html">jeans</a>
+        <a href="anarkalis.html">Anarkalis</a>
+        <a href="lehangas.html">Lahangas</a>
+        <a href="womenfootwear.html">Footwear</a>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-title">🧒 Kids <i class="fas fa-chevron-down"></i></div>
+      <div class="accordion-content">
+        <a href="boys.html">Boys Clothing</a>
+        <a href="girls.html">Girls Clothing</a>
+        <a href="boysfootwear.html">Boys Footwear</a>
+        <a href="girlsfootwear.html">Girls Footwear</a>
+      </div>
+    </div>
+  </div>
+
+  <a href="profile.html"><i class="fa-solid fa-user"></i> My Profile</a>
+  <a href="my-order.html"><i class="fas fa-box"></i>  My Orders</a>
+  <a href="wishlist.html"><i class="fa-solid fa-heart"></i> Wishlist</a>
+  <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
+  <button onclick="logout()"><i class="fa-solid fa-right-from-bracket"></i> Logout</button>
+</div>
+
+<div class="overlay" id="overlay"></div>
+
+    </header>
+   <div class="list">
+        <div class="dropdown">
+            <p class="dropbtn">Mens</p>
+            <div class="dropdown-content">
+                <a href="shirts.html">Shirts</a>
+                <a href="pants.html">Pants</a>
+                <a href="tshirts.html">T-Shirts</a>
+                <a href="menfootwear.html">Footwear</a>
+            </div>
+      </div>
+      <div class="dropdown">
+            <p class="dropbtn">Womens</p>
+            <div class="dropdown-content">
+                <a href="sarees.html">Sarees</a>
+                <a href="tshirtswomens.html">Tshirts</a>
+                <a href="womenjeens.html">Jeans</a>
+                <a href="anarkalis.html">Anarkalis</a>
+                <a href="lehangas.html">Lahangas</a>
+                <a href="womenfootwear.html">Footwear</a>
+            </div>
+      </div>
+      <div class="dropdown">
+            <p class="dropbtn">Kids</p>
+            <div class="dropdown-content">
+                <a href="boys.html">Boys wear</a>
+                <a href="girls.html">Girls wear</a>
+                <a href="boysfootwear.html">Boys Footwear</a>
+                <a href="girlsfootwear.html">Girls Footwear</a>
+            </div>
+      </div>
+      <div class="dropdown">
+            <p class="dropbtn">Electronics</p>
+            <div class="dropdown-content">
+                <a href="mobiles.html">Mobiles</a>
+                <a href="laptops.html">Laptops</a>
+            </div>
+      </div>
+    </div>
+    <img src="/frontend/asserts/menspants/banner1.jpeg" alt="" class="hero-banner">
+<main>
+    <section>
+  <p class="section-title">New Arrivals</p>
+
+  <!-- STATIC PRODUCTS ABOVE (unchanged) -->
+
+  <!-- DYNAMIC PRODUCTS -->
+  <div class="section-container" id="dynamicProducts"></div>
+</section>
+    <section class="casual trousers">
+        <p class="section-title">Casual Trousers</p>
+        <div class="section-container">
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/menspants/casual trousers/a1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/menspants/casual trousers/a2.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/casual trousers/a3.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/casual trousers/a4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">GAP</div>
+                    <div class="title">Men Regular Fit Solid Spread Collar Shirt</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,499</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/menspants/casual trousers/b1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/menspants/casual trousers/b2.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/casual trousers/b3.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/casual trousers/b4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">GAP</div>
+                    <div class="title">Men Regular Fit Solid Spread Collar Shirt</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,499</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/menspants/casual trousers/c1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/menspants/casual trousers/c2.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/casual trousers/c3.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/casual trousers/c4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">GAP</div>
+                    <div class="title">Men Regular Fit Solid Spread Collar Shirt</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,499</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/menspants/casual trousers/d1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/menspants/casual trousers/d2.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/casual trousers/d3.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/casual trousers/d4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">GAP</div>
+                    <div class="title">Men Regular Fit Solid Spread Collar Shirt</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,499</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/menspants/casual trousers/e1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/menspants/casual trousers/e2.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/casual trousers/e3.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/casual trousers/e4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">GAP</div>
+                    <div class="title">Men Regular Fit Solid Spread Collar Shirt</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,499</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/menspants/casual trousers/f1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/menspants/casual trousers/f2.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/casual trousers/f3.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/casual trousers/f4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">GAP</div>
+                    <div class="title">Men Regular Fit Solid Spread Collar Shirt</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,499</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/menspants/casual trousers/g1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/menspants/casual trousers/g2.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/casual trousers/g3.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/casual trousers/g4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">GAP</div>
+                    <div class="title">Men Regular Fit Solid Spread Collar Shirt</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,499</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/menspants/casual trousers/h1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/menspants/casual trousers/h2.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/casual trousers/h3.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/casual trousers/h4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">GAP</div>
+                    <div class="title">Men Regular Fit Solid Spread Collar Shirt</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,499</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/menspants/casual trousers/i1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/menspants/casual trousers/i2.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/casual trousers/i3.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/casual trousers/i4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">GAP</div>
+                    <div class="title">Men Regular Fit Solid Spread Collar Shirt</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,499</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/menspants/casual trousers/j1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/menspants/casual trousers/j2.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/casual trousers/j3.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/casual trousers/j4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">GAP</div>
+                    <div class="title">Men Regular Fit Solid Spread Collar Shirt</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,499</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/menspants/casual trousers/k1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/menspants/casual trousers/k2.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/casual trousers/k3.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/casual trousers/k4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">GAP</div>
+                    <div class="title">Men Regular Fit Solid Spread Collar Shirt</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,499</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/menspants/casual trousers/l1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/menspants/casual trousers/l2.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/casual trousers/l3.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/casual trousers/l4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">GAP</div>
+                    <div class="title">Men Regular Fit Solid Spread Collar Shirt</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,499</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <section class="formal trousers">
+        <p class="section-title">Formal Trousers</p>
+        <div class="section-container">
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/menspants/formal trousers/a1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/menspants/formal trousers/a2.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/formal trousers/a3.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/formal trousers/a4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">GAP</div>
+                    <div class="title">Men Regular Fit Solid Spread Collar Shirt</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,499</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/menspants/formal trousers/b1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/menspants/formal trousers/b2.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/formal trousers/b3.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/formal trousers/b4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">GAP</div>
+                    <div class="title">Men Regular Fit Solid Spread Collar Shirt</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,499</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/menspants/formal trousers/c1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/menspants/formal trousers/c2.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/formal trousers/c3.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/formal trousers/c4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">GAP</div>
+                    <div class="title">Men Regular Fit Solid Spread Collar Shirt</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,499</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/menspants/formal trousers/d1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/menspants/formal trousers/d2.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/formal trousers/d3.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/formal trousers/d4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">GAP</div>
+                    <div class="title">Men Regular Fit Solid Spread Collar Shirt</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,499</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/menspants/formal trousers/e1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/menspants/formal trousers/e2.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/formal trousers/e3.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/formal trousers/e4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">GAP</div>
+                    <div class="title">Men Regular Fit Solid Spread Collar Shirt</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,499</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/menspants/formal trousers/f1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/menspants/formal trousers/f2.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/formal trousers/f3.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/formal trousers/f4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">GAP</div>
+                    <div class="title">Men Regular Fit Solid Spread Collar Shirt</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,499</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/menspants/formal trousers/g1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/menspants/formal trousers/g2.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/formal trousers/g3.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/formal trousers/g4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">GAP</div>
+                    <div class="title">Men Regular Fit Solid Spread Collar Shirt</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,499</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/menspants/formal trousers/h1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/menspants/formal trousers/h2.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/formal trousers/h3.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/formal trousers/h4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">GAP</div>
+                    <div class="title">Men Regular Fit Solid Spread Collar Shirt</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,499</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="jeans">
+        <p class="section-title">Jeans</p>
+        <div class="section-container">
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/menspants/jeans/a1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/menspants/jeans/a2.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/jeans/a3.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/jeans/a4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">GAP</div>
+                    <div class="title">Men Regular Fit Solid Spread Collar Shirt</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,499</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/menspants/jeans/b1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/menspants/jeans/b2.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/jeans/b3.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/jeans/b4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">GAP</div>
+                    <div class="title">Men Regular Fit Solid Spread Collar Shirt</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,499</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/menspants/jeans/c1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/menspants/jeans/c2.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/jeans/c3.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/jeans/c4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">GAP</div>
+                    <div class="title">Men Regular Fit Solid Spread Collar Shirt</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,499</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/menspants/jeans/d1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/menspants/jeans/d2.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/jeans/d3.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/jeans/d4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">GAP</div>
+                    <div class="title">Men Regular Fit Solid Spread Collar Shirt</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,499</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/menspants/jeans/e1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/menspants/jeans/e2.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/jeans/e3.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/jeans/e4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">GAP</div>
+                    <div class="title">Men Regular Fit Solid Spread Collar Shirt</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,499</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/menspants/jeans/f1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/menspants/jeans/f2.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/jeans/f3.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/jeans/f4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">GAP</div>
+                    <div class="title">Men Regular Fit Solid Spread Collar Shirt</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,499</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/menspants/jeans/g1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/menspants/jeans/g2.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/jeans/g3.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/jeans/g4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">GAP</div>
+                    <div class="title">Men Regular Fit Solid Spread Collar Shirt</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,499</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/menspants/jeans/h1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/menspants/jeans/h2.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/jeans/h3.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/jeans/h4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">GAP</div>
+                    <div class="title">Men Regular Fit Solid Spread Collar Shirt</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,499</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="cargos">
+        <p class="section-title">Cargos</p>
+        <div class="section-container">
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/menspants/cargos/a1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/menspants/cargos/a2.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/cargos/a3.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/cargos/a4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">GAP</div>
+                    <div class="title">Men Regular Fit Solid Spread Collar Shirt</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,499</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/menspants/cargos/b1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/menspants/cargos/b2.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/cargos/b3.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/cargos/b4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">GAP</div>
+                    <div class="title">Men Regular Fit Solid Spread Collar Shirt</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,499</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/menspants/cargos/c1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/menspants/cargos/c2.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/cargos/c3.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/cargos/c4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">GAP</div>
+                    <div class="title">Men Regular Fit Solid Spread Collar Shirt</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,499</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/menspants/cargos/d1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/menspants/cargos/d2.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/cargos/d3.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/cargos/d4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">GAP</div>
+                    <div class="title">Men Regular Fit Solid Spread Collar Shirt</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,499</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/menspants/cargos/e1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/menspants/cargos/e2.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/cargos/e3.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/cargos/e4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">GAP</div>
+                    <div class="title">Men Regular Fit Solid Spread Collar Shirt</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,499</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/menspants/cargos/f1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/menspants/cargos/f2.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/cargos/f3.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/cargos/f4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">GAP</div>
+                    <div class="title">Men Regular Fit Solid Spread Collar Shirt</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,499</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/menspants/cargos/g1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/menspants/cargos/g2.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/cargos/g3.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/cargos/g4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">GAP</div>
+                    <div class="title">Men Regular Fit Solid Spread Collar Shirt</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,499</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/menspants/cargos/h1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/menspants/cargos/h2.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/cargos/h3.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/cargos/h4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">GAP</div>
+                    <div class="title">Men Regular Fit Solid Spread Collar Shirt</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,499</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <section class="track Pants">
+        <p class="section-title">Track Pants</p>
+        <div class="section-container">
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/menspants/track pants/a1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/menspants/track pants/a2.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/track pants/a3.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/track pants/a4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">GAP</div>
+                    <div class="title">Men Regular Fit Solid Spread Collar Shirt</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,499</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/menspants/track pants/b1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/menspants/track pants/b2.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/track pants/b3.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/track pants/b4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">GAP</div>
+                    <div class="title">Men Regular Fit Solid Spread Collar Shirt</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,499</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/menspants/track pants/c1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/menspants/track pants/c2.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/track pants/c3.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/track pants/c4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">GAP</div>
+                    <div class="title">Men Regular Fit Solid Spread Collar Shirt</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,499</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/menspants/track pants/d1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/menspants/track pants/d2.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/track pants/d3.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/track pants/d4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">GAP</div>
+                    <div class="title">Men Regular Fit Solid Spread Collar Shirt</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,499</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/menspants/track pants/e1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/menspants/track pants/e2.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/track pants/e3.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/track pants/e4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">GAP</div>
+                    <div class="title">Men Regular Fit Solid Spread Collar Shirt</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,499</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/menspants/track pants/f1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/menspants/track pants/f2.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/track pants/f3.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/track pants/f4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">GAP</div>
+                    <div class="title">Men Regular Fit Solid Spread Collar Shirt</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,499</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/menspants/track pants/g1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/menspants/track pants/g2.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/track pants/g3.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/track pants/g4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">GAP</div>
+                    <div class="title">Men Regular Fit Solid Spread Collar Shirt</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,499</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/menspants/track pants/h1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/menspants/track pants/h2.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/track pants/h3.jpg" class="product-img">
+                    <img src="/frontend/asserts/menspants/track pants/h4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">GAP</div>
+                    <div class="title">Men Regular Fit Solid Spread Collar Shirt</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,499</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section">
+        <div class="footer-logo">
+        <span>🛒</span>NexCart
+    </div>
+        <p style="font-size: 12px;">Your one-stop destination for quality products at the best prices.</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <a href="#">Home</a>
+      <a href="#">Shop</a>
+      <a href="#">Categories</a>
+      <a href="#">Contact Us</a>
+    </div>
+
+    <div class="footer-section">
+      <h3>Customer Service</h3>
+      <a href="#">FAQ</a>
+      <a href="#">Returns</a>
+      <a href="#">Shipping</a>
+      <a href="#">Privacy Policy</a>
+    </div>
+
+    <div class="footer-social">
+      <h3>Follow Us</h3>
+      <i class="fa-brands fa-instagram" id="instagram"></i>
+      <i class="fa-brands fa-facebook" id="facebook"></i>
+      <i class="fa-brands fa-x-twitter" id="twitter"></i>
+      <i class="fa-brands fa-youtube" id="youtube"></i>
+      <i class="fa-brands fa-whatsapp" id="whatsapp"></i>
+      <i class="fa-brands fa-telegram" id="telegram"></i>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 NexCart. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/frontend/js/product.js"></script>
+</body>
+</html>

@@ -1,0 +1,2508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boys FootWear</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/frontend/css/product.css">
+</head>
+<body data-category="kids" data-subcategory="boysfootwear">
+     <div class="page-container">
+    <header>
+        <!-- DESKTOP HEADER -->
+<div class="desktop-header">
+  <div class="logo">🛒 NexCart</div>
+
+  <div class="search-box">
+    <i class="fas fa-search"></i>
+    <input type="text" placeholder="Search products">
+  </div>
+
+  <div class="icons">
+    <div class="icon user" id="userIcon">
+      <i class="far fa-user"></i>
+      <span>Profile</span>
+      <div class="user-dropdown">
+        <a href="profile.html"><i class="far fa-user"></i> My Profile</a>
+        <a href="my-order.html"><i class="fas fa-box"></i> My Orders</a>
+        <button onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</button>
+      </div>
+    </div>
+
+    <div class="icon" onclick="location.href='wishlist.html'">
+      <i class="far fa-heart"></i>
+      <span class="count" id="wishlistCount">0</span>
+    </div>
+
+    <div class="icon" onclick="location.href='cart.html'">
+      <i class="fas fa-shopping-cart"></i>
+      <span class="count" id="cartCount">0</span>
+    </div>
+
+    <div class="icon">
+      <i class="fa-regular fa-circle-question"></i>
+    </div>
+  </div>
+</div>
+
+<!-- MOBILE HEADER -->
+<div class="mobile-header">
+  <div class="logo">🛒 NexCart</div>
+  <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
+</div>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-header">
+    NexCart
+    <i class="fas fa-times" id="closeMenu"></i>
+  </div>
+
+  <a href="#"><i class="fa-solid fa-house"></i> Home</a>
+
+  <div class="accordion">
+    <div class="accordion-item">
+      <div class="accordion-title">👕 Men <i class="fas fa-chevron-down"></i></div>
+      <div class="accordion-content">
+        <a href="shirts.html">Shirt</a>
+        <a href="pants.html">Pants</a>
+        <a href="tshirts.html">T-shirts</a>
+        <a href="menfootwear.html">Footwear</a>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-title">👗 Women <i class="fas fa-chevron-down"></i></div>
+      <div class="accordion-content">
+        <a href="sarees.html">Sarees</a>
+        <a href="tshirtswomens.html">Tshirts</a>
+        <a href="womenjeens.html">jeans</a>
+        <a href="anarkalis.html">Anarkalis</a>
+        <a href="lehangas.html">Lahangas</a>
+        <a href="womenfootwear.html">Footwear</a>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-title">🧒 Kids <i class="fas fa-chevron-down"></i></div>
+      <div class="accordion-content">
+        <a href="#">Boys Clothing</a>
+        <a href="#">Girls Clothing</a>
+        <a href="boysfootwear.html">Boys Footwear</a>
+        <a href="girlsfootwear.html">Girls Footwear</a>
+      </div>
+    </div>
+  </div>
+
+  <a href="profile.html"><i class="fa-solid fa-user"></i> My Profile</a>
+  <a href="my-order.html"><i class="fas fa-box"></i>  My Orders</a>
+  <a href="wishlist.html"><i class="fa-solid fa-heart"></i> Wishlist</a>
+  <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
+  <button onclick="logout()"><i class="fa-solid fa-right-from-bracket"></i> Logout</button>
+</div>
+
+<div class="overlay" id="overlay"></div>
+
+    </header>
+   <div class="list">
+        <div class="dropdown">
+            <p class="dropbtn">Mens</p>
+            <div class="dropdown-content">
+                <a href="shirts.html">Shirts</a>
+                <a href="pants.html">Pants</a>
+                <a href="tshirts.html">T-Shirts</a>
+                <a href="menfootwear.html">Footwear</a>
+            </div>
+      </div>
+      <div class="dropdown">
+            <p class="dropbtn">Womens</p>
+            <div class="dropdown-content">
+                <a href="sarees.html">Sarees</a>
+                <a href="tshirtswomens.html">Tshirts</a>
+                <a href="womenjeens.html">jeans</a>
+                <a href="anarkalis.html">Anarkalis</a>
+                <a href="lehangas.html">Lahangas</a>
+                <a href="womenfootwear.html">Footwear</a>
+            </div>
+      </div>
+      <div class="dropdown">
+            <p class="dropbtn">Kids</p>
+            <div class="dropdown-content">
+                <a href="boys.html">Boys wear</a>
+                <a href="girls.html">Girls wear</a>
+                <a href="boysfootwear.html">Boys Footwear</a>
+                <a href="girlsfootwear.html">Girls Footwear</a>
+            </div>
+      </div>
+      <div class="dropdown">
+            <p class="dropbtn">Electronics</p>
+            <div class="dropdown-content">
+                <a href="mobiles.html">Mobiles</a>
+                <a href="laptops.html">Laptops</a>
+            </div>
+      </div>
+    </div>
+<img src="/frontend/asserts/kids/boysfootwear/BoysFootbanner.jpeg"  alt="banner" class="hero-banner">
+<main>
+    <section>
+  <p class="section-title">New Arrivals</p>
+
+  <!-- STATIC PRODUCTS ABOVE (unchanged) -->
+
+  <!-- DYNAMIC PRODUCTS -->
+  <div class="section-container" id="dynamicProducts"></div>
+</section>
+    <section class="boys sandals">
+        <p class="section-title">Boys Sandals</p>
+        <div class="section-container">
+            <div class="product-card" data-id="shirt_101">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boysfootwear/Kids sandals men/a1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boysfootwear/Kids sandals men/a2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Kids sandals men/a3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Kids sandals men/a4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">ONYC</div>
+                    <div class="title">ONYC Premium Frog Sandals For Kids Boys</div>
+             
+                    <div class="price">
+                        <span class="current">₹299</span>
+                        <span class="old">₹499</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boysfootwear/Kids sandals men/b1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boysfootwear/Kids sandals men/b2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Kids sandals men/b3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Kids sandals men/b4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">LucyLuke</div>
+                    <div class="title">Soft EVA Sole Stylish Sandals for Kids</div>
+             
+                    <div class="price">
+                        <span class="current">₹499</span>
+                        <span class="old">₹999</span>
+                        <span class="off">50% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boysfootwear/Kids sandals men/c1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boysfootwear/Kids sandals men/c2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Kids sandals men/c3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Kids sandals men/c4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">park</div>
+                    <div class="title">Hero Lightning Bolt Kids Sandals </div>
+             
+                    <div class="price">
+                        <span class="current">₹419</span>
+                        <span class="old">₹899</span>
+                        <span class="off">53% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boysfootwear/Kids sandals men/d1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boysfootwear/Kids sandals men/d2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Kids sandals men/d3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Kids sandals men/d4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">TOMSY</div>
+                    <div class="title">Durable Casual Wear Footwear</div>
+             
+                    <div class="price">
+                        <span class="current">₹299</span>
+                        <span class="old">₹799</span>
+                        <span class="off">63% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boysfootwear/Kids sandals men/e1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boysfootwear/Kids sandals men/e2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Kids sandals men/e3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Kids sandals men/e4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">KidsVilley</div>
+                    <div class="title">Kidsville Official Naruto Printed Sandals</div>
+             
+                    <div class="price">
+                        <span class="current">₹599</span>
+                        <span class="old">₹749</span>
+                        <span class="off">20% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boysfootwear/Kids sandals men/f1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boysfootwear/Kids sandals men/f2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Kids sandals men/f3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Kids sandals men/f4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Trend Station</div>
+                    <div class="title">Bear Kids Sandals, Attractive Colors And soft</div>
+             
+                    <div class="price">
+                        <span class="current">₹399</span>
+                        <span class="old">₹889</span>
+                        <span class="off">52% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boysfootwear/Kids sandals men/g1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boysfootwear/Kids sandals men/g2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Kids sandals men/g3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Kids sandals men/g4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">supermet</div>
+                    <div class="title">Camouflage Army Print Stylish Sandals</div>
+             
+                    <div class="price">
+                        <span class="current">₹425</span>
+                        <span class="old">₹889</span>
+                        <span class="off">52% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boysfootwear/Kids sandals men/h1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boysfootwear/Kids sandals men/h2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Kids sandals men/h3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Kids sandals men/h4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">KidsVilley</div>
+                    <div class="title">Kidsville Official Spiderman Printed Sandals</div>
+             
+                    <div class="price">
+                        <span class="current">₹296</span>
+                        <span class="old">₹495</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boysfootwear/Kids sandals men/i1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boysfootwear/Kids sandals men/i2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Kids sandals men/i3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Kids sandals men/i4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Campus</div>
+                    <div class="title">Campus Kids DRS-206 Sandal</div>
+             
+                    <div class="price">
+                        <span class="current">₹299</span>
+                        <span class="old">₹549</span>
+                        <span class="off">46% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boysfootwear/Kids sandals men/j1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boysfootwear/Kids sandals men/j2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Kids sandals men/j3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Kids sandals men/j4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Bata</div>
+                    <div class="title">TRASE Fisherman Sandals for Kids</div>
+             
+                    <div class="price">
+                        <span class="current">₹854</span>
+                        <span class="old">₹1,999</span>
+                        <span class="off">57% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boysfootwear/Kids sandals men/k1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boysfootwear/Kids sandals men/k2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Kids sandals men/k3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Kids sandals men/k4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">GLJ</div>
+                    <div class="title"> Comfort Clogs Sandals For Boy</div>
+             
+                    <div class="price">
+                        <span class="current">₹499</span>
+                        <span class="old">₹999</span>
+                        <span class="off">50% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boysfootwear/Kids sandals men/l1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boysfootwear/Kids sandals men/l2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Kids sandals men/l3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Kids sandals men/l4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Trend Station</div>
+                    <div class="title">Bear Kids Sandals, Attractive Colors</div>
+             
+                    <div class="price">
+                        <span class="current">₹399</span>
+                        <span class="old">₹599</span>
+                        <span class="off">33% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <section class="boys slipers">
+        <p class="section-title">Boys Slipers</p>
+        <div class="section-container">
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Slipers/a1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Slipers/a2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Slipers/a3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Slipers/a4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">MOBIO</div>
+                    <div class="title">Comfortable Durable Footwear for Children </div>
+             
+                    <div class="price">
+                        <span class="current">₹249</span>
+                        <span class="old">₹499</span>
+                        <span class="off">50% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Slipers/b1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Slipers/b2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Slipers/b3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Slipers/b4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">ASIAN</div>
+                    <div class="title">ASIAN Zoopy-10 Kids Slippers for Boys </div>
+             
+                    <div class="price">
+                        <span class="current">₹349</span>
+                        <span class="old">₹399</span>
+                        <span class="off">13% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Slipers/c1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Slipers/c2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Slipers/c3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Slipers/c4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">FILPPSTER</div>
+                    <div class="title">Toddler Flip Flops with Cute Rainbow Smiley</div>
+             
+                    <div class="price">
+                        <span class="current">₹299</span>
+                        <span class="old">₹360</span>
+                        <span class="off">17% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Slipers/d1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Slipers/d2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Slipers/d3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Slipers/d4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">ONCY</div>
+                    <div class="title">Shark V Shape Sliders for Kids, Unisex</div>
+             
+                    <div class="price">
+                        <span class="current">₹284</span>
+                        <span class="old">₹399</span>
+                        <span class="off">29% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Slipers/e1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Slipers/e2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Slipers/e3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Slipers/e4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">ONCY</div>
+                    <div class="title">Shark V Shape Slider for Kids, Unisex</div>
+             
+                    <div class="price">
+                        <span class="current">₹264</span>
+                        <span class="old">₹399</span>
+                        <span class="off">34% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Slipers/f1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Slipers/f1.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Slipers/f1.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Slipers/f1.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Disney</div>
+                    <div class="title">Disney Boys THUNDER Slippers</div>
+             
+                    <div class="price">
+                        <span class="current">₹269</span>
+                        <span class="old">₹599</span>
+                        <span class="off">22% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Slipers/g1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Slipers/g2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Slipers/g3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Slipers/g4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Kidsville</div>
+                    <div class="title">Kidsville Captain America Printed Kids Boys</div>
+             
+                    <div class="price">
+                        <span class="current">₹327</span>
+                        <span class="old">₹447</span>
+                        <span class="off">29% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Slipers/h1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Slipers/h2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Slipers/h3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Slipers/h4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">MOBIO</div>
+                    <div class="title">Kids Slippers for Boys</div>
+             
+                    <div class="price">
+                        <span class="current">₹249</span>
+                        <span class="old">₹499</span>
+                        <span class="off">50% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Slipers/i1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Slipers/i2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Slipers/i3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Slipers/i4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">ERA</div>
+                    <div class="title">ERA Kids Nautical Flip Flops, Navy Blue</div>
+             
+                    <div class="price">
+                        <span class="current">₹299</span>
+                        <span class="old">₹360</span>
+                        <span class="off">17% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Slipers/j1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Slipers/j2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Slipers/j3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Slipers/j4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">MOBIO</div>
+                    <div class="title">Child Kids Flip-Flop Durable Comfortable</div>
+             
+                    <div class="price">
+                        <span class="current">₹249</span>
+                        <span class="old">₹599</span>
+                        <span class="off">58% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Slipers/k1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Slipers/k2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Slipers/k3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Slipers/k4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">sparx</div>
+                    <div class="title">Sparx Kids's Slippers, RED YELLOW</div>
+             
+                    <div class="price">
+                        <span class="current">₹232</span>
+                        <span class="old">₹374</span>
+                        <span class="off">15% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Slipers/l1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Slipers/l2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Slipers/l3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Slipers/l4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Cutties</div>
+                    <div class="title">Cutties Flip Flops with Shark Design</div>
+             
+                    <div class="price">
+                        <span class="current">₹249</span>
+                        <span class="old">₹499</span>
+                        <span class="off">50% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                      <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <section class="boys sliders">
+        <p class="section-title">Boys Sliders</p>
+        <div class="section-container">
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Sliders/a1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Sliders/a2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Sliders/a3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Sliders/a4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">DOCTOR EXTRA SOFT </div>
+                    <div class="title">Rainy Monsoon Flip-Flop Sliders Soft</div>
+             
+                    <div class="price">
+                        <span class="current">₹391</span>
+                        <span class="old">₹799</span>
+                        <span class="off">51% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Sliders/b1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Sliders/b2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Sliders/b3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Sliders/b4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">WELCOME</div>
+                    <div class="title">Stylish Non-Slip Slide Home Casual</div>
+             
+                    <div class="price">
+                        <span class="current">₹419</span>
+                        <span class="old">₹1,199</span>
+                        <span class="off">65% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Sliders/c1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Sliders/c2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Sliders/c3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Sliders/c4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">MAX</div>
+                    <div class="title">Max Boys Sliders</div>
+             
+                    <div class="price">
+                        <span class="current">₹379</span>
+                        <span class="old">₹399</span>
+                        <span class="off">5% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Sliders/d1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Sliders/d2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Sliders/d3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Sliders/d4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Liberty Lucy</div>
+                    <div class="title"> Lightweight Latest and Trendy Design </div>
+             
+                    <div class="price">
+                        <span class="current">₹514</span>
+                        <span class="old">₹1,099</span>
+                        <span class="off">51% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Sliders/e1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Sliders/e2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Sliders/e3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Sliders/e4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">URJO</div>
+                    <div class="title">Flexible Anti-Skid Stylish Dailywear</div>
+             
+                    <div class="price">
+                        <span class="current">₹499</span>
+                        <span class="old">₹1,699</span>
+                        <span class="off">71% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Sliders/f1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Sliders/f2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Sliders/f3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Sliders/f4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">keneye</div>
+                    <div class="title">Boy's Stylish Comfortable Flip Flop</div>
+             
+                    <div class="price">
+                        <span class="current">₹248</spa289n>
+                        <span class="old">₹999</span>
+                        <span class="off">71% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                      <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Sliders/g1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Sliders/g2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Sliders/g3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Sliders/g4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">ONYC</div>
+                    <div class="title">ONYC Premium Zebra Artistic Slider </div>
+             
+                    <div class="price">
+                        <span class="current">₹312</span>
+                        <span class="old">₹699</span>
+                        <span class="off">55% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Sliders/h1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Sliders/h2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Sliders/h3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Sliders/h4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">ASIAN</div>
+                    <div class="title">Perfect for Indoor and Outdoor Wear</div>
+             
+                    <div class="price">
+                        <span class="current">₹411</span>
+                        <span class="old">₹549</span>
+                        <span class="off">25% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Sliders/i1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Sliders/i2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Sliders/i3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Sliders/i4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">ASIAN Kids</div>
+                    <div class="title">Use Walking Sliders, Casual Slippers</div>
+             
+                    <div class="price">
+                        <span class="current">₹401</span>
+                        <span class="old">₹549</span>
+                        <span class="off">27% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Sliders/j1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Sliders/j2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Sliders/j3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Sliders/j4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">GLISSERS</div>
+                    <div class="title">Basketball Open-Toe Comfortable</div>
+             
+                    <div class="price">
+                        <span class="current">₹490</span>
+                        <span class="old">₹1,499</span>
+                        <span class="off">67% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Sliders/k1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Sliders/k2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Sliders/k3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Sliders/k4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Giraffe</div>
+                    <div class="title">Flip Flops for Boys Design EVA </div>
+             
+                    <div class="price">
+                        <span class="current">₹399</span>
+                        <span class="old">₹1,399</span>
+                        <span class="off">70% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Sliders/l1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Sliders/l2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Sliders/l3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Sliders/l4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">ASIAN</div>
+                    <div class="title">Use Walking Sliders, Casual Slippers</div>
+             
+                    <div class="price">
+                        <span class="current">₹411</span>
+                        <span class="old">₹549</span>
+                        <span class="off">25% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <section class="boys shoes">
+        <p class="section-title">Boys Shoes</p>
+        <div class="section-container">
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Shoes/a1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Shoes/a2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Shoes/a3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Shoes/a4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Coolz</div>
+                    <div class="title">Multicolored LED Lights Blink-7</div>
+             
+                    <div class="price">
+                        <span class="current">₹381</span>
+                        <span class="old">₹999</span>
+                        <span class="off">62% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Shoes/b1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Shoes//b2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Shoes//b3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Shoes//b4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">CHIU Chu-Chu</div>
+                    <div class="title">Black Shoes with Double Strap for Baby</div>
+             
+                    <div class="price">
+                        <span class="current">₹299</span>
+                        <span class="old">₹499</span>
+                        <span class="off">20% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Shoes/c1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Shoes/c2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Shoes/c3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Shoes/c4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">HOOH Kids </div>
+                    <div class="title">Button Closure with Drawstring and Light</div>
+             
+                    <div class="price">
+                        <span class="current">₹599</span>
+                        <span class="old">₹999</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Shoes/d1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Shoes/d2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Shoes/d3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Shoes/d4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">GIGAHERTZ</div>
+                    <div class="title">ports Sneakers with BOA Dial</div>
+             
+                    <div class="price">
+                        <span class="current">₹599</span>
+                        <span class="old">₹1,099</span>
+                        <span class="off">45% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Shoes/e1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Shoes/e2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Shoes/e3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Shoes/e4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">ONYC</div>
+                    <div class="title">Shady Toddlers's First Step Breathable</div>
+             
+                    <div class="price">
+                        <span class="current">549</span>
+                        <span class="old">₹899</span>
+                        <span class="off">39% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Shoes/f1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Shoes/f2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Shoes/f3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Shoes/f4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">FOOTSTATION</div>
+                    <div class="title">Breathable, Shock Absorbing and Soft Sole</div>
+             
+                    <div class="price">
+                        <span class="current">₹499</span>
+                        <span class="old">₹899</span>
+                        <span class="off">44% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                      <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Shoes/g1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Shoes/g2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Shoes/g3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Shoes/g4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">ZORDIK</div>
+                    <div class="title">Breathable Knitted Shoes for BOYS</div>
+             
+                    <div class="price">
+                        <span class="current">₹299</span>
+                        <span class="old">₹499</span>
+                        <span class="off">20% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Shoes/h1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Shoes/h2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Shoes/h3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Shoes/h4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">KLAUFF</div>
+                    <div class="title">Kids Casual Shoes,Lightweight,Durable</div>
+             
+                    <div class="price">
+                        <span class="current">₹349</span>
+                        <span class="old">₹999</span>
+                        <span class="off">65% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Shoes/i1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Shoes/i2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Shoes/i3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Shoes/i4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">HOOH</div>
+                    <div class="title">Denim Sneakers for Baby Boys</div>
+             
+                    <div class="price">
+                        <span class="current">₹399</span>
+                        <span class="old">₹999</span>
+                        <span class="off">60% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Shoes/j1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Shoes/j2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Shoes/j3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Shoes/j4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Liberty Lucy</div>
+                    <div class="title">Velcro Walking Shoes for Kids with PVC</div>
+             
+                    <div class="price">
+                        <span class="current">₹459</span>
+                        <span class="old">₹1,499</span>
+                        <span class="off">69% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                      <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Shoes/k1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Shoes/k2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Shoes/k3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Shoes/k4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">DEWK BERRIES</div>
+                    <div class="title">Shoes for Kids with Rotary Dial Lock</div>
+             
+                    <div class="price">
+                        <span class="current">₹799</span>
+                        <span class="old">₹1,499</span>
+                        <span class="off">50% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Shoes/l1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Shoes/l2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Shoes/l3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boysfootwear/Boys Shoes/l4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">ASIAN</div>
+                    <div class="title">Casual Sneakers with Laces for Boys</div>
+             
+                    <div class="price">
+                        <span class="current">₹607</span>
+                        <span class="old">₹1,199</span>
+                        <span class="off">49% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section">
+        <div class="footer-logo">
+        <span>🛒</span>NexCart
+    </div>
+        <p style="font-size: 12px;">Your one-stop destination for quality products at the best prices.</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <a href="#">Home</a>
+      <a href="#">Shop</a>
+      <a href="#">Categories</a>
+      <a href="#">Contact Us</a>
+    </div>
+
+    <div class="footer-section">
+      <h3>Customer Service</h3>
+      <a href="#">FAQ</a>
+      <a href="#">Returns</a>
+      <a href="#">Shipping</a>
+      <a href="#">Privacy Policy</a>
+    </div>
+
+    <div class="footer-social">
+      <h3>Follow Us</h3>
+      <i class="fa-brands fa-instagram" id="instagram"></i>
+      <i class="fa-brands fa-facebook" id="facebook"></i>
+      <i class="fa-brands fa-x-twitter" id="twitter"></i>
+      <i class="fa-brands fa-youtube" id="youtube"></i>
+      <i class="fa-brands fa-whatsapp" id="whatsapp"></i>
+      <i class="fa-brands fa-telegram" id="telegram"></i>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 NexCart. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/frontend/js/product.js"></script>
+</body>
+</html>

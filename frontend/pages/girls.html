@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Girls Wear</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/frontend/css/product.css">
+</head>
+<body data-category="kids" data-subcategory="girlswear">
+     <div class="page-container">
+    <header>
+        <!-- DESKTOP HEADER -->
+<div class="desktop-header">
+  <div class="logo">🛒 NexCart</div>
+
+  <div class="search-box">
+    <i class="fas fa-search"></i>
+    <input type="text" placeholder="Search products">
+  </div>
+
+  <div class="icons">
+    <div class="icon user" id="userIcon">
+      <i class="far fa-user"></i>
+      <span>Profile</span>
+      <div class="user-dropdown">
+        <a href="profile.html"><i class="far fa-user"></i> My Profile</a>
+        <a href="my-order.html"><i class="fas fa-box"></i> My Orders</a>
+        <button onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</button>
+      </div>
+    </div>
+
+    <div class="icon" onclick="location.href='wishlist.html'">
+      <i class="far fa-heart"></i>
+      <span class="count" id="wishlistCount">0</span>
+    </div>
+
+    <div class="icon" onclick="location.href='cart.html'">
+      <i class="fas fa-shopping-cart"></i>
+      <span class="count" id="cartCount">0</span>
+    </div>
+
+    <div class="icon">
+      <i class="fa-regular fa-circle-question"></i>
+    </div>
+  </div>
+</div>
+
+<!-- MOBILE HEADER -->
+<div class="mobile-header">
+  <div class="logo">🛒 NexCart</div>
+  <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
+</div>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-header">
+    NexCart
+    <i class="fas fa-times" id="closeMenu"></i>
+  </div>
+
+  <a href="#"><i class="fa-solid fa-house"></i> Home</a>
+
+  <div class="accordion">
+    <div class="accordion-item">
+      <div class="accordion-title">👕 Men <i class="fas fa-chevron-down"></i></div>
+      <div class="accordion-content">
+        <a href="shirts.html">Shirt</a>
+        <a href="pants.html">Pants</a>
+        <a href="tshirts.html">T-shirts</a>
+        <a href="menfootwear.html">Footwear</a>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-title">👗 Women <i class="fas fa-chevron-down"></i></div>
+      <div class="accordion-content">
+        <a href="sarees.html">Sarees</a>
+        <a href="tshirtswomens.html">Tshirts</a>
+        <a href="womenjeens.html">jeans</a>
+        <a href="anarkalis.html">Anarkalis</a>
+        <a href="lehangas.html">Lahangas</a>
+        <a href="womenfootwear.html">Footwear</a>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-title">🧒 Kids <i class="fas fa-chevron-down"></i></div>
+      <div class="accordion-content">
+        <a href="boys.html">Boys Clothing</a>
+        <a href="girls.html">Girls Clothing</a>
+        <a href="boysfootwear.html">Boys Footwear</a>
+        <a href="girlsfootwear.html">Girls Footwear</a>
+      </div>
+    </div>
+  </div>
+
+  <a href="profile.html"><i class="fa-solid fa-user"></i> My Profile</a>
+  <a href="my-order.html"><i class="fas fa-box"></i>  My Orders</a>
+  <a href="wishlist.html"><i class="fa-solid fa-heart"></i> Wishlist</a>
+  <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
+  <button onclick="logout()"><i class="fa-solid fa-right-from-bracket"></i> Logout</button>
+</div>
+
+<div class="overlay" id="overlay"></div>
+
+    </header>
+   <div class="list">
+        <div class="dropdown">
+            <p class="dropbtn">Mens</p>
+            <div class="dropdown-content">
+                <a href="shirts.html">Shirts</a>
+                <a href="pants.html">Pants</a>
+                <a href="tshirts.html">T-Shirts</a>
+                <a href="menfootwear.html">Footwear</a>
+            </div>
+      </div>
+      <div class="dropdown">
+            <p class="dropbtn">Womens</p>
+            <div class="dropdown-content">
+                <a href="sarees.html">Sarees</a>
+                <a href="tshirtswomens.html">Tshirts</a>
+                <a href="womenjeens.html">jeans</a>
+                <a href="anarkalis.html">Anarkalis</a>
+                <a href="lehangas.html">Lahangas</a>
+                <a href="womenfootwear.html">Footwear</a>
+            </div>
+      </div>
+      <div class="dropdown">
+            <p class="dropbtn">Kids</p>
+            <div class="dropdown-content">
+                <a href="boys.html">Boys wear</a>
+                <a href="girls.html">Girls wear</a>
+                <a href="boysfootwear.html">Boys Footwear</a>
+                <a href="girlsfootwear.html">Girls Footwear</a>
+            </div>
+      </div>
+      <div class="dropdown">
+            <p class="dropbtn">Electronics</p>
+            <div class="dropdown-content">
+                <a href="mobiles.html">Mobiles</a>
+                <a href="laptops.html">Laptops</a>
+            </div>
+      </div>
+    </div>
+<img src="/frontend/asserts/kids/banner1.webp"  alt="banner" class="hero-banner">
+<main>
+    <section>
+  <p class="section-title">New Arrivals</p>
+
+  <!-- STATIC PRODUCTS ABOVE (unchanged) -->
+
+  <!-- DYNAMIC PRODUCTS -->
+  <div class="section-container" id="dynamicProducts"></div>
+</section>
+    <section class="Girls">
+        <p class="section-title">Girls Wear</p>
+        <div class="section-container">
+            <div class="product-card" data-id="shirt_101">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girls/a1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girls/a2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girls/a3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girls/a4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">A.T.U.N.</div>
+                    <div class="title">Girls Cotton Striped Knee Length Shirt Dress</div>
+             
+                    <div class="price">
+                        <span class="current">₹659</span>
+                        <span class="old">₹1,099</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-9Y</button>
+                       <button class="size-btn">10-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girls/b1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girls/b2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girls/b3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girls/b4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Nautinati</div>
+                    <div class="title">Nautinati Infant Girls Top and Bottom Set</div>
+             
+                    <div class="price">
+                        <span class="current">₹499</span>
+                        <span class="old">₹1,299</span>
+                        <span class="off">65% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-9Y</button>
+                       <button class="size-btn">10-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girls/c1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girls/c2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girls/c3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girls/c4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Generic</div>
+                    <div class="title">Delima Fashion Girls Net Dress</div>
+             
+                    <div class="price">
+                        <span class="current">₹664</span>
+                        <span class="old">₹1,499</span>
+                        <span class="off">56% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-9Y</button>
+                       <button class="size-btn">10-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girls/d1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girls/d2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girls/d3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girls/d4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Generic</div>
+                    <div class="title">Delima Fashion Girls Net Dress white look</div>
+             
+                    <div class="price">
+                        <span class="current">₹699</span>
+                        <span class="old">₹1,499</span>
+                        <span class="off">53% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-9Y</button>
+                       <button class="size-btn">10-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girls/e1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girls/e2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girls/e3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girls/e4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">AMEEHA</div>
+                    <div class="title">Girls Stylish  Outfit Set with Sleeveless</div>
+             
+                    <div class="price">
+                        <span class="current">₹579</span>
+                        <span class="old">₹2,999</span>
+                        <span class="off">81% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-9Y</button>
+                       <button class="size-btn">10-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girls/f1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girls/f2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girls/f3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girls/f4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">ALL THINGS UBER NICE</div>
+                    <div class="title">Traditional Ethnic Wear Clothing for Festival</div>
+             
+                    <div class="price">
+                        <span class="current">₹989</span>
+                        <span class="old">₹4,499</span>
+                        <span class="off">78% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-9Y</button>
+                       <button class="size-btn">10-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girls/g1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girls/g2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girls/g3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girls/g4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">CHHAMAKK</div>
+                    <div class="title">Striped Cotton Waist Tie-Ups Sleeveless</div>
+             
+                    <div class="price">
+                        <span class="current">₹599</span>
+                        <span class="old">₹1,999</span>
+                        <span class="off">70% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-9Y</button>
+                       <button class="size-btn">10-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girls/h1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girls/h2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girls/h3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girls/h4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">ALL THINGS UBER NICE</div>
+                    <div class="title">Poly Silk Floral Printed Sleeveless Sharara </div>
+             
+                    <div class="price">
+                        <span class="current">₹899</span>
+                        <span class="old">₹4,999</span>
+                        <span class="off">82% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-9Y</button>
+                       <button class="size-btn">10-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girls/i1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girls/i2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girls/i3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girls/i4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Nusyl</div>
+                    <div class="title">Girl's Solid Regular Fit T-Shirt</div>
+             
+                    <div class="price">
+                        <span class="current">₹324</span>
+                        <span class="old">₹549</span>
+                        <span class="off">41% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-9Y</button>
+                       <button class="size-btn">10-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girls/j1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girls/j2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girls/j3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girls/j4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Bouquet</div>
+                    <div class="title">Grace and chic, together in adorable style</div>
+             
+                    <div class="price">
+                        <span class="current">₹899</span>
+                        <span class="old">₹1,999</span>
+                        <span class="off">60% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-9Y</button>
+                       <button class="size-btn">10-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girls/k1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girls/k2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girls/k3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girls/k4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">A.T.U.N.</div>
+                    <div class="title">Girls Cotton Striped Knee Length Shirt Dress </div>
+             
+                    <div class="price">
+                        <span class="current">₹679</span>
+                        <span class="old">₹899</span>
+                        <span class="off">24% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-9Y</button>
+                       <button class="size-btn">10-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girls/l1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girls/l2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girls/l3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girls/l4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Arshia Fashions</div>
+                    <div class="title"> Ethnic Wear Kurti and Dhoti Pant Set</div>
+             
+                    <div class="price">
+                        <span class="current">₹612</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">76% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-9Y</button>
+                       <button class="size-btn">10-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girls/m1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girls/m2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girls/m3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girls/m4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Cutecumber</div>
+                    <div class="title">Dress for Girls' with Pink Buttons, Short Sleeves</div>
+             
+                    <div class="price">
+                        <span class="current">₹999</span>
+                        <span class="old">₹2,580</span>
+                        <span class="off">61% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-9Y</button>
+                       <button class="size-btn">10-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girls/n1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girls/n2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girls/n3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girls/n4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">A.T.U.N.</div>
+                    <div class="title">Girls Special Occasion Party Frock Dress</div>
+             
+                    <div class="price">
+                        <span class="current">₹799</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">68% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-9Y</button>
+                       <button class="size-btn">10-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girls/o1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girls/o2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girls/o3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girls/o4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">NAUTINATI</div>
+                    <div class="title">White Heart Jaquard Sleeves Sweater</div>
+             
+                    <div class="price">
+                        <span class="current">₹699</span>
+                        <span class="old">₹1,699</span>
+                        <span class="off">66% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-9Y</button>
+                       <button class="size-btn">10-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girls/p1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girls/p2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girls/p3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girls/p4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">HOP</div>
+                    <div class="title">Girls White Embellished Party Dress</div>
+             
+                    <div class="price">
+                        <span class="current">₹599</span>
+                        <span class="old">₹999</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-9Y</button>
+                       <button class="size-btn">10-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girls/q1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girls/q2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girls/q3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girls/q4jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Aarika Girls</div>
+                    <div class="title">Green Colour Emballished Beads Net Gown</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,229</span>
+                        <span class="old">₹3,999</span>
+                        <span class="off">69% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-9Y</button>
+                       <button class="size-btn">10-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girls/r1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girls/r2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girls/r3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girls/r4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">CHANDRIKA</div>
+                    <div class="title">Girls Casual T-shirt Track Pants</div>
+             
+                    <div class="price">
+                        <span class="current">₹317</span>
+                        <span class="old">₹700</span>
+                        <span class="off">55% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-9Y</button>
+                       <button class="size-btn">10-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girls/s1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girls/s2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girls/s3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girls/s4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Nauti nati</div>
+                    <div class="title">Girls Striped Shirts Dress</div>
+             
+                    <div class="price">
+                        <span class="current">₹599</span>
+                        <span class="old">₹419,599</span>
+                        <span class="off">63% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-9Y</button>
+                       <button class="size-btn">10-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girls/t1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girls/t2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girls/t3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girls/t4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Fashion Dream</div>
+                    <div class="title">Girl's Crepe Silk Maxi Length Printed Dress</div>
+             
+                    <div class="price">
+                        <span class="current">₹660</span>
+                        <span class="old">₹3,499</span>
+                        <span class="off">81% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-9Y</button>
+                       <button class="size-btn">10-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+        </div>
+    </section>
+        
+</main>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section">
+        <div class="footer-logo">
+        <span>🛒</span>NexCart
+    </div>
+        <p style="font-size: 12px;">Your one-stop destination for quality products at the best prices.</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <a href="#">Home</a>
+      <a href="#">Shop</a>
+      <a href="#">Categories</a>
+      <a href="#">Contact Us</a>
+    </div>
+
+    <div class="footer-section">
+      <h3>Customer Service</h3>
+      <a href="#">FAQ</a>
+      <a href="#">Returns</a>
+      <a href="#">Shipping</a>
+      <a href="#">Privacy Policy</a>
+    </div>
+
+    <div class="footer-social">
+      <h3>Follow Us</h3>
+      <i class="fa-brands fa-instagram" id="instagram"></i>
+      <i class="fa-brands fa-facebook" id="facebook"></i>
+      <i class="fa-brands fa-x-twitter" id="twitter"></i>
+      <i class="fa-brands fa-youtube" id="youtube"></i>
+      <i class="fa-brands fa-whatsapp" id="whatsapp"></i>
+      <i class="fa-brands fa-telegram" id="telegram"></i>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 NexCart. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/frontend/js/product.js"></script>
+</body>
+</html>

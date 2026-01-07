@@ -1,0 +1,2461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women footwear</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/frontend/css/product.css">
+</head>
+<body data-category="womens" data-subcategory="womenfootwear">
+     <div class="page-container">
+    <header>
+        <!-- DESKTOP HEADER -->
+<div class="desktop-header">
+  <div class="logo">🛒 NexCart</div>
+
+  <div class="search-box">
+    <i class="fas fa-search"></i>
+    <input type="text" placeholder="Search products">
+  </div>
+
+  <div class="icons">
+    <div class="icon user" id="userIcon">
+      <i class="far fa-user"></i>
+      <span>Profile</span>
+      <div class="user-dropdown">
+        <a href="profile.html"><i class="far fa-user"></i> My Profile</a>
+        <a href="my-order.html"><i class="fas fa-box"></i> My Orders</a>
+        <button onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</button>
+      </div>
+    </div>
+
+    <div class="icon" onclick="location.href='wishlist.html'">
+      <i class="far fa-heart"></i>
+      <span class="count" id="wishlistCount">0</span>
+    </div>
+
+    <div class="icon" onclick="location.href='cart.html'">
+      <i class="fas fa-shopping-cart"></i>
+      <span class="count" id="cartCount">0</span>
+    </div>
+
+    <div class="icon">
+      <i class="fa-regular fa-circle-question"></i>
+    </div>
+  </div>
+</div>
+
+<!-- MOBILE HEADER -->
+<div class="mobile-header">
+  <div class="logo">🛒 NexCart</div>
+  <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
+</div>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-header">
+    NexCart
+    <i class="fas fa-times" id="closeMenu"></i>
+  </div>
+
+  <a href="home.html"><i class="fa-solid fa-house"></i> Home</a>
+
+  <div class="accordion">
+    <div class="accordion-item">
+      <div class="accordion-title">👕 Men <i class="fas fa-chevron-down"></i></div>
+      <div class="accordion-content">
+        <a href="shirts.html">Shirt</a>
+        <a href="pants.html">Pants</a>
+        <a href="tshirts.html">T-shirts</a>
+        <a href="menfootwear.html">Footwear</a>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-title">👗 Women <i class="fas fa-chevron-down"></i></div>
+      <div class="accordion-content">
+        <a href="sarees.html">Sarees</a>
+        <a href="tshirtswomens.html">Tshirts</a>
+        <a href="womenjeens.html">jeans</a>
+        <a href="anarkalis.html">Anarkalis</a>
+        <a href="lehangas.html">Lahangas</a>
+        <a href="womenfootwear.html">Footwear</a>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-title">🧒 Kids <i class="fas fa-chevron-down"></i></div>
+      <div class="accordion-content">
+        <a href="boys.html">Boys Clothing</a>
+        <a href="girls.html">Girls Clothing</a>
+        <a href="boysfootwear.html">Boys Footwear</a>
+        <a href="girlsfootwear.html">Girls Footwear</a>
+      </div>
+    </div>
+  </div>
+
+  <a href="profile.html"><i class="fa-solid fa-user"></i> My Profile</a>
+  <a href="my-order.html"><i class="fas fa-box"></i>  My Orders</a>
+  <a href="wishlist.html"><i class="fa-solid fa-heart"></i> Wishlist</a>
+  <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
+  <button onclick="logout()"><i class="fa-solid fa-right-from-bracket"></i> Logout</button>
+</div>
+
+<div class="overlay" id="overlay"></div>
+
+    </header>
+   <div class="list">
+        <div class="dropdown">
+            <p class="dropbtn">Mens</p>
+            <div class="dropdown-content">
+                <a href="shirts.html">Shirts</a>
+                <a href="pants.html">Pants</a>
+                <a href="tshirts.html">T-Shirts</a>
+                <a href="menfootwear.html">Footwear</a> 
+            </div>
+      </div>
+      <div class="dropdown">
+            <p class="dropbtn">Womens</p>
+            <div class="dropdown-content">
+                <a href="sarees.html">Sarees</a>
+                <a href="tshirtswomens.html">Tshirts</a>
+                <a href="womenjeens.html">Jeans</a>
+                <a href="anarkalis.html">Anarkalis</a>
+                <a href="lehangas.html">Lahangas</a>
+                <a href="womenfootwear.html">Footwear</a>
+            </div>
+      </div>
+      <div class="dropdown">
+            <p class="dropbtn">Kids</p>
+            <div class="dropdown-content">
+                <a href="boys.html">Boys wear</a>
+                <a href="girls.html">Girls wear</a>
+                <a href="boysfootwear.html">Boys Footwear</a>
+                <a href="girlsfootwear.html">Girls Footwear</a>
+            </div>
+      </div>
+      <div class="dropdown">
+            <p class="dropbtn">Electronics</p>
+            <div class="dropdown-content">
+                <a href="mobiles.html">Mobiles</a>
+                <a href="laptops.html">Laptops</a>
+            </div>
+      </div>
+    </div>
+<img src="/frontend/asserts/womenfootwear/footbanner.jpg"  alt="banner" class="hero-banner">
+<main>
+    <section>
+  <p class="section-title">New Arrivals</p>
+
+  <!-- STATIC PRODUCTS ABOVE (unchanged) -->
+
+  <!-- DYNAMIC PRODUCTS -->
+  <div class="section-container" id="dynamicProducts"></div>
+</section>
+    <section class="sandals">
+        <p class="section-title">Sandals</p>
+        <div class="section-container">
+            <div class="product-card" data-id="shirt_101">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womenfootwear/Wsandals/a1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womenfootwear/Wsandals/a2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/Wsandals/a3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/Wsandals/a4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Bata</div>
+                    <div class="title">Bata Comfit Women's Slip-on Sandal</div>
+             
+                    <div class="price">
+                        <span class="current">₹512</span>
+                        <span class="old">₹899</span>
+                        <span class="off">43% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womenfootwear/Wsandals/b1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womenfootwear/Wsandals/b2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/Wsandals/b3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/Wsandals/b4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Frido Cloud</div>
+                    <div class="title">Frido Cloud Comfort Sandal for Women</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,898</span>
+                        <span class="old">₹2,789</span>
+                        <span class="off">32% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womenfootwear/Wsandals/c1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womenfootwear/Wsandals/c2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/Wsandals/c3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/Wsandals/c4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">ORTHO JOY</div>
+                    <div class="title">ORTHO JOY Fancy doctor Sandals|</div>
+             
+                    <div class="price">
+                        <span class="current">₹800</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">68% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womenfootwear/Wsandals/d1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womenfootwear/Wsandals/d2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/Wsandals/d3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/Wsandals/d4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Marc Loire</div>
+                    <div class="title">Marc Loire Comfortable Flat Fashion Sandal</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,169</span>
+                        <span class="old">₹1,599</span>
+                        <span class="off">27% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womenfootwear/Wsandals/e1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womenfootwear/Wsandals/e2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/Wsandals/e3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/Wsandals/e4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Bata</div>
+                    <div class="title">Bata Comfit Women's Slip-on Sandal</div>
+             
+                    <div class="price">
+                        <span class="current">₹999</span>
+                        <span class="old">₹1,499</span>
+                        <span class="off">33% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womenfootwear/Wsandals/f1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womenfootwear/Wsandals/f2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/Wsandals/f3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/Wsandals/f4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Metro</div>
+                    <div class="title">Metro Women's 32-1702 Flat Sandal</div>
+             
+                    <div class="price">
+                        <span class="current">₹894</span>
+                        <span class="old">₹1,499</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womenfootwear/Wsandals/g1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womenfootwear/Wsandals/g2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/Wsandals/g3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/Wsandals/g4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">ORTHO JOY</div>
+                    <div class="title">ORTHO JOY Extra-Soft Stylisht</div>
+             
+                    <div class="price">
+                        <span class="current">₹561</span>
+                        <span class="old">₹1,999</span>
+                        <span class="off">72% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womenfootwear/Wsandals/h1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womenfootwear/Wsandals/h2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/Wsandals/h3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/Wsandals/h4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">vendoz sports</div>
+                    <div class="title">Vendoz Women Stylish Cream Flat Sandals</div>
+             
+                    <div class="price">
+                        <span class="current">₹439</span>
+                        <span class="old">₹999</span>
+                        <span class="off">56% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9L</button>
+                       <button class="size-btn">10</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womenfootwear/Wsandals/i1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womenfootwear/Wsandals/i2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/Wsandals/i3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/Wsandals/i4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand"> Fancy Doctor</div>
+                    <div class="title"> Fancy Doctor Slippers for women</div>
+             
+                    <div class="price">
+                        <span class="current">₹561</span>
+                        <span class="old">₹1,999</span>
+                        <span class="off">72% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womenfootwear/Wsandals/j1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womenfootwear/Wsandals/j2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/Wsandals/j3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/Wsandals/j4.jpg" class="product-img">
+                </div>
+
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Frido Cloud</div>
+                    <div class="title">Frido Cloud Comfort Sandal for Women</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,898</span>
+                        <span class="old">₹2,789</span>
+                        <span class="off">32% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womenfootwear/Wsandals/k1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womenfootwear/Wsandals/k2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/Wsandals/k3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/Wsandals/k4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">TRASE Slippers</div>
+                    <div class="title">TRASE Slippers for Women Stylish Flat</div>
+             
+                    <div class="price">
+                        <span class="current">₹719</span>
+                        <span class="old">₹1,799</span>
+                        <span class="off">60% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womenfootwear/Wsandals/l1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womenfootwear/Wsandals/l2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/Wsandals/l3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/Wsandals/l4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Moshun Women</div>
+                    <div class="title">Moshun Matte Finish Orthopedic Flip-Flops </div>
+             
+                    <div class="price">
+                        <span class="current">₹1,175</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">53% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <section class="highheels">
+        <p class="section-title">HighHeels</p>
+        <div class="section-container">
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womenfootwear/whighheels/a1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womenfootwear/whighheels/a2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/whighheels/a3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/whighheels/a4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Shoetopia</div>
+                    <div class="title">Shoetopia Women's Block Heel Sandals</div>
+             
+                    <div class="price">
+                        <span class="current">₹599</span>
+                        <span class="old">₹1,999</span>
+                        <span class="off">70% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womenfootwear/whighheels/b1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womenfootwear/whighheels/b2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/whighheels/b3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/whighheels/b4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">XE Looks</div>
+                    <div class="title">XE Looks Trendy and Stylish Fancy Sandal</div>
+             
+                    <div class="price">
+                        <span class="current">₹829</span>
+                        <span class="old">₹1,999</span>
+                        <span class="off">31% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womenfootwear/whighheels/c1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womenfootwear/whighheels/c2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/whighheels/c3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/whighheels/c4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">TRASE Ankle</div>
+                    <div class="title">TRASE Ankle Strap Flat Sandals</div>
+             
+                    <div class="price">
+                        <span class="current">₹669</span>
+                        <span class="old">₹1,999</span>
+                        <span class="off">67% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womenfootwear/whighheels/d1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womenfootwear/whighheels/d2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/whighheels/d3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/whighheels/d4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">XE Looks</div>
+                    <div class="title">Women's Platform Pencil High Heels</div>
+             
+                    <div class="price">
+                        <span class="current">₹829</span>
+                        <span class="old">₹2,135</span>
+                        <span class="off">61% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womenfootwear/whighheels/e1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womenfootwear/whighheels/e2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/whighheels/e3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/whighheels/e4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">ARWAH Store</div>
+                    <div class="title">Women’s Fashion High Heels </div>
+             
+                    <div class="price">
+                        <span class="current">₹699</span>
+                        <span class="old">₹1,299</span>
+                        <span class="off">46% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+        
+                    <img src="/frontend/asserts/womenfootwear/whighheels/f1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womenfootwear/whighheels/f2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/whighheels/f3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/whighheels/f4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">XE Looks</div>
+                    <div class="title">XE Looks Women's Elegant Heels</div>
+             
+                    <div class="price">
+                        <span class="current">₹719</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">71% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womenfootwear/whighheels/g1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womenfootwear/whighheels/g2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/whighheels/g3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/whighheels/g4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">LOUIS STITCH</div>
+                    <div class="title">Stylish Transparent High Heels</div>
+             
+                    <div class="price">
+                        <span class="current">₹949</span>
+                        <span class="old">₹2,589</span>
+                        <span class="off">62%off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womenfootwear/whighheels/h1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womenfootwear/whighheels/h2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/whighheels/h3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/whighheels/h4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">JM LOOKS</div>
+                    <div class="title">Women Stylish Pencil Heel Sandalt</div>
+             
+                    <div class="price">
+                        <span class="current">₹857</span>
+                        <span class="old">₹1,995</span>
+                        <span class="off">57% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womenfootwear/whighheels/i1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womenfootwear/whighheels/i2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/whighheels/i3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/whighheels/i4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">GAP</div>
+                    <div class="title">Men Regular Fit Solid Spread Collar Shirt</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,499</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5</button>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womenfootwear/whighheels/j1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womenfootwear/whighheels/j2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/whighheels/j3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/whighheels/j4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">JM LOOKS Store</div>
+                    <div class="title"> Women's Strappy Heels For Women</div>
+             
+                    <div class="price">
+                        <span class="current">₹642</span>
+                        <span class="old">₹1,995</span>
+                        <span class="off">68% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womenfootwear/whighheels/k1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womenfootwear/whighheels/k2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/whighheels/k3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/whighheels/k4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Shoetopia Store</div>
+                    <div class="title">Stylish Ankle Strap Block Heeled</div>
+             
+                    <div class="price">
+                        <span class="current">₹599</span>
+                        <span class="old">₹1,999</span>
+                        <span class="off">70% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5</button>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womenfootwear/whighheels/l1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womenfootwear/whighheels/l2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/whighheels/l3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/whighheels/l4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">SilverArrow</div>
+                    <div class="title">SilverArrow Casual and Classy Block Heel</div>
+             
+                    <div class="price">
+                        <span class="current">₹599</span>
+                        <span class="old">₹1,899</span>
+                        <span class="off">68% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5</button>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <section class="casual-shoes">
+        <p class="section-title">Casual-Shoes</p>
+        <div class="section-container">
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womenfootwear/casual-shoes/a1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womenfootwear/casual-shoes/a2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/casual-shoes/a3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/casual-shoes/a4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">ASIAN Store</div>
+                    <div class="title">Melody-71 Casual Loafer</div>
+             
+                    <div class="price">
+                        <span class="current">₹649</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">47% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5</button>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womenfootwear/casual-shoes/b1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womenfootwear/casual-shoes/b2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/casual-shoes/b3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/casual-shoes/b4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Bata</div>
+                    <div class="title">Bata Women's Slip-on Walking Shoe</div>
+             
+                    <div class="price">
+                        <span class="current">₹589</span>
+                        <span class="old">₹1,299</span>
+                        <span class="off">55% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5</button>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womenfootwear/casual-shoes/c1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womenfootwear/casual-shoes/c2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/casual-shoes/c3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/casual-shoes/c4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">URJO</div>
+                    <div class="title">URJO Pure 1002 Women's Lightweight</div>
+             
+                    <div class="price">
+                        <span class="current">₹779</span>
+                        <span class="old">₹999</span>
+                        <span class="off">20% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5</button>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womenfootwear/casual-shoes/d1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womenfootwear/casual-shoes/d2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/casual-shoes/d3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/casual-shoes/d4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">YOHO</div>
+                    <div class="title">YOHO CAS 105 Sneakers for Women</div>
+             
+                    <div class="price">
+                        <span class="current">₹799</span>
+                        <span class="old">₹2,495</span>
+                        <span class="off">68% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5</button>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womenfootwear/casual-shoes/e1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womenfootwear/casual-shoes/e2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/casual-shoes/e3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/casual-shoes/e4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Marc Loire </div>
+                    <div class="title">Lightweight Athleisure Knitted</div>
+             
+                    <div class="price">
+                        <span class="current">₹999</span>
+                        <span class="old">₹2,999</span>
+                        <span class="off">67% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5</button>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                    </div>s
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womenfootwear/casual-shoes/f1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womenfootwear/casual-shoes/f2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/casual-shoes/f3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/casual-shoes/f4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Ortho</div>
+                    <div class="title">Dr.Ortho Flexi Ease Walking Sports Shoes for Women</div>
+             
+                    <div class="price">
+                        <span class="current">₹646</span>
+                        <span class="old">₹999</span>
+                        <span class="off">35% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5</button>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womenfootwear/casual-shoes/g1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womenfootwear/casual-shoes/g2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/casual-shoes/g3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/casual-shoes/g4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">campus</div>
+                    <div class="title">campus Women Camp Eloy Walking Shoes</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,194</span>
+                        <span class="old">₹1,999</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5</button>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womenfootwear/casual-shoes/h1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womenfootwear/casual-shoes/h2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/casual-shoes/h3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/casual-shoes/h4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">ASIAN</div>
+                    <div class="title">ASIAN Casual Walking Shoes for Women</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,195</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">52% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womenfootwear/casual-shoes/i1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womenfootwear/casual-shoes/i2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/casual-shoes/i3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/casual-shoes/i4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Campus</div>
+                    <div class="title">Campus Women's LUMI Walking Shoes</div>
+             
+                    <div class="price">
+                        <span class="current">₹743</span>
+                        <span class="old">₹1,099</span>
+                        <span class="off">32% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5</button>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womenfootwear/casual-shoes/j1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womenfootwear/casual-shoes/j2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/casual-shoes/j3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/casual-shoes/j4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">ELLE Women</div>
+                    <div class="title">ELLE Women Stylish, Comfortable </div>
+             
+                    <div class="price">
+                        <span class="current">₹1,499</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5</button>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womenfootwear/casual-shoes/k1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womenfootwear/casual-shoes/k2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/casual-shoes/k3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/casual-shoes/k4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">AVANT</div>
+                    <div class="title">AVANT Women Shadow Walking Shoes</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,499</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womenfootwear/casual-shoes/l1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womenfootwear/casual-shoes/l2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/casual-shoes/l3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/casual-shoes/l4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">ATHCO</div>
+                    <div class="title">Womens Ella Memory Foam Comfort Shoes</div>
+             
+                    <div class="price">
+                        <span class="current">₹799</span>
+                        <span class="old">₹999</span>
+                        <span class="off">20% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5</button>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <section class="sportsshoes">
+        <p class="section-title">Sports-Shoes</p>
+        <div class="section-container">
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womenfootwear/Sports Shoes/a1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womenfootwear/Sports Shoes/a2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/Sports Shoes/a3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/Sports Shoes/a4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Campus</div>
+                    <div class="title"> Campus Women Ciara Running Shoes</div>
+             
+                    <div class="price">
+                        <span class="current">₹999</span>
+                        <span class="old">₹1,999</span>
+                        <span class="off">50% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womenfootwear/Sports Shoes/b1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womenfootwear/Sports Shoes/b2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/Sports Shoes/b3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/Sports Shoes/b4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Campus</div>
+                    <div class="title">Campus Women Hall Sneakers</div>
+             
+                    <div class="price">
+                        <span class="current">₹976</span>
+                        <span class="old">₹1,499</span>
+                        <span class="off">35% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5</button>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womenfootwear/Sports Shoes/c1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womenfootwear/Sports Shoes/c2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/Sports Shoes/c3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/Sports Shoes/c4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Generic</div>
+                    <div class="title">Lightweight Breathable Sports Shoes </div>
+             
+                    <div class="price">
+                        <span class="current">₹393</span>
+                        <span class="old">₹999</span>
+                        <span class="off">61% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5</button>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womenfootwear/Sports Shoes/d1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womenfootwear/Sports Shoes/d2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/Sports Shoes/d3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/Sports Shoes/d4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Lotto</div>
+                    <div class="title">Lotto Women Strada Blend Sneakers</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,649</span>
+                        <span class="old">₹3,299</span>
+                        <span class="off">50% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5</button>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womenfootwear/Sports Shoes/e1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womenfootwear/Sports Shoes/e2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/Sports Shoes/e3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/Sports Shoes/e4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Puma </div>
+                    <div class="title">Puma Men Softride Enzo Evo Walking Shoe</div>
+             
+                    <div class="price">
+                        <span class="current">₹3,499</span>
+                        <span class="old">₹6,999</span>
+                        <span class="off">50% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5</button>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womenfootwear/Sports Shoes/f1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womenfootwear/Sports Shoes/f2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/Sports Shoes/f3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/Sports Shoes/f4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">columbia</div>
+                    <div class="title">Columbia Women Crestwood Hiking</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,499</span>
+                        <span class="old">₹2,999</span>
+                        <span class="off">50% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womenfootwear/Sports Shoes/g1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womenfootwear/Sports Shoes/g2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/Sports Shoes/g3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/Sports Shoes/g4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">PUMA</div>
+                    <div class="title">PUMA Women NRGY Neko Running Sho</div>
+             
+                    <div class="price">
+                        <span class="current">₹2,969</span>
+                        <span class="old">₹5,999</span>
+                        <span class="off">51% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5</button>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">10</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womenfootwear/Sports Shoes/h1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womenfootwear/Sports Shoes/h2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/Sports Shoes/h3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/Sports Shoes/h4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">YOHO</div>
+                    <div class="title">YOHO Blinc Sneakers for Women </div>
+             
+                    <div class="price">
+                        <span class="current">₹1,999</span>
+                        <span class="old">₹4,199</span>
+                        <span class="off">52% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5</button>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womenfootwear/Sports Shoes/i1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womenfootwear/Sports Shoes/i2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/Sports Shoes/i3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/Sports Shoes/i4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">puma</div>
+                    <div class="title">Women's Comet Wn Black Running Shoes</div>
+             
+                    <div class="price">
+                        <span class="current">₹2,699</span>
+                        <span class="old">₹4,499</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5</button>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womenfootwear/Sports Shoes/j1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womenfootwear/Sports Shoes/j2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/Sports Shoes/j3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/Sports Shoes/j4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Nike</div>
+                    <div class="title">Nike Women Lace Up Running Shoes</div>
+             
+                    <div class="price">
+                        <span class="current">₹2,499</span>
+                        <span class="old">₹4,999</span>
+                        <span class="off">50% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5</button>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womenfootwear/Sports Shoes/k1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womenfootwear/Sports Shoes/k2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/Sports Shoes/k3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/Sports Shoes/k4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Puma</div>
+                    <div class="title">Puma Women NRGY v2 Running Shoe</div>
+             
+                    <div class="price">
+                        <span class="current">₹2,225</span>
+                        <span class="old">₹5,499</span>
+                        <span class="off">50% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5</button>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womenfootwear/Sports Shoes/l1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womenfootwear/Sports Shoes/l2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/Sports Shoes/l3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womenfootwear/Sports Shoes/l4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">TUFF store</div>
+                    <div class="title">Knitted Casual and Sports Shoe</div>
+             
+                    <div class="price">
+                        <span class="current">₹439</span>
+                        <span class="old">₹999</span>
+                        <span class="off">56% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section">
+        <div class="footer-logo">
+        <span>🛒</span>NexCart
+    </div>
+        <p style="font-size: 12px;">Your one-stop destination for quality products at the best prices.</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <a href="#">Home</a>
+      <a href="#">Shop</a>
+      <a href="#">Categories</a>
+      <a href="#">Contact Us</a>
+    </div>
+
+    <div class="footer-section">
+      <h3>Customer Service</h3>
+      <a href="#">FAQ</a>
+      <a href="#">Returns</a>
+      <a href="#">Shipping</a>
+      <a href="#">Privacy Policy</a>
+    </div>
+
+    <div class="footer-social">
+      <h3>Follow Us</h3>
+      <i class="fa-brands fa-instagram" id="instagram"></i>
+      <i class="fa-brands fa-facebook" id="facebook"></i>
+      <i class="fa-brands fa-x-twitter" id="twitter"></i>
+      <i class="fa-brands fa-youtube" id="youtube"></i>
+      <i class="fa-brands fa-whatsapp" id="whatsapp"></i>
+      <i class="fa-brands fa-telegram" id="telegram"></i>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 NexCart. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/frontend/js/product.js"></script>
+</body>
+</html>

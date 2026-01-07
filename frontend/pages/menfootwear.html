@@ -1,0 +1,3029 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men footwear</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/frontend/css/product.css">
+</head>
+<body data-category="mens" data-subcategory="mensfootwear">
+     <div class="page-container">
+    <header>
+        <!-- DESKTOP HEADER -->
+<div class="desktop-header">
+  <div class="logo">🛒 NexCart</div>
+
+  <div class="search-box">
+    <i class="fas fa-search"></i>
+    <input type="text" placeholder="Search products">
+  </div>
+
+  <div class="icons">
+    <div class="icon user" id="userIcon">
+      <i class="far fa-user"></i>
+      <span>Profile</span>
+      <div class="user-dropdown">
+        <a href="profile.html"><i class="far fa-user"></i> My Profile</a>
+        <a href="my-order.html"><i class="fas fa-box"></i> My Orders</a>
+        <button onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</button>
+      </div>
+    </div>
+
+    <div class="icon"  onclick="location.href='wishlist.html'">
+      <i class="far fa-heart"></i>
+      <span class="count" id="wishlistCount">0</span>
+    </div>
+
+    <div class="icon" onclick="location.href='cart.html'">
+      <i class="fas fa-shopping-cart"></i>
+      <span class="count" id="cartCount">0</span>
+    </div>
+
+    <div class="icon">
+      <i class="fa-regular fa-circle-question"></i>
+    </div>
+  </div>
+</div>
+
+<!-- MOBILE HEADER -->
+<div class="mobile-header">
+  <div class="logo">🛒 NexCart</div>
+  <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
+</div>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-header">
+    NexCart
+    <i class="fas fa-times" id="closeMenu"></i>
+  </div>
+
+  <a href="home.html"><i class="fa-solid fa-house"></i> Home</a>
+
+  <div class="accordion">
+    <div class="accordion-item">
+      <div class="accordion-title">👕 Men <i class="fas fa-chevron-down"></i></div>
+      <div class="accordion-content">
+        <a href="shirts.html">Shirt</a>
+        <a href="pants.html">Pants</a>
+        <a href="tshirts.html">T-shirts</a>
+        <a href="menfootwear.html">Footwear</a>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-title">👗 Women <i class="fas fa-chevron-down"></i></div>
+      <div class="accordion-content">
+        <a href="sarees.html">Sarees</a>
+        <a href="tshirtswomens.html">Tshirts</a>
+        <a href="womenjeens.html">jeans</a>
+        <a href="anarkalis.html">Anarkalis</a>
+        <a href="lehangas.html">Lahangas</a>
+        <a href="womenfootwear.html">Footwear</a>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-title">🧒 Kids <i class="fas fa-chevron-down"></i></div>
+      <div class="accordion-content">
+        <a href="boys.html">Boys Clothing</a>
+        <a href="girls.html">Girls Clothing</a>
+        <a href="boysfootwear.html">Boys Footwear</a>
+        <a href="girlsfootwear.html">Girls Footwear</a>
+      </div>
+    </div>
+  </div>
+
+  <a href="profile.html"><i class="fa-solid fa-user"></i> My Profile</a>
+  <a href="my-order.html"><i class="fas fa-box"></i>  My Orders</a>
+  <a href="wishlist.html"><i class="fa-solid fa-heart"></i> Wishlist</a>
+  <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
+  <button onclick="logout()"><i class="fa-solid fa-right-from-bracket"></i> Logout</button>
+</div>
+
+<div class="overlay" id="overlay"></div>
+
+    </header>
+   <div class="list">
+        <div class="dropdown">
+            <p class="dropbtn">Mens</p>
+            <div class="dropdown-content">
+                <a href="#">Shirts</a>
+                <a href="#">Tshirts</a>
+                <a href="#">Jeans</a>
+                <a href="#">Cargoes</a>
+                <a href="#">Footwear</a>
+            </div>
+      </div>
+      <div class="dropdown">
+            <p class="dropbtn">Womens</p>
+            <div class="dropdown-content">
+                <a href="#">Shirts</a>
+                <a href="#">Tshirts</a>
+                <a href="#">Jeans</a>
+                <a href="#">Cargoes</a>
+                <a href="#">Footwear</a>
+            </div>
+      </div>
+      <div class="dropdown">
+            <p class="dropbtn">Kids</p>
+            <div class="dropdown-content">
+                <a href="#">Boys wear</a>
+                <a href="#">Girls wear</a>
+                <a href="#">Jeans</a>
+                <a href="#">Cargoes</a>
+                <a href="#">Footwear</a>
+            </div>
+      </div>
+      <div class="dropdown">
+            <p class="dropbtn">Electronics</p>
+            <div class="dropdown-content">
+                <a href="#">Mobiles</a>
+                <a href="#">Laptops</a>
+            </div>
+      </div>
+    </div>
+<img src="/frontend/asserts/"  alt="banner" class="hero-banner">
+<main>
+    <section>
+  <p class="section-title">New Arrivals</p>
+
+  <!-- STATIC PRODUCTS ABOVE (unchanged) -->
+
+  <!-- DYNAMIC PRODUCTS -->
+  <div class="section-container" id="dynamicProducts"></div>
+</section>
+    <section class="sandals">
+        <p class="section-title">Sandals</p>
+        <div class="section-container">
+            <div class="product-card" data-id="shirt_101">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/Men sandals/a1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/Men sandals/a2.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men sandals/a3.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men sandals/a4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Centrino</div>
+                    <div class="title">Berkin-Style Slip-On Casual Sandal</div>
+             
+                    <div class="price">
+                        <span class="current">₹799</span>
+                        <span class="old">₹2499</span>
+                        <span class="off">68% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,428)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                       <button class="size-btn">11</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/Men sandals/b1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/Men sandals/b2.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men sandals/b3.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men sandals/b4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">SPARX </div>
+                    <div class="title">SPARX Men's Ss 101 Sport Sandal</div>
+             
+                    <div class="price">
+                        <span class="current">₹639</span>
+                        <span class="old">₹749</span>
+                        <span class="off">15% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(25,760)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/Men sandals/c1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/Men sandals/c2.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men sandals/c3.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men sandals/c4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Bata</div>
+                    <div class="title">Bata Men's Slip-on Fisherman Sandal|</div>
+             
+                    <div class="price">
+                        <span class="current">₹3,84</span>
+                        <span class="old">₹6,49</span>
+                        <span class="off">41% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(2,068)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/Men sandals/d1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/Men sandals/d2.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men sandals/d3.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men sandals/d4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">WALKROO</div>
+                    <div class="title">WALKAROO Mens Sandals </div>
+             
+                    <div class="price">
+                        <span class="current">₹874</span>
+                        <span class="old">₹1,999</span>
+                        <span class="off">56% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(758)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/Men sandals/e1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/Men sandals/e2.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men sandals/e3.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men sandals/e4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Woodland</div>
+                    <div class="title">Woodland Men Camel Sandal</div>
+             
+                    <div class="price">
+                        <span class="current">₹2,209</span>
+                        <span class="old">₹3,497</span>
+                        <span class="off">37% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/Men sandals/f1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/Men sandals/f2.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men sandals/f3.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men sandals/f4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">SPARX</div>
+                    <div class="title">SPARX Men's SFG 547 Sport Sandal</div>
+             
+                    <div class="price">
+                        <span class="current">₹715</span>
+                        <span class="old">₹849</span>
+                        <span class="off">16% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(2,498)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/Men sandals/g1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/Men sandals/g2.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men sandals/g3.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men sandals/g4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">STANFORD</div>
+                    <div class="title">Men's Gravixion with Adjustable Backstrap</div>
+             
+                    <div class="price">
+                        <span class="current">₹899</span>
+                        <span class="old">₹4,295</span>
+                        <span class="off">79% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/Men sandals/h1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/Men sandals/h2.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men sandals/h3.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men sandals/h4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">EL PASO </div>
+                    <div class="title">EL PASO Men Leather Sandals</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,089</span>
+                        <span class="old">₹2,849</span>
+                        <span class="off">62% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/Men sandals/i1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/Men sandals/i2.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men sandals/i3.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men sandals/i4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand"> Centrino</div>
+                    <div class="title">  Grip Insole for Stability </div>
+             
+                    <div class="price">
+                        <span class="current">₹799</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">68% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/Men sandals/j1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/Men sandals/j2.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men sandals/j3.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men sandals/j4.jpg" class="product-img">
+                </div>
+
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Woodland</div>
+                    <div class="title">Woodland Men's Leather Sandal</div>
+             
+                    <div class="price">
+                        <span class="current">₹2,608</span>
+                        <span class="old">₹3,495</span>
+                        <span class="off">25% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,120)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/Men sandals/k1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/Men sandals/k2.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men sandals/k3.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men sandals/k4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Centrino </div>
+                    <div class="title">Centrino Men’s Sandals Stylish</div>
+             
+                    <div class="price">
+                        <span class="current">₹749</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">70% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(9,255)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/Men sandals/l1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/Men sandals/l2.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men sandals/l3.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men sandals/l4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">CULT</div>
+                    <div class="title">CULT Mens Krios Sandals </div>
+             
+                    <div class="price">
+                        <span class="current">₹1,599</span>
+                        <span class="old">₹2,959</span>
+                        <span class="off">46% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <section class="highheels">
+        <p class="section-title">Slippers</p>
+        <div class="section-container">
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/Men slippers/a1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/Men slippers/a2.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men slippers/a3.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men slippers/a4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Impakto</div>
+                    <div class="title">Impakto 5 Finger Slippers for Men</div>
+             
+                    <div class="price">
+                        <span class="current">₹599</span>
+                        <span class="old">₹999</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/Men slippers/b1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/Men slippers/b2.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men slippers/b3.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men slippers/b4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Woodland</div>
+                    <div class="title">Woodland Men Flip-Flops</div>
+             
+                    <div class="price">
+                        <span class="current">₹489</span>
+                        <span class="old">₹630</span>
+                        <span class="off">22% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/Men slippers/c1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/Men slippers/c2.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men slippers/c3.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men slippers/c4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Metro </div>
+                    <div class="title">Metro Men Synthetic Leather Chappal</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,099</span>
+                        <span class="old">₹2,290</span>
+                        <span class="off">52% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/Men slippers/d1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/Men slippers/d2.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men slippers/d3.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men slippers/d4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Metro </div>
+                    <div class="title">Metro Men Synthetic Leather Chappal</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,346</span>
+                        <span class="old">₹2,990</span>
+                        <span class="off">55% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/Men slippers/e1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/Men slippers/e2.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men slippers/e3.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men slippers/e4.jpg" class="product-img">
+                </div>
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Metro </div>
+                    <div class="title">Metro Men Leather Casual Slippers </div>
+             
+                    <div class="price">
+                        <span class="current">₹1,794</span>
+                        <span class="old">₹2,990</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+        
+                    <img src="/frontend/asserts/Men slippers/f1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/Men slippers/f2.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men slippers/f3.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men slippers/f4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Centrino</div>
+                    <div class="title">Centrino Men's Flip-Flop Slippers</div>
+             
+                    <div class="price">
+                        <span class="current">₹499</span>
+                        <span class="old">₹,499</span>
+                        <span class="off">67% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/Men slippers/g1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/Men slippers/g2.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men slippers/g3.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men slippers/g4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">DOCTOR EXTRA SOFT</div>
+                    <div class="title">DOCTOR EXTRA SOFT Men's Classic</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,199</span>
+                        <span class="old">₹3,999</span>
+                        <span class="off">70%off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/Men slippers/h1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/Men slippers/h2.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men slippers/h3.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men slippers/h4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Bata</div>
+                    <div class="title">Bata Men Slippers</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,099</span>
+                        <span class="old">₹1,299</span>
+                        <span class="off">15% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/Men slippers/i1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/Men slippers/i2.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men slippers/i3.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men slippers/i4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Crocs</div>
+                    <div class="title">Crocs Flat Adult Bayaband Flip</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,199</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5</button>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/Men slippers/j1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/Men slippers/j2.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men slippers/j3.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men slippers/j4.jpg"product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Bata</div>
+                    <div class="title"> Bata Men Casual Thong Slipper </div>
+             
+                    <div class="price">
+                        <span class="current">₹969</span>
+                        <span class="old">₹1,099</span>
+                        <span class="off">13% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/Men slippers/k1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/Men slippers/k2.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men slippers/k3.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men slippers/k4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Shoetopia Store</div>
+                    <div class="title">Stylish Ankle Strap Block Heeled</div>
+             
+                    <div class="price">
+                        <span class="current">₹599</span>
+                        <span class="old">₹1,999</span>
+                        <span class="off">70% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5</button>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/Men slippers/l1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/Men slippers/l2.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men slippers/l3.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men slippers/l4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">DOCTOR HEALTH SUPER SOFT</div>
+                    <div class="title">DOCTOR HEALTH Men’s Slippers</div>
+             
+                    <div class="price">
+                        <span class="current">₹498</span>
+                        <span class="old">₹1,999</span>
+                        <span class="off">75% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5</button>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </section>
+        <section class="casual-shoes">
+        <p class="section-title">Casual-Shoes</p>
+        <div class="section-container">
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/Men casual shoes/a1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/Men casual shoes/a2.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men casual shoes/a3.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men casual shoes/a4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">ASIAN</div>
+                    <div class="title">ASIAN Men Casual, College, Parties </div>
+             
+                    <div class="price">
+                        <span class="current">₹665</span>
+                        <span class="old">₹1,499</span>
+                        <span class="off">55% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5</button>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/Men casual shoes/b1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/Men casual shoes/b2.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men casual shoes/b3.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men casual shoes/b4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">U.S. POLO ASSN.</div>
+                    <div class="title">USPA|Camry|White Stylish Shoes for Man</div>
+             
+                    <div class="price">
+                        <span class="current">₹2,591</span>
+                        <span class="old">₹4,799</span>
+                        <span class="off">46% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5</button>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/Men casual shoes/c1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/Men casual shoes/c2.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men casual shoes/c3.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men casual shoes/c4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Campus</div>
+                    <div class="title">Campus Men First Running Shoes</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,209</span>
+                        <span class="old">₹1,899</span>
+                        <span class="off">36% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5</button>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/Men casual shoes/d1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/Men casual shoes/d2.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men casual shoes/d3.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men casual shoes/d4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Puma</div>
+                    <div class="title">Puma Mens Dazzler Sneaker</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,549</span>
+                        <span class="old">₹3,999</span>
+                        <span class="off">61% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5</button>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/Men casual shoes/e1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/Men casual shoes/e2.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men casual shoes/e3.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men casual shoes/e4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Reebok </div>
+                    <div class="title">Reebok Courtswift - Stylish Shoes</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,566</span>
+                        <span class="old">₹3,799</span>
+                        <span class="off">59% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5</button>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/Men casual shoes/f1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/Men casual shoes/f2.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men casual shoes/f3.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men casual shoes/f4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Skechers</div>
+                    <div class="title">Skechers Men Lace Up Sneaker Shoes</div>
+             
+                    <div class="price">
+                        <span class="current">₹2,187</span>
+                        <span class="old">₹4,999</span>
+                        <span class="off">56% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5</button>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/Men casual shoes/g1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/Men casual shoes/g2.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men casual shoes/g3.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men casual shoes/g4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Woodland</div>
+                    <div class="title">Woodland Men's Leather Casual Shoes</div>
+             
+                    <div class="price">
+                        <span class="current">₹2,947</span>
+                        <span class="old">₹3,595</span>
+                        <span class="off">18% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5</button>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/Men casual shoes/h1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/Men casual shoes/h2.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men casual shoes/h3.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men casual shoes/h4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Nike</div>
+                    <div class="title">Nike Men Running Shoes</div>
+             
+                    <div class="price">
+                        <span class="current">₹2,547</span>
+                        <span class="old">₹5,999</span>
+                        <span class="off">58% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/Men casual shoes/i1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/Men casual shoes/i2.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men casual shoes/i3.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men casual shoes/i4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">BRUTON</div>
+                    <div class="title">BRUTON Casual Shoes for Men & Boys</div>
+             
+                    <div class="price">
+                        <span class="current">₹743</span>
+                        <span class="old">₹1,299</span>
+                        <span class="off">68% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5</button>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/Men casual shoes/j1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/Men casual shoes/j2.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men casual shoes/j3.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men casual shoes/j4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">AADI</div>
+                    <div class="title">AADI Men's Walking & Gym Casual Shoes </div>
+             
+                    <div class="price">
+                        <span class="current">₹451</span>
+                        <span class="old">₹1,999</span>
+                        <span class="off">77% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5</button>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/Men casual shoes/k1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/Men casual shoes/k2.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men casual shoes/k3.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men casual shoes/k4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Bata</div>
+                    <div class="title">Bata Men's Lace-up Shoes</div>
+             
+                    <div class="price">
+                        <span class="current">₹739</span>
+                        <span class="old">₹999</span>
+                        <span class="off">26% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5</button>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/Men casual shoes/l.jpg" class="product-img active">
+                    <img src="/frontend/asserts/Men casual shoes/l2.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men casual shoes/l3.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men casual shoes/l4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">adidas</div>
+                    <div class="title">adidas Men Restound M Running Shoe</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,909</span>
+                        <span class="old">₹3,799</span>
+                        <span class="off">50% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5</button>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <section class="sportsshoes">
+        <p class="section-title">Sports-Shoes</p>
+        <div class="section-container">
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/Men sports shoes/a1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/Men sports shoes/a2.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men sports shoes/a3.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men sports shoes/a4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Campus</div>
+                    <div class="title"> Campus Men Camp Karl Running Shoes</div>
+             
+                    <div class="price">
+                        <span class="current">₹749</span>
+                        <span class="old">₹1,599</span>
+                        <span class="off">51% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/Men sports shoes/b1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/Men sports shoes/b2.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men sports shoes/b3.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men sports shoes/b4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Boldfit</div>
+                    <div class="title">Boldfit Badminton Shoes for Man Lightweight</div>
+             
+                    <div class="price">
+                        <span class="current">₹999</span>
+                        <span class="old">₹4,199</span>
+                        <span class="off">76% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/Men sports shoes/c1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/Men sports shoes/c2.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men sports shoes/c3.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men sports shoes/c4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Campus</div>
+                    <div class="title">Campus Men Abacus Running Shoes </div>
+             
+                    <div class="price">
+                        <span class="current">₹1,199</span>
+                        <span class="old">₹2,299</span>
+                        <span class="off">48% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/Men sports shoes/d1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/Men sports shoes/d2.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men sports shoes/d3.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men sports shoes/d4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Nivia</div>
+                    <div class="title">Nivia Football Hard Grassy Ground Surfaces</div>
+             
+                    <div class="price">
+                        <span class="current">₹764</span>
+                        <span class="old">₹869</span>
+                        <span class="off">12% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5</button>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/Men sports shoes/e1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/Men sports shoes/e2.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men sports shoes/e3.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men sports shoes/e4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Nivia </div>
+                    <div class="title">Nivia Airstrike Football Molding Technology </div>
+             
+                    <div class="price">
+                        <span class="current">₹769</span>
+                        <span class="old">₹1,069</span>
+                        <span class="off">28% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5</button>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/Men sports shoes/f1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/Men sports shoes/f2.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men sports shoes/f3.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men sports shoes/f4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Reebok</div>
+                    <div class="title">Reebok Men's Sports Shoe </div>
+             
+                    <div class="price">
+                        <span class="current">₹1,299</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">48% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/Men sports shoes/g1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/Men sports shoes/g2.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men sports shoes/g3.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men sports shoes/g4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">adidas</div>
+                    <div class="title">Adidas Men's Clinch-X M Running Shoe</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,576</span>
+                        <span class="old">₹2,999</span>
+                        <span class="off">47% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/Men sports shoes/h1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/Men sports shoes/h2.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men sports shoes/h3.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men sports shoes/h4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Campus</div>
+                    <div class="title">Campus Men Draft Walking Shoes </div>
+             
+                    <div class="price">
+                        <span class="current">₹999</span>
+                        <span class="old">₹1,999</span>
+                        <span class="off">50% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/Men sports shoes/i1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/Men sports shoes/i2.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men sports shoes/i3.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men sports shoes/i4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">OFF LIMITS</div>
+                    <div class="title">OFF LIMITS Men's Gladiator Lightweight </div>
+             
+                    <div class="price">
+                        <span class="current">₹1,759</span>
+                        <span class="old">₹5,499</span>
+                        <span class="off">68% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/Men sports shoes/j1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/Men sports shoes/j2.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men sports shoes/j3.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men sports shoes/j4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">FIELD CARE</div>
+                    <div class="title">FIELD CARE Dark Athletic Sports shoe</div> 
+
+
+                    <div class="price">
+                        <span class="current">₹1,630</span>
+                        <span class="old">₹3,499</span>
+                        <span class="off">53% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/Men sports shoes/k1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/Men sports shoes/k2.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men sports shoes/k3.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men sports shoes/k4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">DSC</div>
+                    <div class="title">DSC Super Storm Cricket Shoes for Mens</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,299</span>
+                        <span class="old">₹1,599</span>
+                        <span class="off">19% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5</button>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/Men sports shoes/l1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/Men sports shoes/l2.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men sports shoes/l3.jpg" class="product-img">
+                    <img src="/frontend/asserts/Men sports shoes/l4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Puma</div>
+                    <div class="title">Puma Mens Stride Lite Running Shoe</div>
+             
+                    <div class="price">
+                        <span class="current">₹2,999</span>
+                        <span class="old">₹5,999</span>
+                        <span class="off">50% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                       <button class="size-btn">11</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <section class="sandals">
+        <p class="section-title">Formal shoes</p>
+        <div class="section-container">
+            <div class="product-card" data-id="shirt_101">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/Formal shoes/a1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/Formal shoes/a2.jpg" class="product-img">
+                    <img src="/frontend/asserts/Formal shoes/a3.jpg" class="product-img">
+                    <img src="/frontend/asserts/Formal shoes/a4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Bata</div>
+                    <div class="title">Bata Men's Lace-up Formal Shoes</div>
+             
+                    <div class="price">
+                        <span class="current">₹789</span>
+                        <span class="old">₹1,199</span>
+                        <span class="off">34% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,428)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                       <button class="size-btn">11</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/Formal shoes/b1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/Formal shoes/b2.jpg" class="product-img">
+                    <img src="/frontend/asserts/Formal shoes/b3.jpg" class="product-img">
+                    <img src="/frontend/asserts/Formal shoes/b4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Hush Puppies</div>
+                    <div class="title">Hush Puppies Men's Lace-up Formal Shoes</div>
+             
+                    <div class="price">
+                        <span class="current">₹2,199</span>
+                        <span class="old">₹3,799</span>
+                        <span class="off">42% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(25,760)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                       <button class="size-btn">11</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/Formal shoes/c1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/Formal shoes/c2.jpg" class="product-img">
+                    <img src="/frontend/asserts/Formal shoes/c3.jpg" class="product-img">
+                    <img src="/frontend/asserts/Formal shoes/c4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Centrino</div>
+                    <div class="title">Centrino Men's Professional or Formal Wear</div>
+             
+                    <div class="price">
+                        <span class="current">₹749</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">70% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(2,068)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/Formal shoes/d1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/Formal shoes/d2.jpg" class="product-img">
+                    <img src="/frontend/asserts/Formal shoes/d3.jpg" class="product-img">
+                    <img src="/frontend/asserts/Formal shoes/d4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Bata</div>
+                    <div class="title">Bata Men's Lace-up Formal Shoes</div>
+             
+                    <div class="price">
+                        <span class="current">₹789</span>
+                        <span class="old">₹1,199</span>
+                        <span class="off">34% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(758)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                       <button class="size-btn">11</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/Formal shoes/e1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/Formal shoes/e2.jpg" class="product-img">
+                    <img src="/frontend/asserts/Formal shoes/e3.jpg" class="product-img">
+                    <img src="/frontend/asserts/Formal shoes/e4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Centrino</div>
+                    <div class="title">Centrino Formal Shoes for Men</div>
+             
+                    <div class="price">
+                        <span class="current">₹499</span>
+                        <span class="old">₹999</span>
+                        <span class="off">50% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/Formal shoes/f1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/Formal shoes/f2.jpg" class="product-img">
+                    <img src="/frontend/asserts/Formal shoes/f3.jpg" class="product-img">
+                    <img src="/frontend/asserts/Formal shoes/f4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">San Frissco</div>
+                    <div class="title">San Frissco Mens Formal Shoes Lace Up</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,359</span>
+                        <span class="old">₹3,799</span>
+                        <span class="off">64% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(2,498)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/Formal shoes/g1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/Formal shoes/g2.jpg" class="product-img">
+                    <img src="/frontend/asserts/Formal shoes/g3.jpg" class="product-img">
+                    <img src="/frontend/asserts/Formal shoes/g4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Bata</div>
+                    <div class="title">Bata Men's Slip-on Loafer</div>
+             
+                    <div class="price">
+                        <span class="current">₹549</span>
+                        <span class="old">₹599</span>
+                        <span class="off">8% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                       <button class="size-btn">11</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/Formal shoes/h1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/Formal shoes/h2.jpg" class="product-img">
+                    <img src="/frontend/asserts/Formal shoes/h3.jpg" class="product-img">
+                    <img src="/frontend/asserts/Formal shoes/h4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">FAUSTO </div>
+                    <div class="title">FAUSTO Men's Formal Oxford Shoes</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,299</span>
+                        <span class="old">₹1,599</span>
+                        <span class="off">19% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/Formal shoes/i1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/Formal shoes/i2.jpg" class="product-img">
+                    <img src="/frontend/asserts/Formal shoes/i3.jpg" class="product-img">
+                    <img src="/frontend/asserts/Formal shoes/i4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">PARAGON</div>
+                    <div class="title">PARAGON K11238G Formal Shoes for Men</div>
+             
+                    <div class="price">
+                        <span class="current">₹899</span>
+                        <span class="old">₹1,599</span>
+                        <span class="off">44% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/Formal shoes/j1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/Formal shoes/j2.jpg" class="product-img">
+                    <img src="/frontend/asserts/Formal shoes/j3.jpg" class="product-img">
+                    <img src="/frontend/asserts/Formal shoes/j4.jpg" class="product-img">
+                </div>
+
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Bata</div>
+                    <div class="title">Bata Men's Lace-up Formal Shoes</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,399</span>
+                        <span class="old">₹1,999</span>
+                        <span class="off">30% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,120)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/Formal shoes/k1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/Formal shoes/k2.jpg" class="product-img">
+                    <img src="/frontend/asserts/Formal shoes/k3.jpg" class="product-img">
+                    <img src="/frontend/asserts/Formal shoes/k4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Centrino </div>
+                    <div class="title">Centrino Mens Glossy Formal Shoes </div>
+             
+                    <div class="price">
+                        <span class="current">₹749</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">70% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(9,255)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/Formal shoes/l1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/Formal shoes/l2.jpg" class="product-img">
+                    <img src="/frontend/asserts/Formal shoes/l3.jpg" class="product-img">
+                    <img src="/frontend/asserts/Formal shoes/l4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Centrino</div>
+                    <div class="title">Centrino Mens for All-Day Elegance</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,599</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">45% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">6</button>
+                       <button class="size-btn">7</button>
+                       <button class="size-btn">8</button>
+                       <button class="size-btn">9</button>
+                       <button class="size-btn">10</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section">
+        <div class="footer-logo">
+        <span>🛒</span>NexCart
+    </div>
+        <p style="font-size: 12px;">Your one-stop destination for quality products at the best prices.</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <a href="#">Home</a>
+      <a href="#">Shop</a>
+      <a href="#">Categories</a>
+      <a href="#">Contact Us</a>
+    </div>
+
+    <div class="footer-section">
+      <h3>Customer Service</h3>
+      <a href="#">FAQ</a>
+      <a href="#">Returns</a>
+      <a href="#">Shipping</a>
+      <a href="#">Privacy Policy</a>
+    </div>
+
+    <div class="footer-social">
+      <h3>Follow Us</h3>
+      <i class="fa-brands fa-instagram" id="instagram"></i>
+      <i class="fa-brands fa-facebook" id="facebook"></i>
+      <i class="fa-brands fa-x-twitter" id="twitter"></i>
+      <i class="fa-brands fa-youtube" id="youtube"></i>
+      <i class="fa-brands fa-whatsapp" id="whatsapp"></i>
+      <i class="fa-brands fa-telegram" id="telegram"></i>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 NexCart. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/frontend/js/product.js"></script>
+</body>
+</html>

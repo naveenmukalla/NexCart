@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>NexCart | Seller Dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+<style>
+/* =========================
+   GLOBAL
+========================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: #f4f6fb;
+  color: #333;
+}
+
+/* =========================
+   LAYOUT
+========================= */
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+.sidebar {
+  width: 250px;
+  background: linear-gradient(180deg, #1e1e1e, #2a2a2a);
+  color: #fff;
+  padding: 22px 18px;
+}
+
+.sidebar h2 {
+  margin: 0 0 30px;
+  font-size: 22px;
+  color: #ff7a18;
+  text-align: center;
+}
+
+.sidebar a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  margin-bottom: 8px;
+  color: #eaeaea;
+  text-decoration: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.25s, color 0.25s;
+  font-size: 15px;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+  background: #ff7a18;
+  color: #fff;
+}
+
+/* =========================
+   MAIN
+========================= */
+.main {
+  flex: 1;
+  padding: 30px;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+.section {
+  display: none;
+}
+
+.section.active {
+  display: block;
+}
+
+/* =========================
+   CARDS
+========================= */
+.card {
+  background: #fff;
+  padding: 26px;
+  border-radius: 14px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.06);
+  margin-bottom: 25px;
+}
+
+/* =========================
+   STATS
+========================= */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 22px;
+}
+
+.stat {
+  background: linear-gradient(135deg, #fff, #fafafa);
+  padding: 24px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+}
+
+.stat h1 {
+  margin: 0;
+  font-size: 30px;
+  color: #ff7a18;
+}
+
+.stat p {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #666;
+}
+
+/* =========================
+   FORMS
+========================= */
+form {
+  display: grid;
+  gap: 16px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #ff7a18;
+  box-shadow: 0 0 0 2px rgba(255,122,24,0.15);
+}
+
+/* =========================
+   BUTTONS
+========================= */
+button {
+  background: linear-gradient(135deg, #ff7a18, #ff5c00);
+  color: #fff;
+  border: none;
+  padding: 13px 22px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s, opacity 0.15s;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(255,122,24,0.35);
+  opacity: 0.95;
+}
+
+/* =========================
+   TABLE
+========================= */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+thead {
+  background: #f7f7f7;
+}
+
+th,
+td {
+  padding: 14px 12px;
+  text-align: left;
+  font-size: 14px;
+}
+
+th {
+  font-weight: 600;
+  color: #444;
+}
+
+tbody tr {
+  border-bottom: 1px solid #eee;
+}
+
+tbody tr:hover {
+  background: #fafafa;
+}
+
+/* =========================
+   PAYOUT SECTION
+========================= */
+#payoutAmount {
+  margin: 15px 0;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .sidebar a {
+    flex: 1 1 45%;
+    justify-content: center;
+  }
+
+  .main {
+    padding: 20px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <h2>Seller Panel</h2>
+    <a onclick="showSection('profile')">Profile</a>
+    <a onclick="showSection('dashboard')">Dashboard</a>
+    <a onclick="showSection('add-product')">Add Product</a>
+    <a onclick="showSection('products')">My Products</a>
+    <a onclick="showSection('payouts')">Payouts</a>
+    <a onclick="logout()">Logout</a>
+  </div>
+
+  <!-- MAIN -->
+  <div class="main">
+
+    <!-- PROFILE -->
+    <div class="section active" id="profile">
+      <div class="card">
+        <h3>👤 Seller Profile</h3>
+        <p><b>Name:</b> <span id="p_fullname"></span></p>
+        <p><b>Business:</b> <span id="p_business"></span></p>
+        <p><b>Email:</b> <span id="p_email"></span></p>
+        <p><b>Phone:</b> <span id="p_phone"></span></p>
+      </div>
+    </div>
+
+    <!-- DASHBOARD -->
+    <div class="section" id="dashboard">
+      <div class="card">
+        <h3>Dashboard</h3>
+        <div class="stats">
+          <div class="stat">
+            <h1 id="totalProducts">0</h1>
+            <p>Total Products</p>
+          </div>
+          <div class="stat">
+            <h1 id="approvedCount">0</h1>
+            <p>Approved</p>
+          </div>
+          <div class="stat">
+            <h1 id="pendingCount">0</h1>
+            <p>Pending</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ADD PRODUCT -->
+    <div class="section" id="add-product">
+      <div class="card">
+        <h3>➕ Add Product</h3>
+
+        <form id="addProductForm" enctype="multipart/form-data">
+
+          <!-- CATEGORY -->
+          <select name="category" required>
+            <option value="">Select Category</option>
+            <option value="mens">Men</option>
+            <option value="womens">Women</option>
+            <option value="kids">Kids</option>
+            <option value="electronics">Electronics</option>
+          </select>
+
+          <!-- SUBCATEGORY -->
+          <select name="subcategory" required>
+            <option value="">Select Subcategory</option>
+            <option value="shirts">Shirts</option>
+            <option value="tshirts">T-shirts</option>
+            <option value="pants">Pants</option>
+            <option value="mensfootwear">Footwear</option>
+            <option value="sarees">Sarees</option>
+            <option value="womens-tshirts">T-shirts</option>
+            <option value="jeans">Jeans</option>
+            <option value="anarkalis">Anarkalis</option>
+            <option value="lehangas">Lahangas</option>
+            <option value="womenfootwear">Footwear</option>
+            <option value="boyswear">Boys Wear</option>
+            <option value="girlswear">Girls Wear</option>
+            <option value="boysfootwear">Boys Footwear</option>
+            <option value="girlsfootwear">Girls Footwear</option>
+            <option value="mobiles">Mobiles</option>
+            <option value="laptops">Laptops</option>
+          </select>
+
+          <input name="brand" placeholder="Brand" required>
+          <input name="title" placeholder="Product Title" required>
+          <input name="price" type="number" placeholder="Price" required>
+          <input name="old_price" type="number" placeholder="Old Price">
+          <input name="sizes" placeholder="Sizes (S,M,L,XL)">
+          <input name="rom" placeholder="ROM (64GB,128GB)">
+          <input type="file" name="images" multiple required>
+
+          <button type="submit">Submit for Approval</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- MY PRODUCTS -->
+    <div class="section" id="products">
+      <div class="card">
+        <h3>📦 My Products</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Category</th>
+              <th>Price</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="myProducts"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- PAYOUTS -->
+    <div class="section" id="payouts">
+      <div class="card">
+        <h3>💰 Wallet</h3>
+        <h1 id="walletBalance">₹0</h1>
+        <input type="number" id="payoutAmount" placeholder="Enter amount">
+        <button onclick="requestPayout()">Request Payout</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="/frontend/js/sellel-dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>anarkalis</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/frontend/css/product.css">
+</head>
+<body data-category="womens" data-subcategory="anarkalis">
+     <div class="page-container">
+    <header>
+        <!-- DESKTOP HEADER -->
+<div class="desktop-header">
+  <div class="logo">🛒 NexCart</div>
+
+  <div class="search-box">
+    <i class="fas fa-search"></i>
+    <input type="text" placeholder="Search products">
+  </div>
+
+  <div class="icons">
+    <div class="icon user" id="userIcon">
+      <i class="far fa-user"></i>
+      <span>Profile</span>
+      <div class="user-dropdown">
+        <a href="profile.html"><i class="far fa-user"></i> My Profile</a>
+        <a href="my-order.html"><i class="fas fa-box"></i> My Orders</a>
+        <button onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</button>
+      </div>
+    </div>
+
+    <div class="icon" onclick="location.href='wishlist.html'">
+      <i class="far fa-heart"></i>
+      <span class="count" id="wishlistCount">0</span>
+    </div>
+
+    <div class="icon" onclick="location.href='cart.html'">
+      <i class="fas fa-shopping-cart"></i>
+      <span class="count" id="cartCount">0</span>
+    </div>
+
+    <div class="icon">
+      <i class="fa-regular fa-circle-question"></i>
+    </div>
+  </div>
+</div>
+
+<!-- MOBILE HEADER -->
+<div class="mobile-header">
+  <div class="logo">🛒 NexCart</div>
+  <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
+</div>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-header">
+    NexCart
+    <i class="fas fa-times" id="closeMenu"></i>
+  </div>
+
+  <a href="home.html"><i class="fa-solid fa-house"></i> Home</a>
+
+  <div class="accordion">
+    <div class="accordion-item">
+      <div class="accordion-title">👕 Men <i class="fas fa-chevron-down"></i></div>
+      <div class="accordion-content">
+        <a href="shirts.html">Shirt</a>
+        <a href="pants.html">Pants</a>
+        <a href="tshirts.html">T-shirts</a>
+        <a href="menfootwear.html">Footwear</a>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-title">👗 Women <i class="fas fa-chevron-down"></i></div>
+      <div class="accordion-content">
+        <a href="sarees.html">Sarees</a>
+        <a href="tshirtswomens.html">Tshirts</a>
+        <a href="womenjeens.html">jeans</a>
+        <a href="anarkalis.html">Anarkalis</a>
+        <a href="lehangas.html">Lahangas</a>
+        <a href="womenfootwear.html">Footwear</a>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-title">🧒 Kids <i class="fas fa-chevron-down"></i></div>
+      <div class="accordion-content">
+        <a href="boys.html">Boys Clothing</a>
+        <a href="girls.html">Girls Clothing</a>
+        <a href="boysfootwear.html">Boys Footwear</a>
+        <a href="girlsfootwear.html">Girls Footwear</a>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-title">📱 Electronics<i class="fas fa-chevron-down"></i></div>
+      <div class="accordion-content">
+        <a href="mobiles.html">Mobiles</a>
+        <a href="laptops.html">Laptops</a>
+      </div>
+    </div>
+  </div>
+
+  <a href="profile.html"><i class="fa-solid fa-user"></i> My Profile</a>
+  <a href="my-order.html"><i class="fas fa-box"></i>  My Orders</a>
+  <a href="wishlist.html"><i class="fa-solid fa-heart"></i> Wishlist</a>
+  <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
+  <button onclick="logout()"><i class="fa-solid fa-right-from-bracket"></i> Logout</button>
+</div>
+
+<div class="overlay" id="overlay"></div>
+
+    </header>
+   <div class="list">
+        <div class="dropdown">
+            <p class="dropbtn">Mens</p>
+            <div class="dropdown-content">
+                <a href="shirts.html">Shirts</a>
+                <a href="pants.html">Pants</a>
+                <a href="tshirts.html">T-Shirts</a>
+                <a href="menfootwear.html">Footwear</a>
+            </div>
+      </div>
+      <div class="dropdown">
+            <p class="dropbtn">Womens</p>
+            <div class="dropdown-content">
+                <a href="sarees.html">Sarees</a>
+                <a href="tshirtswomens.html">Tshirts</a>
+                <a href="womenjeens.html">jeans</a>
+                <a href="anarkalis.html">Anarkalis</a>
+                <a href="lehangas.html">Lahangas</a>
+                <a href="womenfootwear.html">Footwear</a>
+            </div>
+      </div>
+      <div class="dropdown">
+            <p class="dropbtn">Kids</p>
+            <div class="dropdown-content">
+                <a href="boys.html">Boys wear</a>
+                <a href="girls.html">Girls wear</a>
+                <a href="boysfootwear.html">Boys Footwear</a>
+                <a href="girlsfootwear.html">Girls Footwear</a>
+            </div>
+      </div>
+      <div class="dropdown">
+            <p class="dropbtn">Electronics</p>
+            <div class="dropdown-content">
+                <a href="mobiles.html">Mobiles</a>
+                <a href="laptops.html">Laptops</a>
+            </div>
+      </div>
+    </div>
+<img src="/frontend/asserts/womensfassion/anarkalibanner.webp"  alt="banner" class="hero-banner">
+<main>
+    <section>
+  <p class="section-title">New Arrivals</p>
+
+  <!-- STATIC PRODUCTS ABOVE (unchanged) -->
+
+  <!-- DYNAMIC PRODUCTS -->
+  <div class="section-container" id="dynamicProducts"></div>
+</section>
+    <section class="anarkalis">
+        <p class="section-title">Anarkalis</p>
+        <div class="section-container">
+            <div class="product-card" data-id="shirt_101">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womensfassion/anarkalis/a1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womensfassion/anarkalis/a2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/anarkalis/a3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/anarkalis/a4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">GoSriKi</div>
+                    <div class="title">Libas Womens Printed Viscose Rayon Straight Kurta With Palazzos and Dupatta</div>
+             
+                    <div class="price">
+                        <span class="current">₹899</span>
+                        <span class="old">₹2,799</span>
+                        <span class="off">68% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womensfassion/anarkalis/b1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womensfassion/anarkalis/b2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/anarkalis/b3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/anarkalis/b4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">ANNI DESIGNER</div>
+                    <div class="title">Pure Cotton Suit Set for Women | Ajrakh Print Kurta Palazzo Dupatta</div>
+             
+                    <div class="price">
+                        <span class="current">₹799</span>
+                        <span class="old">₹2,599</span>
+                        <span class="off">69% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womensfassion/anarkalis/c1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womensfassion/anarkalis/c2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/anarkalis/c3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/anarkalis/c4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Nermosa</div>
+                    <div class="title">Embroidered Anarkali Kurta Pant Set with Organza Dupatta A-line</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,599</span>
+                        <span class="old">₹2,999</span>
+                        <span class="off">47% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womensfassion/anarkalis/d1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womensfassion/anarkalis/d2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/anarkalis/d3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/anarkalis/d4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Madhuram</div>
+                    <div class="title">Madhuram Cotton Embroidery Anarkali Kurti and Pant with Dupatta </div>
+             
+                    <div class="price">
+                        <span class="current">₹1,099</span>
+                        <span class="old">₹1,999</span>
+                        <span class="off">45% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womensfassion/anarkalis/e1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womensfassion/anarkalis/e2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/anarkalis/e3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/anarkalis/e4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">GoSriKi</div>
+                    <div class="title">Rayon Anarkali Printed Kurta Pant Dupatta Set Ethnic Co-ord Suit Set with Dupatta</div>
+             
+                    <div class="price">
+                        <span class="current">₹692</span>
+                        <span class="old">₹2,599</span>
+                        <span class="off">73% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womensfassion/anarkalis/f1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womensfassion/anarkalis/f2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/anarkalis/f3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/anarkalis/f4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">MANHAREE</div>
+                    <div class="title">Pure Viscose Ethnic Suit Set with Pant & Dupatta Cotton Kurta Sets for Woman</div>
+             
+                    <div class="price">
+                        <span class="current">₹699</span>
+                        <span class="old">₹2,599</span>
+                        <span class="off">73% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womensfassion/anarkalis/g1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womensfassion/anarkalis/g2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/anarkalis/g3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/anarkalis/g4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">MOKOSH</div>
+                    <div class="title">Women's Rayon Viscose Straight Embroidery Kurta with Pant & Dupatta</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,499</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womensfassion/anarkalis/h1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womensfassion/anarkalis/h2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/anarkalis/h3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/anarkalis/h4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">GoSriKi</div>
+                    <div class="title">GoSriKi Rayon Viscose Embroidered Anarkali Kurta with Pant & Dupatta</div>
+             
+                    <div class="price">
+                        <span class="current">₹826</span>
+                        <span class="old">₹2,598</span>
+                        <span class="off">68% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womensfassion/anarkalis/i1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womensfassion/anarkalis/i2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/anarkalis/i3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/anarkalis/i4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Arayna</div>
+                    <div class="title">Rayon Viscose Printed Anarkali Kurta with Pant Anarkali Suit for Women</div>
+             
+                    <div class="price">
+                        <span class="current">₹554</span>
+                        <span class="old">₹2,599</span>
+                        <span class="off">79% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womensfassion/anarkalis/j1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womensfassion/anarkalis/j2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/anarkalis/j3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/anarkalis/j4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">ANNI DESIGNER</div>
+                    <div class="title">ANNI Designer Women's Pure Cotton Block Hand Print Anarkali Kurta Set with Dupatta</div>
+             
+                    <div class="price">
+                        <span class="current">₹909</span>
+                        <span class="old">₹2,599</span>
+                        <span class="off">65% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womensfassion/anarkalis/k1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womensfassion/anarkalis/k2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/anarkalis/k3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/anarkalis/k4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Ada</div>
+                    <div class="title">Women's Embroiderd Work Navyblue Color Weding Wear Anarkali Kurta Sharara Set</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,389</span>
+                        <span class="old">₹2,999</span>
+                        <span class="off">54% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/womensfassion/anarkalis/l1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/womensfassion/anarkalis/l2.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/anarkalis/l3.jpg" class="product-img">
+                    <img src="/frontend/asserts/womensfassion/anarkalis/l4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Yash Gallery</div>
+                    <div class="title">Rangnavi Women Rayon Anarkali Embroidered Printed Kurta Pant and Dupatta</div>
+             
+                    <div class="price">
+                        <span class="current">₹732</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">71% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">S</button>
+                       <button class="size-btn">M</button>
+                       <button class="size-btn">L</button>
+                       <button class="size-btn">XL</button>
+                       <button class="size-btn">2XL</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+       
+    
+</main>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section">
+        <div class="footer-logo">
+        <span>🛒</span>NexCart
+    </div>
+        <p style="font-size: 12px;">Your one-stop destination for quality products at the best prices.</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <a href="#">Home</a>
+      <a href="#">Shop</a>
+      <a href="#">Categories</a>
+      <a href="#">Contact Us</a>
+    </div>
+
+    <div class="footer-section">
+      <h3>Customer Service</h3>
+      <a href="#">FAQ</a>
+      <a href="#">Returns</a>
+      <a href="#">Shipping</a>
+      <a href="#">Privacy Policy</a>
+    </div>
+
+    <div class="footer-social">
+      <h3>Follow Us</h3>
+      <i class="fa-brands fa-instagram" id="instagram"></i>
+      <i class="fa-brands fa-facebook" id="facebook"></i>
+      <i class="fa-brands fa-x-twitter" id="twitter"></i>
+      <i class="fa-brands fa-youtube" id="youtube"></i>
+      <i class="fa-brands fa-whatsapp" id="whatsapp"></i>
+      <i class="fa-brands fa-telegram" id="telegram"></i>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 NexCart. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/frontend/js/product.js"></script>
+</body>
+</html>

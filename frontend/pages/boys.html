@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boys Wear</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/frontend/css/product.css">
+</head>
+<body data-category="kids" data-subcategory="boyswear">
+     <div class="page-container">
+    <header>
+        <!-- DESKTOP HEADER -->
+<div class="desktop-header">
+  <div class="logo">🛒 NexCart</div>
+
+  <div class="search-box">
+    <i class="fas fa-search"></i>
+    <input type="text" placeholder="Search products">
+  </div>
+
+  <div class="icons">
+    <div class="icon user" id="userIcon">
+      <i class="far fa-user"></i>
+      <span>Profile</span>
+      <div class="user-dropdown">
+        <a href="profile.html"><i class="far fa-user"></i> My Profile</a>
+        <a href="my-order.html"><i class="fas fa-box"></i> My Orders</a>
+        <button onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</button>
+      </div>
+    </div>
+
+    <div class="icon" onclick="location.href='wishlist.html'">
+      <i class="far fa-heart"></i>
+      <span class="count" id="wishlistCount">0</span>
+    </div>
+
+    <div class="icon" onclick="location.href='cart.html'">
+      <i class="fas fa-shopping-cart"></i>
+      <span class="count" id="cartCount">0</span>
+    </div>
+
+    <div class="icon">
+      <i class="fa-regular fa-circle-question"></i>
+    </div>
+  </div>
+</div>
+
+<!-- MOBILE HEADER -->
+<div class="mobile-header">
+  <div class="logo">🛒 NexCart</div>
+  <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
+</div>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-header">
+    NexCart
+    <i class="fas fa-times" id="closeMenu"></i>
+  </div>
+
+  <a href="home.html"><i class="fa-solid fa-house"></i> Home</a>
+
+  <div class="accordion">
+    <div class="accordion-item">
+      <div class="accordion-title">👕 Men <i class="fas fa-chevron-down"></i></div>
+      <div class="accordion-content">
+        <a href="shirts.html">Shirt</a>
+        <a href="pants.html">Pants</a>
+        <a href="tshirts.html">T-shirts</a>
+        <a href="menfootwear.html">Footwear</a>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-title">👗 Women <i class="fas fa-chevron-down"></i></div>
+      <div class="accordion-content">
+        <a href="sarees.html">Sarees</a>
+        <a href="tshirtswomens.html">Tshirts</a>
+        <a href="womenjeens.html">jeans</a>
+        <a href="anarkalis.html">Anarkalis</a>
+        <a href="lehangas.html">Lahangas</a>
+        <a href="womenfootwear.html">Footwear</a>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-title">🧒 Kids <i class="fas fa-chevron-down"></i></div>
+      <div class="accordion-content">
+        <a href="boys.html">Boys Clothing</a>
+        <a href="girls.html">Girls Clothing</a>
+        <a href="boysfootwear.html">Boys Footwear</a>
+        <a href="girlsfootwear.html">Girls Footwear</a>
+      </div>
+    </div>
+  </div>
+
+  <a href="profile.html"><i class="fa-solid fa-user"></i> My Profile</a>
+  <a href="my-order.html"><i class="fas fa-box"></i>  My Orders</a>
+  <a href="wishlist.html"><i class="fa-solid fa-heart"></i> Wishlist</a>
+  <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
+  <button onclick="logout()"><i class="fa-solid fa-right-from-bracket"></i> Logout</button>
+</div>
+
+<div class="overlay" id="overlay"></div>
+
+    </header>
+   <div class="list">
+        <div class="dropdown">
+            <p class="dropbtn">Mens</p>
+            <div class="dropdown-content">
+                <a href="shirts.html">Shirts</a>
+                <a href="pants.html">Pants</a>
+                <a href="tshirts.html">T-Shirts</a>
+                <a href="menfootwear.html">Footwear</a>
+            </div>
+      </div>
+      <div class="dropdown">
+            <p class="dropbtn">Womens</p>
+            <div class="dropdown-content">
+                <a href="sarees.html">Sarees</a>
+                <a href="tshirtswomens.html">Tshirts</a>
+                <a href="womenjeens.html">jeans</a>
+                <a href="anarkalis.html">Anarkalis</a>
+                <a href="lehangas.html">Lahangas</a>
+                <a href="womenfootwear.html">Footwear</a>
+            </div>
+      </div>
+      <div class="dropdown">
+            <p class="dropbtn">Kids</p>
+            <div class="dropdown-content">
+                <a href="boys.html">Boys wear</a>
+                <a href="girls.html">Girls wear</a>
+                <a href="boysfootwear.html">Boys Footwear</a>
+                <a href="girlsfootwear.html">Girls Footwear</a>
+            </div>
+      </div>
+      <div class="dropdown">
+            <p class="dropbtn">Electronics</p>
+            <div class="dropdown-content">
+                <a href="mobiles.html">Mobiles</a>
+                <a href="laptops.html">Laptops</a>
+            </div>
+      </div>
+    </div>
+<img src="/frontend/asserts/kids/banner3.jpg"  alt="banner" class="hero-banner">
+<main>
+    <section>
+  <p class="section-title">New Arrivals</p>
+
+  <!-- STATIC PRODUCTS ABOVE (unchanged) -->
+
+  <!-- DYNAMIC PRODUCTS -->
+  <div class="section-container" id="dynamicProducts"></div>
+</section>
+    <section class="Boys">
+        <p class="section-title">Boys Wear</p>
+        <div class="section-container">
+            <div class="product-card" data-id="shirt_101">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boys/a1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boys/a2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boys/a32.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boys/a4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Li'l Tomatoes</div>
+                    <div class="title"> Boys Regular Fit Cotton Night Suits</div>
+             
+                    <div class="price">
+                        <span class="current">₹809</span>
+                        <span class="old">₹2,549</span>
+                        <span class="off">68% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-9Y</button>
+                       <button class="size-btn">10-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boys/b1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boys/b2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boys/b3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boys/b4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">JBN Creation</div>
+                    <div class="title">Boys Navy Blue Self Design Kurta</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,343</span>
+                        <span class="old">₹3,799</span>
+                        <span class="off">65% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-9Y</button>
+                       <button class="size-btn">10-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boys/c1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boys/c2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boys/c3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boys/c4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Pro-Ethic Style..</div>
+                    <div class="title">Boys Suit Set Pary Wear for Kids Wedding</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,999</span>
+                        <span class="old">₹5,799</span>
+                        <span class="off">67% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-9Y</button>
+                       <button class="size-btn">10-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boys/d1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boys/d2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boys/d3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boys/d4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Nuego</div>
+                    <div class="title">T-Shirt for Boys Long Sleeve</div>
+             
+                    <div class="price">
+                        <span class="current">₹249</span>
+                        <span class="old">₹499</span>
+                        <span class="off">50% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-9Y</button>
+                       <button class="size-btn">10-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boys/e1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boys/e2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boys/e3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boys/e4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">LI'L TOMATOES</div>
+                    <div class="title">Boys Cotton Night Suits</div>
+             
+                    <div class="price">
+                        <span class="current">₹655</span>
+                        <span class="old">₹1,899</span>
+                        <span class="off">65% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-9Y</button>
+                       <button class="size-btn">10-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boys/f1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boys/f2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boys/f3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boys/f4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">KISAH</div>
+                    <div class="title">Boy's Kurta, Cotton Blend Black</div>
+             
+                    <div class="price">
+                        <span class="current">₹989</span>
+                        <span class="old">₹1,699</span>
+                        <span class="off">42% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-9Y</button>
+                       <button class="size-btn">10-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boys/g1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boys/g2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boys/g3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boys/g4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">VASTRAMAY</div>
+                    <div class="title">VASTRAMAY Boys' Nehru Jacket</div>
+             
+                    <div class="price">
+                        <span class="current">₹959</span>
+                        <span class="old">₹2399</span>
+                        <span class="off">60% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-9Y</button>
+                       <button class="size-btn">10-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boys/h1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boys/h2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boys/h3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boys/h4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Allen</div>
+                    <div class="title">Allen Solly Boys Sweatshirt</div>
+             
+                    <div class="price">
+                        <span class="current">₹900</span>
+                        <span class="old">₹1,799</span>
+                        <span class="off">50% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-9Y</button>
+                       <button class="size-btn">10-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boys/i1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boys/i2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boys/i3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boys/i4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Allen</div>
+                    <div class="title">Allen Solly Boys Sweatshirt</div>
+             
+                    <div class="price">
+                        <span class="current">₹959</span>
+                        <span class="old">₹1,799</span>
+                        <span class="off">47% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-9Y</button>
+                       <button class="size-btn">10-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boys/j1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boys/j2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boys/j3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boys/j4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Allen</div>
+                    <div class="title">Allen Solly Kids Jacket</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,151</span>
+                        <span class="old">₹2,399</span>
+                        <span class="off">52% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-9Y</button>
+                       <button class="size-btn">10-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boys/k1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boys/k2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boys/k3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boys/k4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Viitor</div>
+                    <div class="title">Boys Cotton Graphic Print Full Sleeve</div>
+             
+                    <div class="price">
+                        <span class="current">₹379</span>
+                        <span class="old">₹1,999</span>
+                        <span class="off">81% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-9Y</button>
+                       <button class="size-btn">10-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boys/l1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boys/l2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boys/l3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boys/l4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">KUKU</div>
+                    <div class="title">Kids Round Neck Boys T-Shirt Full Sleeves</div>
+             
+                    <div class="price">
+                        <span class="current">₹499</span>
+                        <span class="old">₹999</span>
+                        <span class="off">50% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-9Y</button>
+                       <button class="size-btn">10-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+             <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boys/m1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boys/m2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boys/m3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boys/m4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Nusyl</div>
+                    <div class="title">Nusyl Boy's Solid Regular Fit T-Shirt</div>
+             
+                    <div class="price">
+                        <span class="current">₹349</span>
+                        <span class="old">₹549</span>
+                        <span class="off">36% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-9Y</button>
+                       <button class="size-btn">10-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boys/n1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boys/n2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boys/n3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boys/n4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Van Heusen</div>
+                    <div class="title">Van Heusen Boy's Cotton Regular Fit T-Shirt</div>
+             
+                    <div class="price">
+                        <span class="current">₹499</span>
+                        <span class="old">₹769</span>
+                        <span class="off">42% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-9Y</button>
+                       <button class="size-btn">10-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boys/o1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boys/o2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boys/o3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boys/o4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Van Heusen</div>
+                    <div class="title">Van Heusen Boy's Cotton Regular Fit T-Shirt</div>
+             
+                    <div class="price">
+                        <span class="current">₹562</span>
+                        <span class="old">₹769</span>
+                        <span class="off">27% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-9Y</button>
+                       <button class="size-btn">10-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boys/p1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boys/p2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boys/p3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boys/p4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">BRUCEWANE</div>
+                    <div class="title">Comfortable Shirt for Boys Casual Wear</div>
+             
+                    <div class="price">
+                        <span class="current">₹499</span>
+                        <span class="old">₹799</span>
+                        <span class="off">38% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-9Y</button>
+                       <button class="size-btn">10-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boys/q1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boys/q2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boys/q3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boys/q4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">ENCROL</div>
+                    <div class="title"> Casual Wear Cotton Shirt for Daily Use</div>
+             
+                    <div class="price">
+                        <span class="current">₹419</span>
+                        <span class="old">₹799</span>
+                        <span class="off">42% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-9Y</button>
+                       <button class="size-btn">10-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boys/r1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boys/r2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boys/r3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boys/r4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">SHEERLOOK</div>
+                    <div class="title">Allen Solly Boys Shirt</div>
+             
+                    <div class="price">
+                        <span class="current">₹799</span>
+                        <span class="old">₹1,199</span>
+                        <span class="off">35% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-9Y</button>
+                       <button class="size-btn">10-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boys/s1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boys/s2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boys/s3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boys/s4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">KAKU FANCY</div>
+                    <div class="title">Sitara Shirt For Boys,Western Type</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,499</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-9Y</button>
+                       <button class="size-btn">10-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/boys/t1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/boys/t2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boys/t3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/boys/t4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Chief</div>
+                    <div class="title">Boys Regular Fit Color Block Spread Casual</div>
+             
+                    <div class="price">
+                        <span class="current">₹453</span>
+                        <span class="old">₹1,899</span>
+                        <span class="off">76% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-9Y</button>
+                       <button class="size-btn">10-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section">
+        <div class="footer-logo">
+        <span>🛒</span>NexCart
+    </div>
+        <p style="font-size: 12px;">Your one-stop destination for quality products at the best prices.</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <a href="#">Home</a>
+      <a href="#">Shop</a>
+      <a href="#">Categories</a>
+      <a href="#">Contact Us</a>
+    </div>
+
+    <div class="footer-section">
+      <h3>Customer Service</h3>
+      <a href="#">FAQ</a>
+      <a href="#">Returns</a>
+      <a href="#">Shipping</a>
+      <a href="#">Privacy Policy</a>
+    </div>
+
+    <div class="footer-social">
+      <h3>Follow Us</h3>
+      <i class="fa-brands fa-instagram" id="instagram"></i>
+      <i class="fa-brands fa-facebook" id="facebook"></i>
+      <i class="fa-brands fa-x-twitter" id="twitter"></i>
+      <i class="fa-brands fa-youtube" id="youtube"></i>
+      <i class="fa-brands fa-whatsapp" id="whatsapp"></i>
+      <i class="fa-brands fa-telegram" id="telegram"></i>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 NexCart. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/frontend/js/product.js"></script>
+</body>
+</html>

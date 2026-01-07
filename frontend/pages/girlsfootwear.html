@@ -1,0 +1,2508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Girls FootWear</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/frontend/css/product.css">
+</head>
+<body data-category="kids" data-subcategory="girlsfootwear">
+     <div class="page-container">
+    <header>
+        <!-- DESKTOP HEADER -->
+<div class="desktop-header">
+  <div class="logo">🛒 NexCart</div>
+
+  <div class="search-box">
+    <i class="fas fa-search"></i>
+    <input type="text" placeholder="Search products">
+  </div>
+
+  <div class="icons">
+    <div class="icon user" id="userIcon">
+      <i class="far fa-user"></i>
+      <span>Profile</span>
+      <div class="user-dropdown">
+        <a href="profile.html"><i class="far fa-user"></i> My Profile</a>
+        <a href="my-order.html"><i class="fas fa-box"></i> My Orders</a>
+        <button onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</button>
+      </div>
+    </div>
+
+    <div class="icon" onclick="location.href='wishlist.html'">
+      <i class="far fa-heart"></i>
+      <span class="count" id="wishlistCount">0</span>
+    </div>
+
+    <div class="icon" onclick="location.href='cart.html'">
+      <i class="fas fa-shopping-cart"></i>
+      <span class="count" id="cartCount">0</span>
+    </div>
+
+    <div class="icon">
+      <i class="fa-regular fa-circle-question"></i>
+    </div>
+  </div>
+</div>
+
+<!-- MOBILE HEADER -->
+<div class="mobile-header">
+  <div class="logo">🛒 NexCart</div>
+  <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
+</div>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-header">
+    NexCart
+    <i class="fas fa-times" id="closeMenu"></i>
+  </div>
+
+  <a href="home.html"><i class="fa-solid fa-house"></i> Home</a>
+
+  <div class="accordion">
+    <div class="accordion-item">
+      <div class="accordion-title">👕 Men <i class="fas fa-chevron-down"></i></div>
+      <div class="accordion-content">
+        <a href="shirts.html">Shirt</a>
+        <a href="pants.html">Pants</a>
+        <a href="tshirts.html">T-shirts</a>
+        <a href="menfootwear.html">Footwear</a>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-title">👗 Women <i class="fas fa-chevron-down"></i></div>
+      <div class="accordion-content">
+        <a href="sarees.html">Sarees</a>
+        <a href="tshirtswomens.html">Tshirts</a>
+        <a href="womenjeens.html">jeans</a>
+        <a href="anarkalis.html">Anarkalis</a>
+        <a href="lehangas.html">Lahangas</a>
+        <a href="womenfootwear.html">Footwear</a>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-title">🧒 Kids <i class="fas fa-chevron-down"></i></div>
+      <div class="accordion-content">
+        <a href="boys.html">Boys Clothing</a>
+        <a href="girls.html">Girls Clothing</a>
+        <a href="boysfootwear.html">Boys Footwear</a>
+        <a href="girlsfootwear.html">Girls Footwear</
+      </div>
+    </div>
+  </div>
+
+  <a href="profile.html"><i class="fa-solid fa-user"></i> My Profile</a>
+  <a href="my-order.html"><i class="fas fa-box"></i>  My Orders</a>
+  <a href="wishlist.html"><i class="fa-solid fa-heart"></i> Wishlist</a>
+  <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
+  <button onclick="logout()"><i class="fa-solid fa-right-from-bracket"></i> Logout</button>
+</div>
+
+<div class="overlay" id="overlay"></div>
+
+    </header>
+   <div class="list">
+        <div class="dropdown">
+            <p class="dropbtn">Mens</p>
+            <div class="dropdown-content">
+                <a href="shirts.html">Shirts</a>
+                <a href="pants.html">Pants</a>
+                <a href="tshirts.html">T-Shirts</a>
+                <a href="menfootwear.html">Footwear</a>
+            </div>
+      </div>
+      <div class="dropdown">
+            <p class="dropbtn">Womens</p>
+            <div class="dropdown-content">
+                <a href="sarees.html">Sarees</a>
+                <a href="tshirtswomens.html">Tshirts</a>
+                <a href="womenjeens.html">jeans</a>
+                <a href="anarkalis.html">Anarkalis</a>
+                <a href="lehangas.html">Lahangas</a>
+                <a href="womenfootwear.html">Footwear</a>
+            </div>
+      </div>
+      <div class="dropdown">
+            <p class="dropbtn">Kids</p>
+            <div class="dropdown-content">
+                <a href="boys.html">Boys wear</a>
+                <a href="girls.html">Girls wear</a>
+                <a href="boysfootwear.html">Boys Footwear</a>
+                <a href="girlsfootwear.html">Girls Footwear</a>
+            </div>
+      </div>
+      <div class="dropdown">
+            <p class="dropbtn">Electronics</p>
+            <div class="dropdown-content">
+                <a href="mobiles.html">Mobiles</a>
+                <a href="laptops.html">Laptops</a>
+            </div>
+      </div>
+    </div>
+<img src="/frontend/asserts/kids/girlsfootwear/girlfootwearbanner.jpeg"  alt="banner" class="hero-banner">
+<main>
+    <section>
+  <p class="section-title">New Arrivals</p>
+
+  <!-- STATIC PRODUCTS ABOVE (unchanged) -->
+
+  <!-- DYNAMIC PRODUCTS -->
+  <div class="section-container" id="dynamicProducts"></div>
+</section>
+    <section class="girls Sandals">
+        <p class="section-title">Girls Sandals</p>
+        <div class="section-container">
+            <div class="product-card" data-id="shirt_101">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sandals/a1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sandals/a2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sandals/a3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sandals/a4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">toothless</div>
+                    <div class="title">Girls Pearl Embellished Sandals</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,240</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">50% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                <img src="/frontend/asserts/kids/girlsfootwear/Girls sandals/b1.jpg" class="product-img">
+                <img src="/frontend/asserts/kids/girlsfootwear/Girls sandals/b3.jpg" class="product-img">
+                <img src="/frontend/asserts/kids/girlsfootwear/Girls sandals/b4.jpg" class="product-img">
+                <img src="/frontend/asserts/kids/girlsfootwear/Girls sandals/b1.jpg" class="product-img active">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">RJ FOOTWEAR</div>
+                    <div class="title">Girl's Beautiful Floral PVC Stylish Block</div>
+             
+                    <div class="price">
+                        <span class="current">₹374</span>
+                        <span class="old">₹899</span>
+                        <span class="off">58% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sandals/c1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sandals/c2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sandals/c3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sandals/c4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Kidsville</div>
+                    <div class="title">Official Barbie Printed Sandals </div>
+             
+                    <div class="price">
+                        <span class="current">₹410</span>
+                        <span class="old">₹749</span>
+                        <span class="off">45% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sandals/d1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sandals/d2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sandals/d3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sandals/d4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Cartoon</div>
+                    <div class="title">Printed Blue & Orange Kids Sandals</div>
+             
+                    <div class="price">
+                        <span class="current">₹399</span>
+                        <span class="old">₹999</span>
+                        <span class="off">60% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sandals/e1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sandals//e2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sandals//e3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sandals//e4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">SIYA</div>
+                    <div class="title">Printed Bow Detailed Comfort Heels</div>
+             
+                    <div class="price">
+                        <span class="current">₹699</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">72% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sandals/f1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sandals/f2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sandals/f3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sandals/f4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">XMARTY</div>
+                    <div class="title">Girls Stylish Special Occasion Sandals</div>
+             
+                    <div class="price">
+                        <span class="current">₹499</span>
+                        <span class="old">₹999</span>
+                        <span class="off">50% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sandals/g1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sandals/g2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sandals/g3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sandals/g4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Bubblegummers</div>
+                    <div class="title">Bubblegummers Boy's Nora Sandal</div>
+             
+                    <div class="price">
+                        <span class="current">₹499</span>
+                        <span class="old">₹799</span>
+                        <span class="off">38% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sandals/h1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sandals/h2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sandals/h3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sandals/h4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">toothless</div>
+                    <div class="title">riss-Cross Strap Open-Toe Footwear</div>
+             
+                    <div class="price">
+                        <span class="current">₹845</span>
+                        <span class="old">₹1,799</span>
+                        <span class="off">53% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sandals/i1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sandals/i2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sandals/i3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sandals/i4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">XMARTY </div>
+                    <div class="title">Girls Beautiful & Comfortable Sole</div>
+             
+                    <div class="price">
+                        <span class="current">₹499</span>
+                        <span class="old">₹799</span>
+                        <span class="off">38% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sandals/j1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sandals/j2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sandals/j3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sandals/j4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Bubblegummers</div>
+                    <div class="title">Bubblegummers Girls RUFFLE Sandals</div>
+             
+                    <div class="price">
+                        <span class="current">₹489</span>
+                        <span class="old">₹699</span>
+                        <span class="off">30% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sandals/k1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sandals/k2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sandals/k3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sandals/k4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Shoetopia</div>
+                    <div class="title">Shoetopia Women Wedge Heel Sandal</div>
+             
+                    <div class="price">
+                        <span class="current">₹545</span>
+                        <span class="old">₹1,999</span>
+                        <span class="off">73% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sandals/l1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sandals/l2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sandals/l3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sandals/l4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">SIYA </div>
+                    <div class="title">Printed Bow Detailed Comfort Heels</div>
+             
+                    <div class="price">
+                        <span class="current">₹749</span>
+                        <span class="old">₹1,499</span>
+                        <span class="off">50% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <section class="girls slipers">
+        <p class="section-title">Girls Slipers</p>
+        <div class="section-container">
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls slipers/a1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls slipers/a2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls slipers/a3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls slipers/a4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">ERA</div>
+                    <div class="title">Floral Print Flip Flops, Purple and Pink</div>
+             
+                    <div class="price">
+                        <span class="current">₹299</span>
+                        <span class="old">₹360</span>
+                        <span class="off">17% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls slipers/b1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls slipers/b2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls slipers/b3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls slipers/b4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Kidsville</div>
+                    <div class="title">Printed Kids Girls Sky Purple Flip-Flops</div>
+             
+                    <div class="price">
+                        <span class="current">₹327</span>
+                        <span class="old">₹449</span>
+                        <span class="off">27% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls slipers/c1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls slipers/c2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls slipers/c3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls slipers/c4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">FILPPSTER</div>
+                    <div class="title">Kids Floral Print Flip Flops</div>
+             
+                    <div class="price">
+                        <span class="current">₹299</span>
+                        <span class="old">₹360</span>
+                        <span class="off">17% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls slipers/d1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls slipers/d2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls slipers/d3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls slipers/d4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">toothless</div>
+                    <div class="title">Kids Girls Printed Flip-Flops</div>
+             
+                    <div class="price">
+                        <span class="current">₹399</span>
+                        <span class="old">₹799</span>
+                        <span class="off">50% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls slipers/e1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls slipers/e2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls slipers/e3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls slipers/e4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">heleey</div>
+                    <div class="title">Women & Girls Fashion Slippers</div>
+             
+                    <div class="price">
+                        <span class="current">₹399</span>
+                        <span class="old">₹600</span>
+                        <span class="off">34% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls slipers/f1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls slipers/f2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls slipers/f3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls slipers/f4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">CASSIEY</div>
+                    <div class="title">Stylish Tie Designer Fashion Fancy</div>
+             
+                    <div class="price">
+                        <span class="current">₹299</span>
+                        <span class="old">₹499</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls slipers/g1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls slipers/g2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls slipers/g3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls slipers/g4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Irsoe</div>
+                    <div class="title">Irsoe Latest Collection, Comfortable </div>
+             
+                    <div class="price">
+                        <span class="current">₹399</span>
+                        <span class="old">₹699</span>
+                        <span class="off">30% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls slipers/h1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls slipers/h2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls slipers/h3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls slipers/h4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Era</div>
+                    <div class="title">Rainbow Princess Flip Flops with Silver</div>
+             
+                    <div class="price">
+                        <span class="current">₹299</span>
+                        <span class="old">₹399</span>
+                        <span class="off">10% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls slipers/i1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls slipers/i2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls slipers/i3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls slipers/i4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">FILPPSTER</div>
+                    <div class="title">Kids Flip Flops, Blue and Yellow Sun</div>
+             
+                    <div class="price">
+                        <span class="current">₹199</span>
+                        <span class="old">₹360</span>
+                        <span class="off">22% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls slipers/j1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls slipers/j2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls slipers/j3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls slipers/j4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Bubblegummers</div>
+                    <div class="title">Bubblegummers Girls Slip-on Slipper</div>
+             
+                    <div class="price">
+                        <span class="current">₹\419</span>
+                        <span class="old">₹499</span>
+                        <span class="off">16% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls slipers/k1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls slipers/k2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls slipers/k3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls slipers/k4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">ASIAN</div>
+                    <div class="title">Daily Use Walking Sliders, Casual</div>
+             
+                    <div class="price">
+                        <span class="current">₹342</span>
+                        <span class="old">₹399</span>
+                        <span class="off">1% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls slipers/l1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls slipers/l2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls slipers/l3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls slipers/l4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Aqualite</div>
+                    <div class="title">Cutties Flip Flops with Shark Design</div>
+             
+                    <div class="price">
+                        <span class="current">₹299</span>
+                        <span class="old">₹699</span>
+                        <span class="off">57% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                      <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <section class="girls sliders">
+        <p class="section-title">Girls Sliders</p>
+        <div class="section-container">
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sliders/a1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sliders/a2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sliders/a3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sliders/a4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Max</div>
+                    <div class="title">Girls 3D Laser Cut Sliders Flat Sandal</div>
+             
+                    <div class="price">
+                        <span class="current">₹349</span>
+                        <span class="old">₹399</span>
+                        <span class="off">13% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sliders/b1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sliders/b2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sliders/b3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sliders/b4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Kidsville</div>
+                    <div class="title">Girls Hello Kitty Printed Pink Sliders</div>
+             
+                    <div class="price">
+                        <span class="current">₹759</span>
+                        <span class="old">₹899</span>
+                        <span class="off">16% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sliders/c1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sliders/c2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sliders/c3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sliders/c4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">MAX</div>
+                    <div class="title">Max Girls Flip Flops</div>
+             
+                    <div class="price">
+                        <span class="current">₹379</span>
+                        <span class="old">₹399</span>
+                        <span class="off">5% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sliders/d1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sliders/d2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sliders/d3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sliders/d4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">DRUNKEN</div>
+                    <div class="title">Girls Sliders Flip Flops Chappals Ladies</div>
+             
+                    <div class="price">
+                        <span class="current">₹860</span>
+                        <span class="old">₹2,730</span>
+                        <span class="off">68% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sliders/e1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sliders/e2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sliders/e3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sliders/e4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">ASIAN</div>
+                    <div class="title">ZOOPY-06 Daily Use Walking Sliders</div>
+             
+                    <div class="price">
+                        <span class="current">₹411</span>
+                        <span class="old">₹549</span>
+                        <span class="off">25% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sliders/f1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sliders/f2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sliders/f3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sliders/f4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">ONYC</div>
+                    <div class="title">ONYC SuperComfy Kids Slippers</div>
+             
+                    <div class="price">
+                        <span class="current">₹280</spa289n>
+                        <span class="old">₹499</span>
+                        <span class="off">38% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                      <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sliders/g1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sliders/g2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sliders/g3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sliders/g4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">VRITRAZ</div>
+                    <div class="title">Stylish & Tendy Fur Design Comfortable</div>
+             
+                    <div class="price">
+                        <span class="current">₹649</span>
+                        <span class="old">₹799</span>
+                        <span class="off">19% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sliders/h1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sliders/h2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sliders/h3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sliders/h4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Panihari</div>
+                    <div class="title">Fashion Slipper house Slides</div>
+             
+                    <div class="price">
+                        <span class="current">₹411</span>
+                        <span class="old">₹549</span>
+                        <span class="off">25% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sliders/i1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sliders/i2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sliders/i3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sliders/i4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">DRUNKEN</div>
+                    <div class="title">DRUNKEN Slippers For Men Winter Sandals</div>
+             
+                    <div class="price">
+                        <span class="current">₹411</span>
+                        <span class="old">₹799</span>
+                        <span class="off">49% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sliders/j1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sliders/j2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sliders/j3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sliders/j4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Bhains</div>
+                    <div class="title">Bhains Ki Ankh Women's Fuzzy Fluffy Furry</div>
+             
+                    <div class="price">
+                        <span class="current">₹299</span>
+                        <span class="old">₹699</span>
+                        <span class="off">57% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sliders/k1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sliders/k2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sliders/k3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sliders/k4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">VRITRAZ</div>
+                    <div class="title">VRITRAZ Warm Fur Design Comfortable </div>
+             
+                    <div class="price">
+                        <span class="current">₹649</span>
+                        <span class="old">₹799</span>
+                        <span class="off">19% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sliders/l1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sliders/l2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sliders/l3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls sliders/l4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Max</div>
+                    <div class="title">Max Girls Flat Sandal</div>
+             
+                    <div class="price">
+                        <span class="current">₹369</span>
+                        <span class="old">₹399</span>
+                        <span class="off">8% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <section class="girls shoes">
+        <p class="section-title">Girls Shoes</p>
+        <div class="section-container">
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls shoes/a1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls shoes/a2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls shoes/a3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls shoes/a4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">KazarMax</div>
+                    <div class="title">KazarMax Hopits Surge Sneakers Sports</div>
+             
+                    <div class="price">
+                        <span class="current">₹1,149</span>
+                        <span class="old">₹2,499</span>
+                        <span class="off">54% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls shoes/b1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls shoes/b2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls shoes/b3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls shoes/b4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">footwear</div>
+                    <div class="title">Black Shoes with Double Strap for Baby</div>
+             
+                    <div class="price">
+                        <span class="current">₹499</span>
+                        <span class="old">₹899</span>
+                        <span class="off">20% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls shoes/c1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls shoes/c2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls shoes/c3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls shoes/c4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">HOOH Kids </div>
+                    <div class="title">Button Closure with Drawstring and Light</div>
+             
+                    <div class="price">
+                        <span class="current">₹599</span>
+                        <span class="old">₹999</span>
+                        <span class="off">40% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls shoes/d1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls shoes/d2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls shoes/d3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls shoes/d4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">GIGAHERTZ</div>
+                    <div class="title">ports Sneakers with BOA Dial</div>
+             
+                    <div class="price">
+                        <span class="current">₹599</span>
+                        <span class="old">₹1,099</span>
+                        <span class="off">45% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls shoes/e1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls shoes/e2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls shoes/e3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls shoes/e4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">ONYC</div>
+                    <div class="title">Shady Toddlers's First Step Breathable</div>
+             
+                    <div class="price">
+                        <span class="current">549</span>
+                        <span class="old">₹899</span>
+                        <span class="off">39% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls shoes/f1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls shoes/f2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls shoes/f3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls shoes/f4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">FOOTSTATION</div>
+                    <div class="title">Breathable, Shock Absorbing and Soft Sole</div>
+             
+                    <div class="price">
+                        <span class="current">₹499</span>
+                        <span class="old">₹899</span>
+                        <span class="off">44% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                      <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls shoes/g1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls shoes/g2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls shoes/g3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls shoes/g4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">HOOKER</div>
+                    <div class="title">STYLISH Knitted Shoes for girls</div>
+             
+                    <div class="price">
+                        <span class="current">₹899</span>
+                        <span class="old">₹1,299</span>
+                        <span class="off">30% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls shoes/h1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls shoes/h2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls shoes/h3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls shoes/h4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">KLAUFF</div>
+                    <div class="title">Kids Casual Shoes,Lightweight,Durable</div>
+             
+                    <div class="price">
+                        <span class="current">₹349</span>
+                        <span class="old">₹999</span>
+                        <span class="off">65% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls shoes/i1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls shoes/i2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls shoes/i3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls shoes/i4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">HOOH</div>
+                    <div class="title">Denim Sneakers for Baby GIRL</div>
+             
+                    <div class="price">
+                        <span class="current">₹399</span>
+                        <span class="old">₹999</span>
+                        <span class="off">60% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls shoes/j1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls shoes/j2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls shoes/j3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls shoes/j4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">Liberty Lucy</div>
+                    <div class="title">Velcro Walking Shoes for Kids with PVC</div>
+             
+                    <div class="price">
+                        <span class="current">₹459</span>
+                        <span class="old">₹1,499</span>
+                        <span class="off">69% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                      <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls shoes/k1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls shoes/k2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls shoes/k3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls shoes/k4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">DEWK BERRIES</div>
+                    <div class="title">Shoes for Kids with Rotary Dial Lock</div>
+             
+                    <div class="price">
+                        <span class="current">₹799</span>
+                        <span class="old">₹1,499</span>
+                        <span class="off">50% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <!-- Image Section -->
+                <div class="image-box" id="imageBox">
+            
+                    <!-- Wishlist Heart -->
+                <div class="wishlist" id="wishlist">❤</div>
+            
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls shoes/l1.jpg" class="product-img active">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls shoes/l2.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls shoes/l3.jpg" class="product-img">
+                    <img src="/frontend/asserts/kids/girlsfootwear/Girls shoes/l4.jpg" class="product-img">
+                </div>
+
+                <!-- Product Details -->
+                <div class="details">
+                    <div class="brand">ASIAN</div>
+                    <div class="title">Casual Sneakers with Laces for girls</div>
+             
+                    <div class="price">
+                        <span class="current">₹607</span>
+                        <span class="old">₹1,199</span>
+                        <span class="off">49% off</span>
+                    </div>
+             
+                    <!-- Rating -->
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">(1,248)</span>
+                    </div>
+             
+                    <div class="sizes">
+                       <span class="size-label">Size:</span>
+                       <button class="size-btn">1-2Y</button>
+                       <button class="size-btn">3-4Y</button>
+                       <button class="size-btn">5-6Y</button>
+                       <button class="size-btn">7-8Y</button>
+                       <button class="size-btn">9-10Y</button>
+                       <button class="size-btn">11-12Y</button>
+                    </div>
+             
+                    <div class="buttons">
+                        <button class="cart">Add to Cart</button>
+                        <button class="buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section">
+        <div class="footer-logo">
+        <span>🛒</span>NexCart
+    </div>
+        <p style="font-size: 12px;">Your one-stop destination for quality products at the best prices.</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <a href="#">Home</a>
+      <a href="#">Shop</a>
+      <a href="#">Categories</a>
+      <a href="#">Contact Us</a>
+    </div>
+
+    <div class="footer-section">
+      <h3>Customer Service</h3>
+      <a href="#">FAQ</a>
+      <a href="#">Returns</a>
+      <a href="#">Shipping</a>
+      <a href="#">Privacy Policy</a>
+    </div>
+
+    <div class="footer-social">
+      <h3>Follow Us</h3>
+      <i class="fa-brands fa-instagram" id="instagram"></i>
+      <i class="fa-brands fa-facebook" id="facebook"></i>
+      <i class="fa-brands fa-x-twitter" id="twitter"></i>
+      <i class="fa-brands fa-youtube" id="youtube"></i>
+      <i class="fa-brands fa-whatsapp" id="whatsapp"></i>
+      <i class="fa-brands fa-telegram" id="telegram"></i>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 NexCart. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/frontend/js/product.js"></script>
+</body>
+</html>

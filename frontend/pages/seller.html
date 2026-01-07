@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>NexCart | Become a Seller</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f6f7fb;
+    }
+
+    .seller-container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+      margin-bottom: 50px;
+    }
+
+    .hero h1 {
+      font-size: 40px;
+      color: #222;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #555;
+      margin: 15px 0;
+    }
+
+    .hero button {
+      background: #ff6600;
+      color: #fff;
+      border: none;
+      padding: 14px 30px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .hero img {
+      width: 100%;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      margin-bottom: 60px;
+    }
+
+    .feature-box {
+      background: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    .feature-box i {
+      font-size: 32px;
+      color: #ff6600;
+      margin-bottom: 15px;
+    }
+
+    .feature-box h3 {
+      margin-bottom: 10px;
+    }
+
+    .seller-form {
+      background: #fff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .seller-form h2 {
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 12px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    .seller-form button {
+      background: #222;
+      color: #fff;
+      padding: 14px;
+      width: 100%;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    @media(max-width: 768px) {
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="seller-container">
+
+  <!-- HERO SECTION -->
+  <div class="hero">
+    <div>
+      <h1>Sell on NexCart</h1>
+      <p>Reach millions of customers across India by selling your products on NexCart.</p>
+      <button onclick="document.getElementById('sellerForm').scrollIntoView({behavior:'smooth'})">Start Selling</button>
+    </div>
+    <img src="https://cdn-icons-png.flaticon.com/512/891/891419.png" alt="Seller" />
+  </div>
+
+  <!-- FEATURES -->
+  <div class="features">
+    <div class="feature-box">
+      <i class="fa fa-users"></i>
+      <h3>Huge Customer Base</h3>
+      <p>Sell to lakhs of active NexCart users.</p>
+    </div>
+
+    <div class="feature-box">
+      <i class="fa fa-truck"></i>
+      <h3>Easy Shipping</h3>
+      <p>We handle logistics and delivery.</p>
+    </div>
+
+    <div class="feature-box">
+      <i class="fa fa-wallet"></i>
+      <h3>Fast Payments</h3>
+      <p>Get paid directly to your bank account.</p>
+    </div>
+
+    <div class="feature-box">
+      <i class="fa fa-shield"></i>
+      <h3>Seller Protection</h3>
+      <p>Secure and transparent transactions.</p>
+    </div>
+  </div>
+
+  <!-- SELLER REGISTRATION FORM -->
+  <div class="seller-form" id="sellerForm">
+  <h2>Register as a Seller</h2>
+
+  <form id="sellerRegisterForm">
+
+    <div class="form-group">
+      <input type="text" name="fullname" placeholder="Full Name" required />
+    </div>
+
+    <div class="form-group">
+      <input type="email" name="email" placeholder="Email Address" required />
+    </div>
+
+    <div class="form-group">
+      <input type="text" name="business" placeholder="Business Name" required />
+    </div>
+
+    <div class="form-group">
+      <input type="tel" name="mobile" placeholder="Mobile Number" required />
+    </div>
+
+    <div class="form-group">
+      <input type="password" name="password" placeholder="Create Password" required />
+    </div>
+
+    <button type="submit">Submit Application</button>
+
+
+
+  </form>
+
+</div>
+
+    <a href="seller-login.html">
+  <button>Already a Seller? Login</button>
+</a>
+<script>
+document.getElementById("sellerRegisterForm").addEventListener("submit", async function(e) {
+  e.preventDefault();
+
+  const form = e.target;
+
+  const payload = {
+    fullname: form.fullname.value.trim(),
+    email: form.email.value.trim(),
+    business_name: form.business.value.trim(), // ✅ FIXED
+    mobile: form.mobile.value.trim(),
+    password: form.password.value
+  };
+
+  try {
+    const res = await fetch("http://localhost:5000/seller/register", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
+    });
+
+    const result = await res.json();
+    alert(result.message);
+
+    if (res.ok) {
+      form.reset();
+    }
+  } catch (err) {
+    alert("Backend server not running");
+  }
+});
+</script>
+
+
+</body>
+</html>

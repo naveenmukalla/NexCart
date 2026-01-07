@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NexCart | Checkout</title>
+<style>
+  .address-option {
+  border: 1px solid #ddd;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.address-option.active {
+  border-color: #f4193e;
+  background: #fff5f7;
+}
+
+.address-option input {
+  margin-top: 5px;
+}
+</style>
+<link rel="stylesheet" href="/frontend/css/checkout.css">
+</head>
+<body>
+
+<div class="checkout-container">
+
+  <!-- LEFT -->
+  <div class="box">
+    <!-- <h3>📍 Delivery Address</h3>
+
+    <input type="text" placeholder="Full Name">
+    <input type="tel" placeholder="Mobile Number">
+    <input type="text" placeholder="Door No">
+    <input type="text" placeholder="Street">
+    <input type="text" placeholder="Village / Area">
+    <input type="text" placeholder="City">
+    <input type="text" placeholder="State">
+    <input type="text" placeholder="Pincode"> -->
+
+    <div class="checkout-section">
+  <h3>🏠 Select Delivery Address</h3>
+  <div id="addressSelector"></div>
+</div>
+
+
+    <h3>💳 Payment Method</h3>
+
+<div class="payment-methods">
+
+  <label class="payment-option">
+    <input type="radio" name="payment" value="cod" checked>
+    <span class="custom-radio"></span>
+    <span class="payment-text">Cash on Delivery (COD)</span>
+  </label>
+
+  <label class="payment-option">
+    <input type="radio" name="payment" value="upi">
+    <span class="custom-radio"></span>
+    <span class="payment-text">UPI (Google Pay / PhonePe)</span>
+  </label>
+
+  <label class="payment-option">
+    <input type="radio" name="payment" value="card">
+    <span class="custom-radio"></span>
+    <span class="payment-text">Credit / Debit / ATM Card</span>
+  </label>
+
+</div>
+
+    
+  </div>
+
+  <!-- RIGHT -->
+  <div class="box">
+    <h3>🧾 Order Summary</h3>
+
+    <div id="orderItems"></div>
+
+    <div class="summary-item">
+      <span>Subtotal</span>
+      <span id="subtotal">0</span>
+    </div>
+
+    <div class="summary-item">
+      <span>Discount</span>
+      <span id="discount">0</span>
+    </div>
+
+    <div class="summary-item">
+      <span>Delivery</span>
+      <span id="delivery">0</span>
+    </div>
+
+    <div class="summary-item total">
+      <span>Total</span>
+      <span id="grandTotal">0</span>
+    </div>
+
+    <button class="btn" onclick="payNow()">Pay Now</button>
+  </div>
+
+</div>
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="/frontend/js/checkout.js"></script>
+</body>
+</html>

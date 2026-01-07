@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NexCart | My Orders</title>
+<link rel="stylesheet" href="/frontend/css/my-order.css">
+</head>
+
+<body>
+
+<div class="container">
+  <h2>📦 My Orders</h2>
+  <button onclick="clearCancelledOrders()"
+  style="
+    background:#f4193e;
+    color:#fff;
+    border:none;
+    padding:8px 14px;
+    border-radius:5px;
+    cursor:pointer;
+    margin-bottom:15px;
+  ">
+  Clear Cancelled Orders
+</button>
+
+  <div id="ordersContainer"></div>
+</div>
+<script src="/frontend/js/my-order.js"></script>
+</body>
+</html>

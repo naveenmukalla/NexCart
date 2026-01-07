@@ -1,0 +1,48 @@
+(function($){const services=['facebook','dotdigital',];$(document).on('click','[data-layer]',function(){var data=JSON.parse($(this).attr('data-layer'));dataLayer.push(data)});$(document).on('psevent',function(e,eventName,eventData){if(!eventData){return!1}
+var data=null;switch(eventName){case 'productClick':data=getSelectItemData(eventData);break;case 'detail':data=getViewItemData(eventData);break;case 'view_item_list':data=getViewItemListData(eventData);break;case 'productClickWishlist':data=getProductWishistData(eventData);break;case 'pagebuilderClick':data=getPagebuilderData(eventData,'select_promotion');break;case 'pagebuilderImpression':data=getPagebuilderData(eventData,'view_promotion');break;case 'categoryPageClickAddToCart':data=getCategoryPageClickAddToCartData(eventData);break;case 'categoryPageClickImageSlider':data=getCategoryPageClickData(eventData,'Image Slider');break;case 'categoryPageClickVideo':data=getCategoryPageClickData(eventData,'Video');break;case 'categoryPageClick2WideImage':data=getCategoryPageClickData(eventData,'2 Wide Images');break;case 'promoClick':data=getPromoClickData(eventData);break;case 'analyticsEvent':data=pushDefaultAnalyticsData(eventData);break;default:data=getDefaultData(eventData);break}
+if(data){dataLayer.push(data)}});function pushDefaultAnalyticsData(eventData){var data={'event':eventData.event,}
+if(eventData.ecommerce){data.ecommerce=eventData.ecommerce}
+if(services.includes('facebook')&&eventData.facebook){data.facebook=eventData.facebook}
+if(services.includes('dotdigital')&&eventData.dotdigital){data.dotdigital=eventData.dotdigital}
+return data}
+function getDefaultData(eventData){var data={};var data={'event':'eventTracking','eventCategory':eventData.eventCategory,'eventAction':eventData.eventAction,'eventLabel':eventData.eventLabel,}
+return data}
+function getViewItemListData(eventData){var product=null;const items=eventData.map(datas=>datas.data);const viewList=items.map(item=>{return remapProduct(item,0)});if(viewList.length<=0){return null}
+var data={'event':'view_item_list','ecommerce':{}}
+var item=viewList[0];data.ecommerce.item_list_id=item.item_list_id??'category';data.ecommerce.item_list_name=item.item_list_name??'Category';data.ecommerce.items=viewList;if(viewList.length>0){var id=null;var fbContentIds=[];for(var i=0;i<viewList.length;++i){id=getFbProductId(viewList[i]);fbContentIds.push(id)}
+if(services.includes('facebook')){data.facebook={'content_type':'product','content_ids':fbContentIds,'content_name':data.ecommerce.item_list_name,'content_category':item.category??'category',}}
+if(services.includes('dotdigital')){var protocol=window.location.protocol;var host=window.location.hostname;var productObject={"product_sku":eventData.stylecolourid,"product_name":eventData.name,"product_categories":eventData.category,"product_price":eventData.baseunitprice,"product_url":(protocol+'//'+host+'/'+eventData.producturl),"product_brand":eventData.brand,"product_currency":currencyCode,};if(parseFloat(eventData.baseunitprice)>parseFloat(eventData.price)){productObject.product_specialPrice=eventData.price}
+data.dotdigitalproduct=productObject}}
+return data};function getPromoClickData(eventData){var promotions=[];var promo=eventData?remapPromo(eventData):null;if(promo){promotions.push(promo)}
+if(promotions.length<=0){return null}
+var data={'event':'promotionClick','ecommerce':{'promoClick':{'promotions':promotions}}}
+return data};function getSelectItemData(eventData){var items=[];var item=eventData?remapProduct(eventData):null;if(item){items.push(item)}
+if(items.length<=0){return null}
+var data={'event':'select_item','ecommerce':{}}
+data.ecommerce.item_list_id=item.item_list_id??'product_list';data.ecommerce.item_list_name=item.item_list_name??'Product List';data.ecommerce.items=items;return data};function getViewItemData(eventData){var products=[];var product=eventData?remapProduct(eventData):null;var currencyCode=eventData.currencycode?eventData.currencycode:null;if(product){products.push(product)}
+if(products.length<=0){return null}
+var data={'event':'view_item','ecommerce':{'currency':"",'value':0,'items':[]}}
+if(currencyCode){data.ecommerce.currency=currencyCode}
+if(product.price){data.ecommerce.value=product.price}
+data.ecommerce.items=products;if(services.includes('facebook')){var productid=getFbProductId(product);data.facebook={'content_type':'product','content_ids':[productid],'content_name':product.item_name?product.item_name:'','value':product.price?product.price:0,'currency':currencyCode?currencyCode:''}}
+return data};function getProductWishistData(eventData){var products=[];var product=eventData?remapProduct(eventData):null;var currencyCode=eventData.currencycode?eventData.currencycode:null;if(product){products.push(product)}
+if(products.length<=0){return null}
+var data={'event':'add_to_wishlist','ecommerce':{'currency':"",'value':0,'wishlist':[]}}
+if(currencyCode){data.ecommerce.currency=currencyCode}
+if(product.price){data.ecommerce.value=product.price}
+data.ecommerce.wishlist=products;return data};function getCategoryPageClickData(eventData,eventLabel){var stylecolourid=eventData.stylecolourid?eventData.stylecolourid:null;var data={'event':'eventTracking','eventCategory':'Category Page','eventAction':'Click','eventLabel':(eventLabel?eventLabel:null)+' - '+stylecolourid,}
+return data};function getCategoryPageClickAddToCartData(eventData,eventLabel){var stylecolourid=eventData.stylecolourid?eventData.stylecolourid:null;var size=eventData.size?eventData.size:null;var data={'event':'eventTracking','eventCategory':'Category Page','eventAction':'Click','eventLabel':'Add to Cart Hover'+' - '+stylecolourid+' '+size,}
+return data};function remapProduct(item,include=1){if(!item.id&&!item.name){return null}
+var product={};product.item_id=String(item.id??'');product.item_name=String(item.name??'');product.price=parseFloat(item.price)??'';product.item_variant=String(item.variant??'');product.item_brand=String(item.brand??'');product.index=item.index??1;product.affiliation=String(item.affiliation??'');product.coupon=String(item.coupon??'');product.location_id=String(item.location_id??'');product.item_list_name=String(item.list??'');product.item_list_id='';product.quantity=item.quantity??1;product.baseunitprice=parseFloat(item.baseunitprice);product.stylecolourid=String(item.stylecolourid??'');if(include){product.barcode=String(item.barcode??'');product.size=String(item.size??'')}
+let discount=0;var num=parseFloat(item.baseunitprice)-parseFloat(item.price);if(num>0){discount=+num.toFixed(2)}
+product.discount=discount??0;var listName=product.item_list_name;var category=item.category??'';if(listName){let replacedStr=listName.toLowerCase().replace(/\+/g,'_').replace(/\s+/g,'-');replacedStr=replacedStr.toLowerCase().replace(/[^0-9a-z\-]/g,'');var listId=replacedStr.replace(/-+/g,'_')}
+product.item_list_id=listId??'';var categoryList=item.gaCategory??[];product.item_category=(categoryList[0]??'').trim();product.item_category2=(categoryList[1]??'').trim();product.item_category3=(categoryList[2]??'').trim();product.item_category4=(categoryList[3]??'').trim();product.item_category5=(categoryList[4]??'').trim();return product}
+function remapPromo(item){if(!item.id&&!item.name){return null}
+var promo={};item.id&&(promo.id=item.id);item.name&&(promo.name=item.name);item.creative&&(promo.creative=item.creative);item.position&&(promo.position=item.position);return promo}
+function getFbProductId(item){var fbId=item.stylecolourid?item.stylecolourid:'';if(!fbId){fbId=(item.id?item.id:'')+(item.variant?'|'+item.variant:'')}
+return fbId}
+function getPagebuilderData(eventData,event){if(!Array.isArray(eventData)){eventData=[eventData]}
+var data={'event':event,'ecommerce':{'creative_name':"",'creative_slot':"",'promotion_id':"",'promotion_name':"",'items':[]}}
+if(eventData.length<=0){return null}
+$item=eventData[0];data.ecommerce.promotion_id=$item.item_id;data.ecommerce.promotion_name=$item.item_name;data.ecommerce.creative_slot=$item.creative_slot;data.ecommerce.creative_name=$item.item_name;if(event=='view_promotion'){data.ecommerce.items=eventData}
+return data}}(jQuery))
