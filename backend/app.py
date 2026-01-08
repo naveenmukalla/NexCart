@@ -1200,10 +1200,6 @@ def seller_payout_history(seller_id):
     return jsonify(payouts), 200
 
 
-@app.route("/api/chat", methods=["POST"])
-def chat():
-    data = request.json
-    user_message = data.get("message")
 
 # ===============================
 # RUN SERVER

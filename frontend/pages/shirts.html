@@ -16,7 +16,7 @@
 
   <div class="search-box">
     <i class="fas fa-search"></i>
-    <input type="text" placeholder="Search products">
+    <input type="text" id="desktopSearch" placeholder="Search products">
   </div>
 
   <div class="icons">
@@ -54,7 +54,7 @@
 <!-- MOBILE SEARCH (NEW) -->
 <div class="mobile-search">
   <i class="fas fa-search"></i>
-  <input type="text" placeholder="Search products">
+  <input type="text" id="mobileSearch" placeholder="Search products">
 </div>
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
@@ -2461,6 +2461,45 @@
     <p>© 2025 NexCart. All rights reserved.</p>
   </div>
 </footer>
+<script>
+    /* =========================
+   PRODUCT SEARCH (GLOBAL)
+========================= */
+
+const desktopSearch = document.getElementById("desktopSearch");
+const mobileSearch = document.getElementById("mobileSearch");
+
+function filterProducts(keyword) {
+  keyword = keyword.toLowerCase().trim();
+
+  const allProducts = document.querySelectorAll(".product-card");
+
+  allProducts.forEach(card => {
+    const text = card.innerText.toLowerCase();
+
+    if (text.includes(keyword)) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+}
+
+/* Desktop Search */
+if (desktopSearch) {
+  desktopSearch.addEventListener("input", e => {
+    filterProducts(e.target.value);
+  });
+}
+
+/* Mobile Search */
+if (mobileSearch) {
+  mobileSearch.addEventListener("input", e => {
+    filterProducts(e.target.value);
+  });
+}
+
+</script>
 <script src="/frontend/js/product.js"></script>
 </body>
 </html>
