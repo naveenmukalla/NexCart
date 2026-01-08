@@ -23,6 +23,54 @@
 .address-option input {
   margin-top: 5px;
 }
+.payment-box {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.pay-section {
+  border-bottom: 1px solid #eee;
+}
+
+.pay-header {
+  display: flex;
+  gap: 10px;
+  padding: 14px;
+  cursor: pointer;
+  background: #fafafa;
+  font-weight: bold;
+}
+
+.pay-body {
+  display: none;
+  padding: 15px;
+}
+
+.pay-body.active {
+  display: block;
+}
+
+.upi-option {
+  display: block;
+  padding: 6px 0;
+  font-size: 14px;
+}
+
+
+
+
+.pay-body input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.card-row {
+  display: flex;
+  gap: 10px;
+}
+
 </style>
 <link rel="stylesheet" href="/frontend/css/checkout.css">
 </head>
@@ -32,48 +80,94 @@
 
   <!-- LEFT -->
   <div class="box">
-    <!-- <h3>📍 Delivery Address</h3>
-
-    <input type="text" placeholder="Full Name">
-    <input type="tel" placeholder="Mobile Number">
-    <input type="text" placeholder="Door No">
-    <input type="text" placeholder="Street">
-    <input type="text" placeholder="Village / Area">
-    <input type="text" placeholder="City">
-    <input type="text" placeholder="State">
-    <input type="text" placeholder="Pincode"> -->
-
     <div class="checkout-section">
   <h3>🏠 Select Delivery Address</h3>
   <div id="addressSelector"></div>
 </div>
 
 
-    <h3>💳 Payment Method</h3>
+<h3>💳 Payment Method</h3>
 
-<div class="payment-methods">
+<div class="payment-box">
 
-  <label class="payment-option">
-    <input type="radio" name="payment" value="cod" checked>
-    <span class="custom-radio"></span>
-    <span class="payment-text">Cash on Delivery (COD)</span>
-  </label>
+  <!-- COD -->
+  <div class="pay-section">
+    <label class="pay-header">
+      <input type="radio" name="payMethod" value="cod" checked>
+      <span>Cash on Delivery (COD)</span>
+    </label>
 
-  <label class="payment-option">
-    <input type="radio" name="payment" value="upi">
-    <span class="custom-radio"></span>
-    <span class="payment-text">UPI (Google Pay / PhonePe)</span>
-  </label>
+    <div class="pay-body active" id="codBox">
+      <p style="font-size:14px;color:#555">
+        Pay when your order is delivered.
+      </p>
+    </div>
+  </div>
 
-  <label class="payment-option">
-    <input type="radio" name="payment" value="card">
-    <span class="custom-radio"></span>
-    <span class="payment-text">Credit / Debit / ATM Card</span>
-  </label>
+  <!-- UPI -->
+  <div class="pay-section">
+    <label class="pay-header">
+      <input type="radio" name="payMethod" value="upi">
+      <span>UPI</span>
+    </label>
 
+    <div class="pay-body" id="upiBox">
+      <label class="upi-option">
+        <input type="radio" name="upiApp" value="paytm" checked> Paytm
+      </label>
+      <label class="upi-option">
+        <input type="radio" name="upiApp" value="gpay"> Google Pay
+      </label>
+      <label class="upi-option">
+        <input type="radio" name="upiApp" value="phonepe"> PhonePe
+      </label>
+    </div>
+  </div>
+
+<div id="upiModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:999;">
+  <div style="background:#fff;width:320px;margin:10% auto;padding:20px;border-radius:10px;text-align:center">
+
+    <h3>Complete Payment</h3>
+
+    <img src="/frontend/asserts/qr.jpeg" alt="UPI QR Code"
+         style="width:200px;height:200px;margin:10px 0">
+
+    <p style="font-size:14px;color:#555">
+      Pay using any UPI app<br>
+      Amount: <b>₹<span id="upiPayAmount"></span></b>
+    </p>
+
+    <button onclick="confirmUPIPayment()"
+      style="margin-top:10px;padding:10px;width:100%;background:#0bbf5a;color:#fff;border:none;border-radius:6px">
+      I Have Paid
+    </button>
+
+    <button onclick="closeUPIModal()"
+      style="margin-top:8px;padding:8px;width:100%">
+      Cancel
+    </button>
+
+  </div>
 </div>
 
-    
+
+  <!-- CARD -->
+  <div class="pay-section">
+    <label class="pay-header">
+      <input type="radio" name="payMethod" value="card">
+      <span>Credit / Debit / ATM Card</span>
+    </label>
+
+    <div class="pay-body" id="cardBox">
+      <input type="text" placeholder="Card Number" maxlength="19">
+      <div class="card-row">
+        <input type="text" placeholder="MM / YY" maxlength="5">
+        <input type="password" placeholder="CVV" maxlength="3">
+      </div>
+    </div>
+  </div>
+
+</div>
   </div>
 
   <!-- RIGHT -->
@@ -107,7 +201,6 @@
 
 </div>
 
-<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 <script src="/frontend/js/checkout.js"></script>
 </body>
 </html>

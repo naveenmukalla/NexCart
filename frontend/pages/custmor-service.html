@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NexCart | Customer Support</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f4f6fb;
+}
+
+.support-container {
+  max-width: 600px;
+  margin: 40px auto;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+}
+
+.support-header {
+  background: #f4193e;
+  color: white;
+  padding: 20px;
+  border-radius: 10px 10px 0 0;
+  text-align: center;
+}
+
+.support-header select,
+.support-header button {
+  margin-top: 8px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+#clearChat {
+  background: white;
+  color: #f4193e;
+  font-weight: bold;
+}
+
+.chat-box {
+  display: flex;
+  flex-direction: column;
+  height: 540px;
+}
+
+.chat-body {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  background: #fafafa;
+}
+
+.quick-questions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  background: #fff;
+}
+
+.quick-questions button {
+  padding: 6px 10px;
+  font-size: 12px;
+  border-radius: 20px;
+  border: 1px solid #f4193e;
+  background: white;
+  color: #f4193e;
+  cursor: pointer;
+}
+
+.chat-footer {
+  display: flex;
+  border-top: 1px solid #ddd;
+}
+
+.chat-footer input {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  outline: none;
+}
+
+.chat-footer button {
+  background: #f4193e;
+  color: white;
+  border: none;
+  padding: 0 18px;
+  cursor: pointer;
+}
+
+.bot, .user {
+  max-width: 80%;
+  padding: 8px 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.bot {
+  background: #eaeaea;
+}
+
+.user {
+  background: #f4193e;
+  color: white;
+  margin-left: auto;
+}
+</style>
+</head>
+
+<body>
+
+<div class="support-container">
+
+  <header class="support-header">
+    <h2>💬 NexCart Customer Support</h2>
+    <p id="welcomeText">We are here to help you</p>
+
+    <select id="language">
+      <option value="en">English</option>
+      <option value="te">తెలుగు (Telugu)</option>
+      <option value="hi">हिन्दी (Hindi)</option>
+      <option value="ta">தமிழ் (Tamil)</option>
+      <option value="kn">ಕನ್ನಡ (Kannada)</option>
+      <option value="ml">മലയാളം (Malayalam)</option>
+    </select>
+    <br>
+    <button id="clearChat">🗑 Clear Chat</button>
+  </header>
+
+  <div class="chat-box">
+
+    <div class="chat-body" id="chatBody">
+      <div class="bot" id="startMsg">
+        👋 Hello! Welcome to NexCart Support.<br>
+        How can I help you today?
+      </div>
+    </div>
+
+    <!-- QUICK QUESTIONS -->
+    <div class="quick-questions">
+      <button onclick="sendQuick('order')">📦 Order</button>
+      <button onclick="sendQuick('delivery')">🚚 Delivery</button>
+      <button onclick="sendQuick('payment')">💳 Payment</button>
+      <button onclick="sendQuick('return')">🔄 Return</button>
+      <button onclick="sendQuick('cancel')">❌ Cancel</button>
+    </div>
+
+    <div class="chat-footer">
+      <input id="chatInput" placeholder="Type your message...">
+      <button onclick="sendMessage()">Send</button>
+    </div>
+
+  </div>
+</div>
+
+<script>
+const chatBody = document.getElementById("chatBody");
+const chatInput = document.getElementById("chatInput");
+const language = document.getElementById("language");
+const clearChat = document.getElementById("clearChat");
+const welcomeText = document.getElementById("welcomeText");
+const startMsg = document.getElementById("startMsg");
+
+let currentLang = "en";
+
+/* LANGUAGE DATA */
+const LANG = {
+  en: {
+    welcome: "We are here to help you",
+    start: "👋 Hello! Welcome to NexCart Support.\nHow can I help you today?",
+    order: "📦 You can track your order from My Orders page.",
+    delivery: "🚚 Delivery usually takes 3–5 business days.",
+    payment: "💳 We support Cash on Delivery and UPI.",
+    return: "🔄 Returns are accepted within 7 days.",
+    cancel: "❌ Orders can be cancelled before shipment.",
+    unknown: "Sorry, I didn’t understand."
+  },
+  te: {
+    welcome: "మేము మీకు సహాయం చేయడానికి ఇక్కడ ఉన్నాము",
+    start: "👋 నమస్కారం! NexCart సహాయ కేంద్రానికి స్వాగతం.\nమీకు ఎలా సహాయం చేయగలను?",
+    order: "📦 My Orders పేజీ నుండి మీ ఆర్డర్‌ను ట్రాక్ చేయవచ్చు.",
+    delivery: "🚚 డెలివరీకి 3–5 పని రోజులు పడుతుంది.",
+    payment: "💳 మేము COD మరియు UPIని మద్దతు ఇస్తాము.",
+    return: "🔄 7 రోజుల్లో రిటర్న్ చేయవచ్చు.",
+    cancel: "❌ షిప్ చేయడానికి ముందు ఆర్డర్ రద్దు చేయవచ్చు.",
+    unknown: "క్షమించండి, నాకు అర్థం కాలేదు."
+  },
+  hi: {
+    welcome: "हम आपकी सहायता के लिए यहाँ हैं",
+    start: "👋 नमस्ते! NexCart सहायता में आपका स्वागत है।\nमैं आपकी कैसे मदद कर सकता हूँ?",
+    order: "📦 आप My Orders पेज से अपना ऑर्डर ट्रैक कर सकते हैं।",
+    delivery: "🚚 डिलीवरी में 3–5 कार्य दिवस लगते हैं।",
+    payment: "💳 हम COD और UPI सपोर्ट करते हैं।",
+    return: "🔄 7 दिनों के भीतर रिटर्न किया जा सकता है।",
+    cancel: "❌ शिपमेंट से पहले ऑर्डर रद्द किया जा सकता है।",
+    unknown: "माफ़ कीजिए, मुझे समझ नहीं आया।"
+  },
+  ta: {
+    welcome: "உங்களுக்கு உதவ நாங்கள் இங்கே இருக்கிறோம்",
+    start: "👋 வணக்கம்! NexCart உதவி மையத்திற்கு வரவேற்கிறோம்.\nஎப்படி உதவலாம்?",
+    order: "📦 My Orders பக்கத்தில் உங்கள் ஆர்டரை கண்காணிக்கலாம்.",
+    delivery: "🚚 விநியோகம் 3–5 வேலை நாட்கள் ஆகும்.",
+    payment: "💳 COD மற்றும் UPI ஆதரிக்கப்படுகின்றன.",
+    return: "🔄 7 நாட்களுக்குள் திருப்பி அனுப்பலாம்.",
+    cancel: "❌ அனுப்புவதற்கு முன் ஆர்டர் ரத்து செய்யலாம்.",
+    unknown: "மன்னிக்கவும், புரியவில்லை."
+  },
+  kn: {
+    welcome: "ನಿಮಗೆ ಸಹಾಯ ಮಾಡಲು ನಾವು ಇಲ್ಲಿ ಇದ್ದೇವೆ",
+    start: "👋 ನಮಸ್ಕಾರ! NexCart ಸಹಾಯ ಕೇಂದ್ರಕ್ಕೆ ಸ್ವಾಗತ.\nನಾನು ಹೇಗೆ ಸಹಾಯ ಮಾಡಲಿ?",
+    order: "📦 My Orders ಪುಟದಲ್ಲಿ ನಿಮ್ಮ ಆರ್ಡರ್ ಟ್ರ್ಯಾಕ್ ಮಾಡಬಹುದು.",
+    delivery: "🚚 ವಿತರಣೆ 3–5 ಕೆಲಸದ ದಿನಗಳು ಬೇಕಾಗುತ್ತದೆ.",
+    payment: "💳 COD ಮತ್ತು UPI ಬೆಂಬಲಿತವಾಗಿದೆ.",
+    return: "🔄 7 ದಿನಗಳೊಳಗೆ ರಿಟರ್ನ್ ಮಾಡಬಹುದು.",
+    cancel: "❌ ಶಿಪ್ ಮಾಡುವ ಮೊದಲು ಆರ್ಡರ್ ರದ್ದು ಮಾಡಬಹುದು.",
+    unknown: "ಕ್ಷಮಿಸಿ, ನನಗೆ ಅರ್ಥವಾಗಲಿಲ್ಲ."
+  },
+  ml: {
+    welcome: "നിങ്ങളെ സഹായിക്കാൻ ഞങ്ങൾ ഇവിടെ ഉണ്ടു",
+    start: "👋 നമസ്കാരം! NexCart സഹായ കേന്ദ്രത്തിലേക്ക് സ്വാഗതം.\nഎങ്ങനെ സഹായിക്കാം?",
+    order: "📦 My Orders പേജിൽ നിന്ന് ഓർഡർ ട്രാക്ക് ചെയ്യാം.",
+    delivery: "🚚 ഡെലിവറി 3–5 ജോലി ദിവസങ്ങൾ എടുക്കും.",
+    payment: "💳 COD, UPI പിന്തുണയ്ക്കുന്നു.",
+    return: "🔄 7 ദിവസത്തിനകം റിട്ടേൺ ചെയ്യാം.",
+    cancel: "❌ ഷിപ്പ് ചെയ്യുന്നതിന് മുൻപ് ഓർഡർ റദ്ദാക്കാം.",
+    unknown: "ക്ഷമിക്കണം, മനസ്സിലായില്ല."
+  }
+};
+
+/* LANGUAGE CHANGE */
+language.onchange = () => {
+  currentLang = language.value;
+  welcomeText.innerText = LANG[currentLang].welcome;
+  startMsg.innerText = LANG[currentLang].start;
+};
+
+/* SEND MESSAGE */
+function sendMessage() {
+  const msg = chatInput.value.trim();
+  if (!msg) return;
+  addMessage(msg, "user");
+  chatInput.value = "";
+  setTimeout(() => botReply(msg), 500);
+}
+
+/* QUICK BUTTON */
+function sendQuick(key) {
+  addMessage(key, "user");
+  setTimeout(() => botReply(key), 500);
+}
+
+/* ADD MESSAGE */
+function addMessage(text, sender) {
+  const div = document.createElement("div");
+  div.className = sender;
+  div.innerText = text;
+  chatBody.appendChild(div);
+  chatBody.scrollTop = chatBody.scrollHeight;
+}
+
+/* BOT LOGIC */
+function botReply(msg) {
+  const L = LANG[currentLang];
+  msg = msg.toLowerCase();
+
+  let reply = L.unknown;
+  if (msg.includes("order")) reply = L.order;
+  else if (msg.includes("delivery")) reply = L.delivery;
+  else if (msg.includes("payment")) reply = L.payment;
+  else if (msg.includes("return")) reply = L.return;
+  else if (msg.includes("cancel")) reply = L.cancel;
+
+  addMessage(reply, "bot");
+}
+
+/* CLEAR CHAT */
+clearChat.onclick = () => {
+  if (!confirm("Clear chat?")) return;
+  chatBody.innerHTML = startMsg.outerHTML;
+};
+</script>
+
+</body>
+</html>
